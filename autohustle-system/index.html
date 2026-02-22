@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoHustle - AI-Powered Autonomous Income System</title>
+    <meta name="description" content="Deploy an AI agent that builds digital products, creates courses, trades crypto, publishes SEO content, and earns money 24/7 while you sleep. Fully autonomous.">
+    <meta property="og:title" content="AutoHustle - Your AI Makes Money While You Sleep">
+    <meta property="og:description" content="Autonomous AI agent that creates products, trades crypto, publishes content, and deposits revenue to your bank. Set it up once, earn forever.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theartofsound.github.io/autohustle-content/autohustle-system/">
+    <link rel="canonical" href="https://theartofsound.github.io/autohustle-content/autohustle-system/">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --green: #10b981;
+            --green-dark: #059669;
+            --gold: #f59e0b;
+            --red: #ef4444;
+            --bg: #0a0b10;
+            --surface: #13151d;
+            --surface2: #1a1d28;
+            --surface3: #22253a;
+            --text: #e4e4e7;
+            --text-muted: #9ca3af;
+            --border: #2d3040;
+            --glow: rgba(99, 102, 241, 0.15);
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: radial-gradient(ellipse at top, var(--glow), transparent 60%);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(99,102,241,0.15);
+            border: 1px solid rgba(99,102,241,0.3);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+        .hero h1 {
+            font-size: clamp(2em, 5vw, 3.2em);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 .accent { color: var(--green); }
+        .hero h1 .accent2 { color: var(--primary); }
+        .hero .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2em;
+            max-width: 620px;
+            margin: 0 auto 32px;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--green), var(--green-dark));
+            color: white;
+            padding: 16px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(16,185,129,0.3);
+        }
+        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(16,185,129,0.4); }
+        .hero-sub { color: var(--text-muted); font-size: 0.85em; margin-top: 12px; }
+
+        /* Stats bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .stat { text-align: center; }
+        .stat .num { font-size: 1.8em; font-weight: 800; color: var(--green); }
+        .stat .label { font-size: 0.85em; color: var(--text-muted); margin-top: 4px; }
+
+        /* Section */
+        .section { padding: 60px 0; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 2em; margin-bottom: 12px; }
+        .section-header p { color: var(--text-muted); font-size: 1.05em; max-width: 550px; margin: 0 auto; }
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        /* Strategy cards */
+        .strategies { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .strat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: border-color 0.2s;
+        }
+        .strat-card:hover { border-color: var(--primary); }
+        .strat-card .icon { font-size: 1.6em; margin-bottom: 10px; }
+        .strat-card h3 { font-size: 1.1em; margin-bottom: 8px; }
+        .strat-card p { color: var(--text-muted); font-size: 0.9em; }
+        .strat-card .tag {
+            display: inline-block;
+            background: rgba(16,185,129,0.1);
+            color: var(--green);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* How it works */
+        .steps { counter-reset: step; }
+        .step {
+            display: flex;
+            gap: 24px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+            align-items: flex-start;
+        }
+        .step:last-child { border-bottom: none; }
+        .step-num {
+            counter-increment: step;
+            flex-shrink: 0;
+            width: 48px; height: 48px;
+            background: var(--surface2);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.2em;
+        }
+        .step-content h3 { margin-bottom: 6px; }
+        .step-content p { color: var(--text-muted); font-size: 0.95em; }
+
+        /* Pricing */
+        .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 800px; margin: 0 auto; }
+        .price-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            text-align: center;
+            position: relative;
+        }
+        .price-card.featured {
+            border-color: var(--green);
+            box-shadow: 0 0 40px rgba(16,185,129,0.15);
+        }
+        .price-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--green);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .price-card .tier { font-size: 1.1em; font-weight: 600; color: var(--text-muted); margin-bottom: 12px; }
+        .price-card .amount { font-size: 3em; font-weight: 800; margin-bottom: 4px; }
+        .price-card .amount .currency { font-size: 0.45em; vertical-align: top; position: relative; top: 8px; }
+        .price-card .amount .per { font-size: 0.3em; color: var(--text-muted); font-weight: 400; }
+        .price-card .period { color: var(--text-muted); font-size: 0.9em; margin-bottom: 24px; }
+        .price-card .save-badge { display: inline-block; background: rgba(245,158,11,0.15); color: var(--gold); padding: 3px 10px; border-radius: 20px; font-size: 0.8em; font-weight: 600; margin-bottom: 16px; }
+        .price-card ul { list-style: none; text-align: left; margin-bottom: 28px; }
+        .price-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95em;
+        }
+        .price-card li::before { content: '\2713 '; color: var(--green); font-weight: 700; margin-right: 8px; }
+        .price-card li.disabled { opacity: 0.4; }
+        .price-card li.disabled::before { content: '\2717 '; color: var(--text-muted); }
+        .price-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05em;
+            text-align: center;
+            transition: transform 0.2s, opacity 0.2s;
+            margin-bottom: 8px;
+        }
+        .price-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+        .price-btn.primary { background: linear-gradient(135deg, var(--green), var(--green-dark)); color: white; box-shadow: 0 4px 20px rgba(16,185,129,0.25); }
+        .price-btn.secondary { background: var(--surface2); color: var(--primary); border: 1px solid var(--primary); }
+        .price-btn.gold { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; box-shadow: 0 4px 20px rgba(245,158,11,0.25); }
+        .price-alt { font-size: 0.8em; color: var(--text-muted); }
+        .price-alt a { color: var(--primary); text-decoration: none; }
+        .price-alt a:hover { text-decoration: underline; }
+        .billing-toggle { display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; align-items: center; }
+        .billing-toggle label { color: var(--text-muted); font-size: 0.95em; cursor: pointer; }
+        .billing-toggle label.active { color: var(--text); font-weight: 600; }
+        .billing-toggle .switch { width: 48px; height: 26px; background: var(--surface2); border-radius: 13px; position: relative; cursor: pointer; border: 1px solid var(--border); }
+        .billing-toggle .switch::after { content: ''; position: absolute; width: 20px; height: 20px; background: var(--primary); border-radius: 50%; top: 2px; left: 2px; transition: transform 0.2s; }
+        .billing-toggle .switch.annual::after { transform: translateX(22px); }
+        .billing-toggle .switch.annual { background: var(--primary); border-color: var(--primary); }
+        .billing-toggle .switch.annual::after { background: white; }
+
+        /* Testimonial / social proof */
+        .proof-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 600px;
+        }
+        .proof-box .quote { font-style: italic; font-size: 1.05em; margin-bottom: 10px; }
+        .proof-box .author { color: var(--text-muted); font-size: 0.9em; }
+
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-weight: 600; font-size: 1.05em; margin-bottom: 8px; cursor: pointer; }
+        .faq-a { color: var(--text-muted); font-size: 0.95em; line-height: 1.6; }
+
+        /* CTA bottom */
+        .bottom-cta {
+            text-align: center;
+            padding: 60px 20px;
+            background: radial-gradient(ellipse at bottom, var(--glow), transparent 60%);
+        }
+        .bottom-cta h2 { font-size: 2em; margin-bottom: 12px; }
+        .bottom-cta p { color: var(--text-muted); margin-bottom: 28px; font-size: 1.05em; }
+
+        /* Footer */
+        footer { text-align: center; padding: 30px 20px; color: var(--text-muted); font-size: 0.85em; border-top: 1px solid var(--border); }
+        footer a { color: var(--primary); text-decoration: none; }
+
+        /* Terminal animation */
+        .terminal {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Cascadia Code', 'Fira Code', monospace;
+            font-size: 0.85em;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+        .terminal .line { opacity: 0; animation: fadeIn 0.3s forwards; }
+        .terminal .prompt { color: var(--green); }
+        .terminal .info { color: #58a6ff; }
+        .terminal .success { color: #3fb950; }
+        .terminal .warn { color: var(--gold); }
+        .terminal .num { color: var(--primary); }
+        @keyframes fadeIn { to { opacity: 1; } }
+        .terminal .line:nth-child(1) { animation-delay: 0.2s; }
+        .terminal .line:nth-child(2) { animation-delay: 0.6s; }
+        .terminal .line:nth-child(3) { animation-delay: 1.0s; }
+        .terminal .line:nth-child(4) { animation-delay: 1.4s; }
+        .terminal .line:nth-child(5) { animation-delay: 1.8s; }
+        .terminal .line:nth-child(6) { animation-delay: 2.2s; }
+        .terminal .line:nth-child(7) { animation-delay: 2.6s; }
+        .terminal .line:nth-child(8) { animation-delay: 3.0s; }
+        .terminal .line:nth-child(9) { animation-delay: 3.4s; }
+        .terminal .line:nth-child(10) { animation-delay: 3.8s; }
+
+        .guarantee {
+            background: rgba(16,185,129,0.08);
+            border: 1px solid rgba(16,185,129,0.2);
+            border-radius: 10px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 24px auto;
+            max-width: 500px;
+        }
+        .guarantee strong { color: var(--green); }
+
+        @media (max-width: 600px) {
+            .hero { padding: 50px 16px 40px; }
+            .hero h1 { font-size: 1.8em; }
+            .pricing { grid-template-columns: 1fr; }
+            .step { flex-direction: column; gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+    <div class="container">
+        <div class="hero-badge">AUTONOMOUS AI INCOME SYSTEM</div>
+        <h1>Your AI Agent <span class="accent">Makes Money</span><br>While You <span class="accent2">Sleep</span></h1>
+        <p class="subtitle">Deploy an autonomous AI system that creates digital products, trades crypto, publishes SEO content, and deposits revenue to your bank. Set it up once. Earn forever.</p>
+        <a href="#pricing" class="hero-cta" id="cta-top">Get AutoHustle Now</a>
+        <p class="hero-sub">Plans starting at $49/mo. Full source code included.</p>
+    </div>
+</div>
+
+<!-- Stats -->
+<div class="container">
+    <div class="stats-bar">
+        <div class="stat"><div class="num">10</div><div class="label">Revenue Strategies</div></div>
+        <div class="stat"><div class="num">24/7</div><div class="label">Autonomous</div></div>
+        <div class="stat"><div class="num">$0</div><div class="label">Hosting Cost</div></div>
+        <div class="stat"><div class="num">100%</div><div class="label">You Keep All Profits</div></div>
+    </div>
+</div>
+
+<!-- Terminal demo -->
+<div class="container">
+    <div class="terminal">
+        <div class="line"><span class="prompt">$</span> python run_forever.py</div>
+        <div class="line"><span class="info">AUTOHUSTLE</span> - 24/7 Autonomous Income Agent</div>
+        <div class="line"><span class="success">[COURSE]</span> Created: Python Automation for Beginners (5 modules, $19)</div>
+        <div class="line"><span class="success">[STRIPE]</span> Payment link LIVE: buy.stripe.com/...</div>
+        <div class="line"><span class="info">[CRYPTO]</span> BTC=$97,452 ETH=$2,831 SOL=$178 - Signals computed</div>
+        <div class="line"><span class="success">[SEO]</span> Published 8 affiliate pages to GitHub Pages</div>
+        <div class="line"><span class="success">[PRODUCTS]</span> AI Writing Prompt Pack listed on Stripe ($9)</div>
+        <div class="line"><span class="warn">[REVENUE]</span> Stripe payment: $19.00 -> course_creator</div>
+        <div class="line"><span class="warn">[REVENUE]</span> Stripe payment: $9.00 -> digital_products</div>
+        <div class="line"><span class="success">[DASHBOARD]</span> Total Revenue: <span class="num">$28.00</span> (+$28.00 NEW!)</div>
+    </div>
+</div>
+
+<!-- What's inside -->
+<div class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">10 Revenue Strategies</div>
+            <h2>One Agent. Multiple Income Streams.</h2>
+            <p>AutoHustle runs 10 strategies simultaneously, creating assets and generating revenue around the clock.</p>
+        </div>
+        <div class="strategies">
+            <div class="strat-card">
+                <div class="icon">&#128218;</div>
+                <h3>Course Creator</h3>
+                <p>Auto-generates complete multi-module courses and lists them on Stripe with payment links.</p>
+                <span class="tag">$12-$19 per sale</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128230;</div>
+                <h3>Digital Products</h3>
+                <p>Creates prompt packs, template bundles, guides, and checklists. Lists automatically on Stripe.</p>
+                <span class="tag">$5-$29 per sale</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128200;</div>
+                <h3>Crypto Trading</h3>
+                <p>Real autonomous trading with RSI, MACD, Bollinger Bands. Executes via Coinbase or Binance API.</p>
+                <span class="tag">Algorithmic profits</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128270;</div>
+                <h3>SEO Content Engine</h3>
+                <p>Researches keywords, writes long-form articles, publishes to GitHub Pages with Amazon affiliate links.</p>
+                <span class="tag">Passive affiliate income</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128295;</div>
+                <h3>Micro-SaaS Tools</h3>
+                <p>Deploys free web tools (JSON formatter, word counter, etc.) with premium upgrade tiers via Stripe.</p>
+                <span class="tag">Freemium model</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128176;</div>
+                <h3>Stripe Premium</h3>
+                <p>Automatically adds premium tiers to existing tools with Stripe Checkout payment buttons.</p>
+                <span class="tag">$4.99 per upgrade</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128722;</div>
+                <h3>Dropshipping</h3>
+                <p>Finds trending products, creates affiliate product pages with comparison content.</p>
+                <span class="tag">Affiliate commissions</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128202;</div>
+                <h3>Data Scraper</h3>
+                <p>Collects market data, creates trend reports, and publishes data products on Stripe.</p>
+                <span class="tag">Data monetization</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#9881;</div>
+                <h3>Content Optimizer</h3>
+                <p>A/B tests titles, pricing, and timing using Bayesian methods. Makes every other strategy earn more.</p>
+                <span class="tag">Force multiplier</span>
+            </div>
+            <div class="strat-card">
+                <div class="icon">&#128640;</div>
+                <h3>Social Growth</h3>
+                <p>Generates posts for Reddit and Medium to drive traffic to your products and affiliate pages.</p>
+                <span class="tag">Traffic engine</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How it works -->
+<div class="section" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Setup</div>
+            <h2>Running in Under 10 Minutes</h2>
+            <p>No servers to manage. No monthly hosting fees. Runs on your computer or any VPS.</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>Download & Install</h3>
+                    <p>Clone the repo, install Python dependencies. Works on Windows, Mac, and Linux. One command setup.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h3>Connect Your Accounts</h3>
+                    <p>Add your Stripe keys, GitHub token, and optionally Coinbase/Binance keys for crypto trading. Built-in settings dashboard makes it easy.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>Launch & Walk Away</h3>
+                    <p>Run <code style="background:var(--surface3);padding:2px 8px;border-radius:4px;">python run_forever.py</code> and the AI takes over. It creates products, publishes content, monitors markets, and earns revenue 24/7. Check the dashboard anytime to see your earnings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tech stack -->
+<div class="section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Under the Hood</div>
+            <h2>Built for Real Revenue</h2>
+        </div>
+        <div class="strategies" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+            <div class="strat-card">
+                <h3>UCB1 Allocator</h3>
+                <p>Multi-armed bandit algorithm automatically shifts resources to whichever strategies earn the most.</p>
+            </div>
+            <div class="strat-card">
+                <h3>Stripe Integration</h3>
+                <p>Products, prices, and payment links created via API. Revenue tracked automatically. Bank payouts every 2 days.</p>
+            </div>
+            <div class="strat-card">
+                <h3>Live Dashboard</h3>
+                <p>Real-time web dashboard showing revenue, strategy performance, crypto portfolio, and system health.</p>
+            </div>
+            <div class="strat-card">
+                <h3>Local LLM Support</h3>
+                <p>Uses Ollama (free, local) or Gemini API. No expensive OpenAI bills. Your content, your machine.</p>
+            </div>
+            <div class="strat-card">
+                <h3>Auto-Recovery</h3>
+                <p>Crash detection, auto-restart, health monitoring. Keeps running even when things go wrong.</p>
+            </div>
+            <div class="strat-card">
+                <h3>Zero Hosting Costs</h3>
+                <p>Content publishes to GitHub Pages (free). Tools run client-side. No servers, no AWS bills.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pricing -->
+<div class="section" id="pricing">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label">Pricing</div>
+            <h2>Choose Your Plan</h2>
+            <p>No revenue share. No hidden fees. You keep 100% of everything the system earns.</p>
+        </div>
+
+        <div class="billing-toggle">
+            <label id="lbl-monthly" class="active">Monthly</label>
+            <div class="switch" id="billing-switch" onclick="toggleBilling()"></div>
+            <label id="lbl-annual">Annual <span style="color:var(--gold);font-weight:600;">(Save 32%)</span></label>
+        </div>
+
+        <div class="pricing">
+            <div class="price-card">
+                <div class="tier">Pro</div>
+                <div class="amount" id="pro-price"><span class="currency">$</span>49<span class="per">/mo</span></div>
+                <div class="period" id="pro-period">billed monthly, cancel anytime</div>
+                <ul>
+                    <li>Full AutoHustle source code</li>
+                    <li>All 10 revenue strategies</li>
+                    <li>Stripe payment integration</li>
+                    <li>SEO content engine</li>
+                    <li>Digital product factory + courses</li>
+                    <li>Crypto trading bot</li>
+                    <li>Live monitoring dashboard</li>
+                    <li>All future updates</li>
+                    <li class="disabled">White-label rights</li>
+                    <li class="disabled">Multi-site deployment</li>
+                </ul>
+                <a href="https://buy.stripe.com/6oUfZhdpf8Bg08m83y6c00A" class="price-btn secondary" id="btn-pro">Start Pro Plan</a>
+                <div class="price-alt">or <a href="https://buy.stripe.com/28E14n0Ct2cSg7k6Zu6c00C" id="pro-lifetime">$997 lifetime access</a></div>
+            </div>
+            <div class="price-card featured">
+                <div class="tier">Enterprise</div>
+                <div class="amount" id="ent-price"><span class="currency">$</span>149<span class="per">/mo</span></div>
+                <div class="period" id="ent-period">billed monthly, cancel anytime</div>
+                <ul>
+                    <li>Everything in Pro, plus:</li>
+                    <li>White-label rights (sell as your own)</li>
+                    <li>Multi-site deployment license</li>
+                    <li>Advanced crypto portfolio management</li>
+                    <li>Custom API endpoint creation</li>
+                    <li>Priority strategy allocation</li>
+                    <li>Dedicated setup support</li>
+                    <li>Quarterly strategy updates</li>
+                    <li>Commercial use license</li>
+                    <li>Agency-ready infrastructure</li>
+                </ul>
+                <a href="https://buy.stripe.com/28E5kD1Gx04K8ES2Je6c00D" class="price-btn primary" id="btn-enterprise">Start Enterprise Plan</a>
+                <div class="price-alt">or <a href="https://buy.stripe.com/5kQaEXgBrdVAf3g0B66c00F" id="ent-lifetime">$2,997 lifetime access</a></div>
+            </div>
+        </div>
+        <div class="guarantee">
+            <strong>30-Day Money-Back Guarantee</strong><br>
+            <span style="color: var(--text-muted); font-size: 0.9em;">If you set it up and it doesn't work as described, get a full refund. No questions asked.</span>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ -->
+<div class="section" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+        <div class="section-header">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Do I need coding experience?</div>
+            <div class="faq-a">Basic command line knowledge helps (running Python commands), but no programming is required. The system is designed to run autonomously after initial setup. Documentation walks you through every step.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What are the additional costs beyond the subscription?</div>
+            <div class="faq-a">None. Hosting is free (GitHub Pages). AI is free (Ollama runs locally). Stripe only takes 2.9% + $0.30 when you make a sale. The system pays for itself fast &mdash; most users cover their subscription within the first week.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">How does the crypto trading work?</div>
+            <div class="faq-a">The system uses real technical analysis (RSI, MACD, Bollinger Bands) to generate buy/sell signals. When you connect a Coinbase or Binance API key, it executes real spot trades. No leverage, no margin. Built-in stop-loss and position limits protect your capital.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">How do I get paid?</div>
+            <div class="faq-a">All digital product sales go through Stripe, which deposits directly to your bank account every 2 business days. Crypto profits stay on your exchange until you withdraw. Affiliate commissions are paid by the affiliate program (Amazon, etc.).</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Can I customize the strategies?</div>
+            <div class="faq-a">Yes, everything is configurable via a single YAML file. Change pricing, enable/disable strategies, adjust crypto trading aggressiveness, set content topics, and more. Full source code means you can modify anything.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Is this legal?</div>
+            <div class="faq-a">Yes. The system creates original content using AI, sells digital products through legitimate payment processors, and trades crypto on regulated exchanges. It respects robots.txt, rate limits, and platform terms of service.</div>
+        </div>
+    </div>
+</div>
+
+<!-- Bottom CTA -->
+<div class="bottom-cta">
+    <div class="container">
+        <h2>Stop Trading Time for Money</h2>
+        <p>Deploy your AI income agent today. It works while you sleep, eat, and live your life.</p>
+        <a href="#pricing" class="hero-cta">Start Your Plan Now</a>
+        <p class="hero-sub">From $149/mo. Cancel anytime. 30-day money-back guarantee.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 <a href="https://theartofsound.github.io/autohustle-content">AutoHustle.online</a></p>
+    <p style="margin-top: 8px;">Questions? Contact support@autohustle.online</p>
+</footer>
+
+<script>
+// Smooth scroll to pricing
+document.querySelectorAll('a[href="#pricing"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById('pricing').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+// Billing toggle (monthly vs annual)
+let isAnnual = false;
+const links = {
+    pro: {
+        monthly: 'https://buy.stripe.com/6oUfZhdpf8Bg08m83y6c00A',
+        annual: 'https://buy.stripe.com/4gMbJ170R04K4oCabG6c00B'
+    },
+    enterprise: {
+        monthly: 'https://buy.stripe.com/28E5kD1Gx04K8ES2Je6c00D',
+        annual: 'https://buy.stripe.com/28E28r2KB8BgbR44Rm6c00E'
+    }
+};
+
+function toggleBilling() {
+    isAnnual = !isAnnual;
+    const sw = document.getElementById('billing-switch');
+    const lblM = document.getElementById('lbl-monthly');
+    const lblA = document.getElementById('lbl-annual');
+
+    if (isAnnual) {
+        sw.classList.add('annual');
+        lblM.classList.remove('active');
+        lblA.classList.add('active');
+        // Update Pro
+        document.getElementById('pro-price').innerHTML = '<span class="currency">$</span>33<span class="per">/mo</span>';
+        document.getElementById('pro-period').textContent = '$397/year (save $191)';
+        document.getElementById('btn-pro').href = links.pro.annual;
+        document.getElementById('btn-pro').textContent = 'Start Pro Annual';
+        // Update Enterprise
+        document.getElementById('ent-price').innerHTML = '<span class="currency">$</span>100<span class="per">/mo</span>';
+        document.getElementById('ent-period').textContent = '$1,197/year (save $591)';
+        document.getElementById('btn-enterprise').href = links.enterprise.annual;
+        document.getElementById('btn-enterprise').textContent = 'Start Enterprise Annual';
+    } else {
+        sw.classList.remove('annual');
+        lblM.classList.add('active');
+        lblA.classList.remove('active');
+        // Update Pro
+        document.getElementById('pro-price').innerHTML = '<span class="currency">$</span>49<span class="per">/mo</span>';
+        document.getElementById('pro-period').textContent = 'billed monthly, cancel anytime';
+        document.getElementById('btn-pro').href = links.pro.monthly;
+        document.getElementById('btn-pro').textContent = 'Start Pro Plan';
+        // Update Enterprise
+        document.getElementById('ent-price').innerHTML = '<span class="currency">$</span>149<span class="per">/mo</span>';
+        document.getElementById('ent-period').textContent = 'billed monthly, cancel anytime';
+        document.getElementById('btn-enterprise').href = links.enterprise.monthly;
+        document.getElementById('btn-enterprise').textContent = 'Start Enterprise Plan';
+    }
+}
+</script>
+</body>
+</html>
