@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoHustle AI System — Complete Setup Guide</title>
+    <meta name="description" content="Complete documentation and setup guide for the AutoHustle autonomous AI income system.">
+    <link rel="canonical" href="https://autohustle.online/products/autohustle-system/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
+        nav { margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+        nav a { color: #6366f1; text-decoration: none; font-weight: 600; }
+        h1 { font-size: 2.4em; margin: 24px 0 12px; color: #1a1a2e; }
+        h2 { font-size: 1.6em; margin: 40px 0 16px; color: #1a1a2e; border-bottom: 2px solid #6366f1; padding-bottom: 8px; }
+        h3 { font-size: 1.2em; margin: 24px 0 8px; color: #2a2a4a; }
+        p { margin: 12px 0; }
+        ul, ol { margin: 12px 0; padding-left: 28px; }
+        li { margin: 8px 0; }
+        a { color: #6366f1; }
+        pre { background: #1a1a2e; color: #e4e4e7; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 16px 0; font-family: monospace; font-size: 0.9em; }
+        code { background: #f0f0f5; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        pre code { background: none; padding: 0; color: #e4e4e7; }
+        .badge { display: inline-block; background: #6366f1; color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 700; margin: 2px; }
+        .step { background: #f8f9fa; border-left: 4px solid #6366f1; padding: 20px 24px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f5f5f5; font-weight: 600; }
+        footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 0.85em; }
+        footer a { color: #6366f1; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://autohustle.online/">&larr; AutoHustle</a>
+        &nbsp;|&nbsp; <a href="https://autohustle.online/blog/">Blog</a>
+        &nbsp;|&nbsp; <a href="https://github.com/TheArtOfSound/autohustle-tools/">Free Tools</a>
+    </nav>
+
+    <div style="background:linear-gradient(135deg,#1a1a2e,#2d2b55);color:white;padding:48px 40px;border-radius:16px;margin:24px 0;text-align:center;">
+        <div style="display:inline-block;background:#6366f1;color:white;padding:4px 16px;border-radius:20px;font-size:0.85em;font-weight:700;margin-bottom:16px;">AI INCOME SYSTEM</div>
+        <h1 style="color:white;font-size:2.2em;margin-bottom:16px;">AutoHustle AI System</h1>
+        <p style="color:#a5b4fc;font-size:1.15em;max-width:600px;margin:0 auto 24px;">
+            An autonomous AI agent that generates income 24/7 through digital products, SEO content, crypto trading, and e-commerce — while you focus on what matters.
+        </p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <span class="badge">15 Revenue Strategies</span>
+            <span class="badge">8+ AI Providers</span>
+            <span class="badge">Full Shopify Integration</span>
+            <span class="badge">Auto-Publishing</span>
+            <span class="badge">Real Crypto Trading</span>
+        </div>
+    </div>
+
+    <h2>What AutoHustle Does</h2>
+    <p>AutoHustle is a fully autonomous income generation system that runs 24/7. It orchestrates 15 revenue strategies simultaneously:</p>
+    <ul>
+        <li><strong>SEO Content</strong> — Generates and publishes 100+ articles/day targeting buyer-intent keywords with affiliate links</li>
+        <li><strong>Shopify Store</strong> — Runs a complete e-commerce store: sources products from CJ Dropshipping, writes descriptions, manages collections, auto-fulfills orders</li>
+        <li><strong>Crypto Trading</strong> — HFT scalping mode: buys top momentum movers, holds 3 minutes, repeats every 5 minutes</li>
+        <li><strong>Digital Products</strong> — Creates and lists templates, guides, and prompt packs on Stripe</li>
+        <li><strong>Micro-SaaS Tools</strong> — Deploys 10 web utility tools to GitHub Pages with premium tiers</li>
+        <li><strong>Email Outreach</strong> — B2B lead discovery and automated email campaigns</li>
+        <li><strong>Course Creator</strong> — Generates and lists online courses on Gumroad</li>
+        <li><strong>Marketing Engine</strong> — Runs email campaigns, social posts, and blog content for the Shopify store</li>
+    </ul>
+
+    <h2>System Requirements</h2>
+    <ul>
+        <li>Python 3.11+ (Windows, Mac, or Linux)</li>
+        <li>4GB+ RAM recommended (8GB for running Ollama locally)</li>
+        <li>Git installed and configured</li>
+        <li>Internet connection (for API calls)</li>
+    </ul>
+
+    <h2>Quick Start (15 Minutes)</h2>
+
+    <div class="step">
+        <h3>Step 1: Install Python Dependencies</h3>
+        <pre><code>git clone https://github.com/theartofsound/autohustle.git
+cd autohustle
+pip install -r requirements.txt</code></pre>
+    </div>
+
+    <div class="step">
+        <h3>Step 2: Configure Your API Keys</h3>
+        <p>Run the interactive setup wizard:</p>
+        <pre><code>python main.py --setup</code></pre>
+        <p>You'll be prompted for each API key. Start with these free ones:</p>
+        <ul>
+            <li><strong>GitHub Token</strong> — For publishing to GitHub Pages (free)</li>
+            <li><strong>Groq API Key</strong> — For AI content generation (free 500K/day)</li>
+            <li><strong>Gemini API Key</strong> — Backup AI provider (free 1K/day)</li>
+        </ul>
+    </div>
+
+    <div class="step">
+        <h3>Step 3: Set Up GitHub Pages</h3>
+        <ol>
+            <li>Create two GitHub repos: <code>autohustle-content</code> and <code>autohustle-tools</code></li>
+            <li>Enable GitHub Pages in each repo's Settings → Pages → Deploy from main branch</li>
+            <li>Add your GitHub token + username in AutoHustle settings</li>
+        </ol>
+    </div>
+
+    <div class="step">
+        <h3>Step 4: Start AutoHustle</h3>
+        <pre><code># Start main agent (runs 24/7)
+python main.py
+
+# Start with dashboard (localhost:8888)
+python main.py --dashboard
+
+# Run one cycle then exit (for testing)
+python main.py --once</code></pre>
+    </div>
+
+    <h2>API Keys Reference</h2>
+    <p>Configure these in AutoHustle settings. Start with free tiers — upgrade only when you're earning revenue:</p>
+
+    <table>
+        <tr><th>Service</th><th>Purpose</th><th>Cost</th><th>Priority</th></tr>
+        <tr><td>GitHub Token</td><td>Publish content to GitHub Pages</td><td>Free</td><td>Required</td></tr>
+        <tr><td>Groq API</td><td>AI content generation (Llama 3.3 70B)</td><td>Free (500K/day)</td><td>High</td></tr>
+        <tr><td>Google Gemini</td><td>Backup AI provider</td><td>Free (1K/day)</td><td>High</td></tr>
+        <tr><td>Stripe</td><td>Sell digital products</td><td>2.9% + $0.30</td><td>High</td></tr>
+        <tr><td>Shopify</td><td>E-commerce store</td><td>$29/mo basic</td><td>Medium</td></tr>
+        <tr><td>CJ Dropshipping</td><td>Product sourcing</td><td>Free</td><td>Medium</td></tr>
+        <tr><td>Coinbase</td><td>Crypto trading</td><td>Trading fees</td><td>Optional</td></tr>
+        <tr><td>Amazon Associates</td><td>Affiliate commissions</td><td>Free</td><td>Medium</td></tr>
+        <tr><td>SendGrid</td><td>Email marketing</td><td>Free (100/day)</td><td>Low</td></tr>
+    </table>
+
+    <h2>Configuration Guide</h2>
+    <p>All settings are in <code>config.yaml</code>. Key sections:</p>
+    <pre><code>brand:
+  name: "YourBrand"
+  domain: "yourdomain.com"
+  github_username: "yourusername"
+  content_repo: "your-content-repo"
+  tools_repo: "your-tools-repo"
+
+strategies:
+  shopify_store:
+    enabled: true
+    store_name: "Your Store"
+    price_min: 15
+    price_max: 79
+
+  crypto_trading:
+    enabled: true
+    max_daily_loss_usd: 50  # Safety limit</code></pre>
+
+    <h2>Safety Systems</h2>
+    <ul>
+        <li><strong>Kill Switch</strong>: Create file <code>data/.kill_switch</code> to immediately halt all activity</li>
+        <li><strong>Trading Guard</strong>: Auto-halts crypto trading if daily loss exceeds $50</li>
+        <li><strong>Circuit Breaker</strong>: Auto-pauses failing strategies after 5 consecutive errors</li>
+        <li><strong>Budget Guard</strong>: Hard cap on daily spending ($0 by default — free tier only)</li>
+    </ul>
+
+    <h2>Monitoring Your Progress</h2>
+    <ul>
+        <li><strong>Dashboard</strong>: Run <code>python main.py --dashboard</code> → open <code>localhost:8888</code></li>
+        <li><strong>Logs</strong>: Check <code>logs/autohustle-YYYY-MM-DD.log</code></li>
+        <li><strong>Database</strong>: Query <code>data/autohustle.db</code> with any SQLite client</li>
+    </ul>
+
+    <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:24px;margin:40px 0;">
+        <h3 style="color:#166534;margin-bottom:12px;">Need Help?</h3>
+        <p>Reply to your purchase confirmation email with any questions. Include your log file for fastest support.</p>
+        <p style="margin-top:8px;"><strong>Common issues:</strong></p>
+        <ul>
+            <li>LLM not generating content → Check Groq/Gemini API keys in settings</li>
+            <li>Content not publishing → Check GitHub token has repo + pages write permissions</li>
+            <li>Shopify not connecting → Verify OAuth scopes in Shopify Partners dashboard</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 <a href="https://autohustle.online">AutoHustle.online</a> &mdash;
+        <a href="https://autohustle.online/blog/">Blog</a> &middot;
+        <a href="https://github.com/TheArtOfSound/autohustle-tools/store/">Products</a> &middot;
+        <a href="https://github.com/TheArtOfSound/autohustle-tools/">Free Tools</a></p>
+    </footer>
+</body>
+</html>
