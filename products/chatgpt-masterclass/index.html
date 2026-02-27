@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Masterclass: 200+ Proven Prompts for Business & Income</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300ff88'/%3E%3Cstop offset='100%25' stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%230a0a14'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='20' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+    <meta name="theme-color" content="#0a0a14">
+    <title>ChatGPT Masterclass: 200+ Proven Prompts for Business & Income — AutoHustle</title>
     <meta name="description" content="Complete guide to using AI for content creation, business automation, and income generation">
     <link rel="canonical" href="https://theartofsound.github.io/autohustle-content/products/chatgpt-masterclass/">
     <meta property="og:title" content="ChatGPT Masterclass: 200+ Proven Prompts for Business & Income">
     <meta property="og:description" content="Complete guide to using AI for content creation, business automation, and income generation">
     <meta property="og:url" content="https://theartofsound.github.io/autohustle-content/products/chatgpt-masterclass/">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="AutoHustle">
+    <meta name="twitter:card" content="summary">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
-        nav { margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
-        nav a { color: #6366f1; text-decoration: none; font-weight: 600; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #1a1a1a; background: #f9fafb; margin: 0; }
+        .product-content { max-width: 900px; margin: 0 auto; padding: 20px; }
         h1 { font-size: 2.2em; margin: 24px 0 12px; color: #1a1a2e; }
         h2 { font-size: 1.5em; margin: 28px 0 12px; color: #1a1a2e; }
         h3 { font-size: 1.2em; margin: 20px 0 8px; color: #2a2a4a; }
@@ -27,26 +31,148 @@
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
         th { background: #f5f5f5; font-weight: 600; }
-        .hero { background: linear-gradient(135deg, #1a1a2e, #2d2b55); color: white; padding: 48px 40px; border-radius: 16px; margin: 24px 0; text-align: center; }
-        footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 0.85em; }
-        footer a { color: #6366f1; }
+        .hero { background: linear-gradient(135deg, #0a0a14, #1a1a2e); color: white; padding: 48px 40px; border-radius: 16px; margin: 24px 0; text-align: center; }
+        
+    .ah-nav {
+        background: linear-gradient(135deg, #0a0a14, #0f1018);
+        border-bottom: 1px solid rgba(99,102,241,0.15);
+        padding: 0 24px;
+        position: sticky; top: 0; z-index: 100;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    .ah-nav-inner {
+        max-width: 1100px; margin: 0 auto;
+        display: flex; align-items: center;
+        height: 56px; gap: 6px;
+    }
+    .ah-nav-brand {
+        font-weight: 800; font-size: 1.1em;
+        background: linear-gradient(135deg, #00ff88, #38bdf8);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        background-clip: text; text-decoration: none;
+        margin-right: auto; letter-spacing: -0.02em;
+        flex-shrink: 0;
+    }
+    .ah-nav a.ah-nav-link {
+        color: #8888a0; text-decoration: none; font-size: 0.82em;
+        font-weight: 500; padding: 6px 12px; border-radius: 7px;
+        transition: color 0.2s, background 0.2s;
+        white-space: nowrap;
+    }
+    .ah-nav a.ah-nav-link:hover { color: #eaeaf0; background: rgba(255,255,255,0.06); }
+    .ah-nav a.ah-nav-link.active { color: #00ff88; background: rgba(0,255,136,0.08); }
+    .ah-nav a.ah-nav-cta {
+        color: #0a0a14; font-size: 0.8em; font-weight: 700;
+        padding: 7px 16px; border-radius: 7px;
+        background: linear-gradient(135deg, #00ff88, #10b981);
+        text-decoration: none; margin-left: 4px;
+        transition: opacity 0.2s, transform 0.2s;
+        white-space: nowrap;
+    }
+    .ah-nav a.ah-nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+    .ah-nav-toggle { display: none; background: none; border: none;
+        color: #8888a0; font-size: 1.4em; cursor: pointer; padding: 6px;
+    }
+    @media (max-width: 720px) {
+        .ah-nav-toggle { display: block; }
+        .ah-nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0;
+            background: #0a0a14; border-bottom: 1px solid rgba(99,102,241,0.15);
+            padding: 12px 16px; flex-direction: column; gap: 4px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        .ah-nav-links.open { display: flex; }
+        .ah-nav a.ah-nav-link { padding: 10px 12px; }
+        .ah-nav a.ah-nav-cta { text-align: center; margin: 4px 0 0; }
+    }
+
+    .ah-footer {
+        background: #0a0a14; border-top: 1px solid rgba(99,102,241,0.15);
+        padding: 40px 24px 28px; margin-top: 60px; text-align: center;
+        color: #55556a; font-size: 0.84em;
+    }
+    .ah-footer-inner { max-width: 1100px; margin: 0 auto; }
+    .ah-footer-brand {
+        font-weight: 800; font-size: 1.15em; margin-bottom: 12px;
+        background: linear-gradient(135deg, #00ff88, #38bdf8);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .ah-footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 16px; }
+    .ah-footer-links a { color: #8888a0; text-decoration: none; font-size: 0.92em; transition: color 0.2s; }
+    .ah-footer-links a:hover { color: #00ff88; }
+    .ah-footer-copy { color: #44445a; font-size: 0.85em; margin-bottom: 8px; }
+    .ah-footer-disc { color: #44445a; font-size: 0.74em; max-width: 520px; margin: 8px auto 0; line-height: 1.5; }
+
+    .ah-breadcrumb {
+        font-size: 0.82em; padding: 10px 0; color: #8888a0;
+        display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
+    }
+    .ah-breadcrumb a { color: #6366f1; text-decoration: none; transition: color 0.15s; }
+    .ah-breadcrumb a:hover { color: #818cf8; }
+    .ah-breadcrumb .sep { color: #55556a; margin: 0 2px; font-size: 0.85em; }
+    .ah-breadcrumb .current { color: #eaeaf0; font-weight: 500; }
+
+    .ah-cta {
+        background: linear-gradient(135deg, #0a0a14, #0f1220);
+        border: 1px solid rgba(99,102,241,0.25); border-radius: 16px;
+        padding: 36px 28px; margin: 48px 0; text-align: center;
+        position: relative; overflow: hidden;
+    }
+    .ah-cta::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 50% -20%, rgba(0,255,136,0.06), transparent 70%);
+        pointer-events: none;
+    }
+    .ah-cta-label { color: #6366f1; font-weight: 700; font-size: 0.8em;
+        text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+    .ah-cta h3 { color: #eaeaf0; font-size: 1.4em; margin-bottom: 12px; }
+    .ah-cta p { color: #8888a0; margin-bottom: 24px; max-width: 480px; display: inline-block; line-height: 1.6; }
+    .ah-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .ah-cta-btn-primary {
+        display: inline-block; background: linear-gradient(135deg, #00ff88, #10b981);
+        color: #0a0a14; padding: 12px 28px; border-radius: 8px;
+        text-decoration: none; font-weight: 700; transition: opacity 0.2s, transform 0.2s;
+    }
+    .ah-cta-btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .ah-cta-btn-secondary {
+        display: inline-block; background: transparent; color: #6366f1;
+        padding: 12px 28px; border-radius: 8px; text-decoration: none;
+        font-weight: 700; border: 1px solid rgba(99,102,241,0.4);
+        transition: border-color 0.2s, color 0.2s;
+    }
+    .ah-cta-btn-secondary:hover { border-color: #6366f1; color: #818cf8; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
     </style>
 </head>
 <body>
-    <nav style="display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;">
-        <a href="https://theartofsound.github.io/autohustle-content/">Home</a>
-        <a href="https://theartofsound.github.io/autohustle-content/blog/">Blog</a>
-        <a href="https://theartofsound.github.io/autohustle-content/products/">Products</a>
-        <a href="https://theartofsound.github.io/autohustle-tools/store/">Store</a>
-        <a href="https://theartofsound.github.io/autohustle-tools/">Free Tools</a>
-        <a href="https://theartofsound.github.io/autohustle-content/getting-started/" style="color:#10b981;font-weight:700;">Get Started</a>
-    </nav>
+    <nav class="ah-nav">
+    <div class="ah-nav-inner">
+        <a href="https://theartofsound.github.io/autohustle-content/" class="ah-nav-brand">AutoHustle</a>
+        <button class="ah-nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        <div class="ah-nav-links">
+            <a href="https://theartofsound.github.io/autohustle-content/" class="ah-nav-link">Home</a>
+            <a href="https://theartofsound.github.io/autohustle-content/blog/" class="ah-nav-link">Blog</a>
+            <a href="https://theartofsound.github.io/autohustle-content/products/" class="ah-nav-link active">Products</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/store/" class="ah-nav-link">Store</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/" class="ah-nav-link">Free Tools</a>
+            <a href="https://theartofsound.github.io/autohustle-content/getting-started/" class="ah-nav-cta">Get Started</a>
+        </div>
+    </div>
+</nav>
+    <main class="product-content">
 
     <div class="hero">
         <div style="display:inline-block;background:#6366f1;color:white;padding:4px 16px;border-radius:20px;font-size:0.85em;font-weight:700;margin-bottom:16px;letter-spacing:1px;">DIGITAL PRODUCT</div>
         <h1 style="color:white;font-size:2em;">ChatGPT Masterclass: 200+ Proven Prompts for Business & Income</h1>
         <p style="color:#a5b4fc;font-size:1.1em;margin-top:12px;">Complete guide to using AI for content creation, business automation, and income generation</p>
-        <div style="margin-top:20px;font-size:2em;font-weight:800;color:#10b981;">$42</div>
+        <div style="margin-top:20px;font-size:2em;font-weight:800;color:#00ff88;">$42</div>
         <div style="margin-top:16px;">
             <a href="https://buy.stripe.com/eVq28r84V04Kg7kgA46c00u" style="display:inline-block;background:#10b981;color:white;padding:12px 32px;border-radius:8px;font-weight:700;font-size:1.1em;text-decoration:none;cursor:pointer;">Buy Now — $42</a>
         </div>
@@ -379,17 +505,37 @@
 </section>
 
 
-    <div style="background:linear-gradient(135deg,#13151d,#1a1d28);border:2px solid #6366f1;border-radius:12px;padding:32px;margin:48px 0;text-align:center;">
-        <h3 style="color:#e4e4e7;margin-bottom:12px;font-size:1.4em;">Get All AutoHustle Products</h3>
-        <p style="color:#9ca3af;margin-bottom:20px;">Access every course, guide, and tool in one membership.</p>
-        <a href="https://theartofsound.github.io/autohustle-content/autohustle-system/" style="display:inline-block;background:linear-gradient(135deg,#10b981,#059669);color:white;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1.05em;">View All Plans &rarr;</a>
+    <div class="ah-cta reveal" style="margin:48px 0;">
+        <div class="ah-cta-label">Get Everything</div>
+        <h3>Get All AutoHustle Products</h3>
+        <p>Access every course, guide, and tool in one membership.</p>
+        <div class="ah-cta-btns">
+            <a href="https://theartofsound.github.io/autohustle-content/products/autohustle-system/" class="ah-cta-btn-primary">View All Plans &rarr;</a>
+        </div>
     </div>
+    </main>
 
-    <footer>
-        <p>&copy; 2026 <a href="https://autohustle.online">AutoHustle.online</a> &mdash;
-        <a href="https://theartofsound.github.io/autohustle-content/blog/">Blog</a> &middot;
-        <a href="https://theartofsound.github.io/autohustle-tools/store/">Products</a> &middot;
-        <a href="https://theartofsound.github.io/autohustle-tools/">Free Tools</a></p>
-    </footer>
+    <footer class="ah-footer">
+    <div class="ah-footer-inner">
+        <div class="ah-footer-brand">AutoHustle</div>
+        <div class="ah-footer-links">
+            <a href="https://theartofsound.github.io/autohustle-content/blog/">Blog</a>
+            <a href="https://theartofsound.github.io/autohustle-content/products/">Products</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/store/">Store</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/">Free Tools</a>
+            <a href="https://theartofsound.github.io/autohustle-content/getting-started/">Get Started</a>
+        </div>
+        <div class="ah-footer-copy">&copy; 2026 <a href="https://autohustle.online" style="color:#6366f1;text-decoration:none;">AutoHustle.online</a></div>
+        <div class="ah-footer-disc">As an Amazon Associate we earn from qualifying purchases. Some links on this site may earn us a small commission at no extra cost to you.</div>
+    </div>
+</footer>
+    <script>
+(function(){
+    var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+})();
+</script>
 </body>
 </html>
