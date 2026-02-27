@@ -3,185 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoHustle AI System — Complete Setup Guide</title>
-    <meta name="description" content="Complete documentation and setup guide for the AutoHustle autonomous AI income system.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300ff88'/%3E%3Cstop offset='100%25' stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%230a0a14'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='20' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
+    <meta name="theme-color" content="#0a0a14">
+    <title>AutoHustle AI System — Autonomous Income Generation</title>
+    <meta name="description" content="Deploy an AI agent that generates income 24/7 through 15 revenue strategies: SEO content, e-commerce, crypto trading, digital products, and more.">
     <link rel="canonical" href="https://theartofsound.github.io/autohustle-content/products/autohustle-system/">
+    <meta property="og:title" content="AutoHustle AI System — Autonomous Income Generation">
+    <meta property="og:description" content="Deploy an AI agent that generates income 24/7 through 15 revenue strategies.">
+    <meta property="og:url" content="https://theartofsound.github.io/autohustle-content/products/autohustle-system/">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="AutoHustle">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
-        nav { margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
-        nav a { color: #6366f1; text-decoration: none; font-weight: 600; }
-        h1 { font-size: 2.4em; margin: 24px 0 12px; color: #1a1a2e; }
-        h2 { font-size: 1.6em; margin: 40px 0 16px; color: #1a1a2e; border-bottom: 2px solid #6366f1; padding-bottom: 8px; }
-        h3 { font-size: 1.2em; margin: 24px 0 8px; color: #2a2a4a; }
-        p { margin: 12px 0; }
-        ul, ol { margin: 12px 0; padding-left: 28px; }
-        li { margin: 8px 0; }
-        a { color: #6366f1; }
-        pre { background: #1a1a2e; color: #e4e4e7; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 16px 0; font-family: monospace; font-size: 0.9em; }
-        code { background: #f0f0f5; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
-        pre code { background: none; padding: 0; color: #e4e4e7; }
-        .badge { display: inline-block; background: #6366f1; color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 700; margin: 2px; }
-        .step { background: #f8f9fa; border-left: 4px solid #6366f1; padding: 20px 24px; margin: 16px 0; border-radius: 0 8px 8px 0; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background: #f5f5f5; font-weight: 600; }
-        footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 0.85em; }
-        footer a { color: #6366f1; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a14; color: #eaeaf0; line-height: 1.7; margin: 0; }
+        .hero { text-align: center; padding: 80px 24px 60px; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,255,136,0.08), transparent 70%); pointer-events: none; }
+        .hero-label { display: inline-block; background: rgba(0,255,136,0.1); color: #00ff88; padding: 6px 18px; border-radius: 20px; font-size: 0.82em; font-weight: 700; letter-spacing: 1.5px; border: 1px solid rgba(0,255,136,0.2); margin-bottom: 20px; }
+        .hero h1 { font-size: 3em; font-weight: 800; max-width: 700px; margin: 0 auto 16px; line-height: 1.15; background: linear-gradient(135deg, #fff, #a5b4fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { color: #8888a0; font-size: 1.15em; max-width: 560px; margin: 0 auto 32px; }
+        .hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; }
+        .hb { background: #12121e; border: 1px solid #1f1f2e; color: #9595b0; padding: 6px 16px; border-radius: 8px; font-size: 0.82em; font-weight: 600; }
+        .hero-cta { display: inline-block; background: linear-gradient(135deg, #00ff88, #10b981); color: #0a0a14; padding: 16px 40px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 1.15em; transition: opacity 0.2s, transform 0.2s; }
+        .hero-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        .content { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        .section { padding: 60px 0; }
+
+        /* Feature grid */
+        .feat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .feat { background: #10101b; border: 1px solid #1f1f2e; border-radius: 14px; padding: 24px; transition: border-color 0.2s, transform 0.2s; }
+        .feat:hover { border-color: rgba(0,255,136,0.3); transform: translateY(-2px); }
+        .feat-icon { font-size: 1.8em; margin-bottom: 12px; }
+        .feat h3 { font-size: 1.05em; font-weight: 700; margin-bottom: 8px; color: #eaeaf0; }
+        .feat p { font-size: 0.88em; color: #7575a0; line-height: 1.6; }
+
+        /* Pricing */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto; }
+        .price-card { background: #10101b; border: 1px solid #1f1f2e; border-radius: 16px; padding: 32px; text-align: center; transition: border-color 0.3s, transform 0.3s; }
+        .price-card:hover { transform: translateY(-4px); }
+        .price-card.featured { border-color: rgba(0,255,136,0.4); position: relative; }
+        .price-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00ff88, #10b981); color: #0a0a14; padding: 4px 16px; border-radius: 20px; font-size: 0.68em; font-weight: 800; letter-spacing: 1px; }
+        .price-name { font-size: 1.2em; font-weight: 700; margin-bottom: 8px; }
+        .price-amount { font-size: 2.8em; font-weight: 800; color: #00ff88; margin-bottom: 4px; }
+        .price-billing { color: #7575a0; font-size: 0.85em; margin-bottom: 20px; }
+        .price-features { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; }
+        .price-features li { padding: 6px 0; font-size: 0.88em; color: #9595b0; border-bottom: 1px solid #ffffff06; display: flex; align-items: center; gap: 8px; }
+        .price-features li::before { content: '\2713'; color: #00ff88; font-weight: 700; flex-shrink: 0; }
+        .price-btn { display: block; width: 100%; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1em; text-align: center; transition: opacity 0.2s, transform 0.2s; }
+        .price-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+        .price-btn.primary { background: linear-gradient(135deg, #00ff88, #10b981); color: #0a0a14; }
+        .price-btn.secondary { background: transparent; color: #00ff88; border: 1px solid rgba(0,255,136,0.3); }
+        .price-alt { margin-top: 10px; font-size: 0.78em; color: #7575a0; }
+        .price-alt a { color: #6366f1; text-decoration: none; }
+
+        /* Section headings */
+        .sh { text-align: center; margin-bottom: 40px; }
+        .sh h2 { font-size: 2em; font-weight: 800; margin-bottom: 12px; background: linear-gradient(135deg, #eaeaf0, #9595b0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .sh p { color: #7575a0; font-size: 1em; max-width: 500px; margin: 0 auto; }
+
+        /* Steps */
+        .steps { max-width: 600px; margin: 0 auto; }
+        .step { background: #10101b; border: 1px solid #1f1f2e; border-radius: 12px; padding: 20px 24px; margin-bottom: 16px; display: flex; gap: 16px; align-items: flex-start; }
+        .step-num { width: 36px; height: 36px; background: rgba(0,255,136,0.1); border: 1px solid rgba(0,255,136,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #00ff88; font-weight: 800; flex-shrink: 0; }
+        .step-body h3 { font-size: 0.95em; font-weight: 700; margin-bottom: 4px; }
+        .step-body p { font-size: 0.85em; color: #7575a0; }
+        .step-body code { background: #1a1a2e; padding: 2px 6px; border-radius: 4px; font-family: monospace; color: #00ff88; font-size: 0.9em; }
+
+        /* FAQ */
+        .faq { max-width: 700px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid #1f1f2e; }
+        .faq-q { cursor: pointer; padding: 18px 0; font-weight: 600; display: flex; justify-content: space-between; align-items: center; transition: color 0.2s; }
+        .faq-q:hover { color: #00ff88; }
+        .faq-q::after { content: '+'; font-size: 1.3em; color: #7575a0; transition: transform 0.2s; }
+        .faq-item.open .faq-q::after { content: '\2212'; color: #00ff88; }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; color: #7575a0; font-size: 0.9em; line-height: 1.7; }
+        .faq-item.open .faq-a { max-height: 300px; padding-bottom: 16px; }
+
+        @media(max-width:600px) {
+            .hero h1 { font-size: 2em; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .feat-grid { grid-template-columns: 1fr; }
+        }
+        
+    .ah-nav {
+        background: linear-gradient(135deg, #0a0a14, #0f1018);
+        border-bottom: 1px solid rgba(99,102,241,0.15);
+        padding: 0 24px;
+        position: sticky; top: 0; z-index: 100;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    .ah-nav-inner {
+        max-width: 1100px; margin: 0 auto;
+        display: flex; align-items: center;
+        height: 56px; gap: 6px;
+    }
+    .ah-nav-brand {
+        font-weight: 800; font-size: 1.1em;
+        background: linear-gradient(135deg, #00ff88, #38bdf8);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        background-clip: text; text-decoration: none;
+        margin-right: auto; letter-spacing: -0.02em;
+        flex-shrink: 0;
+    }
+    .ah-nav a.ah-nav-link {
+        color: #8888a0; text-decoration: none; font-size: 0.82em;
+        font-weight: 500; padding: 6px 12px; border-radius: 7px;
+        transition: color 0.2s, background 0.2s;
+        white-space: nowrap;
+    }
+    .ah-nav a.ah-nav-link:hover { color: #eaeaf0; background: rgba(255,255,255,0.06); }
+    .ah-nav a.ah-nav-link.active { color: #00ff88; background: rgba(0,255,136,0.08); }
+    .ah-nav a.ah-nav-cta {
+        color: #0a0a14; font-size: 0.8em; font-weight: 700;
+        padding: 7px 16px; border-radius: 7px;
+        background: linear-gradient(135deg, #00ff88, #10b981);
+        text-decoration: none; margin-left: 4px;
+        transition: opacity 0.2s, transform 0.2s;
+        white-space: nowrap;
+    }
+    .ah-nav a.ah-nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+    .ah-nav-toggle { display: none; background: none; border: none;
+        color: #8888a0; font-size: 1.4em; cursor: pointer; padding: 6px;
+    }
+    @media (max-width: 720px) {
+        .ah-nav-toggle { display: block; }
+        .ah-nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0;
+            background: #0a0a14; border-bottom: 1px solid rgba(99,102,241,0.15);
+            padding: 12px 16px; flex-direction: column; gap: 4px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        .ah-nav-links.open { display: flex; }
+        .ah-nav a.ah-nav-link { padding: 10px 12px; }
+        .ah-nav a.ah-nav-cta { text-align: center; margin: 4px 0 0; }
+    }
+
+    .ah-footer {
+        background: #0a0a14; border-top: 1px solid rgba(99,102,241,0.15);
+        padding: 40px 24px 28px; margin-top: 60px; text-align: center;
+        color: #55556a; font-size: 0.84em;
+    }
+    .ah-footer-inner { max-width: 1100px; margin: 0 auto; }
+    .ah-footer-brand {
+        font-weight: 800; font-size: 1.15em; margin-bottom: 12px;
+        background: linear-gradient(135deg, #00ff88, #38bdf8);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .ah-footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 16px; }
+    .ah-footer-links a { color: #8888a0; text-decoration: none; font-size: 0.92em; transition: color 0.2s; }
+    .ah-footer-links a:hover { color: #00ff88; }
+    .ah-footer-copy { color: #44445a; font-size: 0.85em; margin-bottom: 8px; }
+    .ah-footer-disc { color: #44445a; font-size: 0.74em; max-width: 520px; margin: 8px auto 0; line-height: 1.5; }
+
+    .ah-breadcrumb {
+        font-size: 0.82em; padding: 10px 0; color: #8888a0;
+        display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
+    }
+    .ah-breadcrumb a { color: #6366f1; text-decoration: none; transition: color 0.15s; }
+    .ah-breadcrumb a:hover { color: #818cf8; }
+    .ah-breadcrumb .sep { color: #55556a; margin: 0 2px; font-size: 0.85em; }
+    .ah-breadcrumb .current { color: #eaeaf0; font-weight: 500; }
+
+    .ah-cta {
+        background: linear-gradient(135deg, #0a0a14, #0f1220);
+        border: 1px solid rgba(99,102,241,0.25); border-radius: 16px;
+        padding: 36px 28px; margin: 48px 0; text-align: center;
+        position: relative; overflow: hidden;
+    }
+    .ah-cta::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse at 50% -20%, rgba(0,255,136,0.06), transparent 70%);
+        pointer-events: none;
+    }
+    .ah-cta-label { color: #6366f1; font-weight: 700; font-size: 0.8em;
+        text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+    .ah-cta h3 { color: #eaeaf0; font-size: 1.4em; margin-bottom: 12px; }
+    .ah-cta p { color: #8888a0; margin-bottom: 24px; max-width: 480px; display: inline-block; line-height: 1.6; }
+    .ah-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .ah-cta-btn-primary {
+        display: inline-block; background: linear-gradient(135deg, #00ff88, #10b981);
+        color: #0a0a14; padding: 12px 28px; border-radius: 8px;
+        text-decoration: none; font-weight: 700; transition: opacity 0.2s, transform 0.2s;
+    }
+    .ah-cta-btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .ah-cta-btn-secondary {
+        display: inline-block; background: transparent; color: #6366f1;
+        padding: 12px 28px; border-radius: 8px; text-decoration: none;
+        font-weight: 700; border: 1px solid rgba(99,102,241,0.4);
+        transition: border-color 0.2s, color 0.2s;
+    }
+    .ah-cta-btn-secondary:hover { border-color: #6366f1; color: #818cf8; }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
     </style>
 </head>
 <body>
-    <nav>
-        <a href="https://theartofsound.github.io/autohustle-content/">&larr; AutoHustle</a>
-        &nbsp;|&nbsp; <a href="https://theartofsound.github.io/autohustle-content/blog/">Blog</a>
-        &nbsp;|&nbsp; <a href="https://theartofsound.github.io/autohustle-tools/">Free Tools</a>
-    </nav>
+    <nav class="ah-nav">
+    <div class="ah-nav-inner">
+        <a href="https://theartofsound.github.io/autohustle-content/" class="ah-nav-brand">AutoHustle</a>
+        <button class="ah-nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        <div class="ah-nav-links">
+            <a href="https://theartofsound.github.io/autohustle-content/" class="ah-nav-link">Home</a>
+            <a href="https://theartofsound.github.io/autohustle-content/blog/" class="ah-nav-link">Blog</a>
+            <a href="https://theartofsound.github.io/autohustle-content/products/" class="ah-nav-link active">Products</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/store/" class="ah-nav-link">Store</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/" class="ah-nav-link">Free Tools</a>
+            <a href="https://theartofsound.github.io/autohustle-content/getting-started/" class="ah-nav-cta">Get Started</a>
+        </div>
+    </div>
+</nav>
 
-    <div style="background:linear-gradient(135deg,#1a1a2e,#2d2b55);color:white;padding:48px 40px;border-radius:16px;margin:24px 0;text-align:center;">
-        <div style="display:inline-block;background:#6366f1;color:white;padding:4px 16px;border-radius:20px;font-size:0.85em;font-weight:700;margin-bottom:16px;">AI INCOME SYSTEM</div>
-        <h1 style="color:white;font-size:2.2em;margin-bottom:16px;">AutoHustle AI System</h1>
-        <p style="color:#a5b4fc;font-size:1.15em;max-width:600px;margin:0 auto 24px;">
-            An autonomous AI agent that generates income 24/7 through digital products, SEO content, crypto trading, and e-commerce — while you focus on what matters.
-        </p>
-        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-            <span class="badge">15 Revenue Strategies</span>
-            <span class="badge">8+ AI Providers</span>
-            <span class="badge">Full Shopify Integration</span>
-            <span class="badge">Auto-Publishing</span>
-            <span class="badge">Real Crypto Trading</span>
+    <div class="hero">
+        <div class="hero-label">AI INCOME SYSTEM</div>
+        <h1>Make Money While You Sleep</h1>
+        <p>Deploy an autonomous AI agent that generates income 24/7 through 15 revenue strategies — content, e-commerce, crypto, and more.</p>
+        <div class="hero-badges">
+            <span class="hb">15 Strategies</span>
+            <span class="hb">14 AI Providers</span>
+            <span class="hb">Shopify + Stripe</span>
+            <span class="hb">Solana Sniper</span>
+            <span class="hb">Real-Time Dashboard</span>
+        </div>
+        <a href="#pricing" class="hero-cta">Get AutoHustle &rarr;</a>
+    </div>
+
+    <div class="content">
+        <!-- Features -->
+        <div class="section">
+            <div class="sh">
+                <h2>What AutoHustle Does</h2>
+                <p>15 revenue strategies running simultaneously, optimized by AI in real time.</p>
+            </div>
+            <div class="feat-grid">
+                <div class="feat reveal"><div class="feat-icon">&#128640;</div><h3>SEO Content Engine</h3><p>Generates and publishes articles targeting buyer-intent keywords with affiliate links. 100+ articles per day.</p></div>
+                <div class="feat reveal reveal-delay-1"><div class="feat-icon">&#128722;</div><h3>Shopify Store</h3><p>Runs a complete e-commerce store: sources products, writes descriptions, manages collections, auto-fulfills orders.</p></div>
+                <div class="feat reveal reveal-delay-2"><div class="feat-icon">&#128176;</div><h3>Crypto Trading</h3><p>Solana sniper bot with LLM-powered scoring. Two-phase token analysis, auto-exits, real-time P&amp;L tracking.</p></div>
+                <div class="feat reveal"><div class="feat-icon">&#128218;</div><h3>Digital Products</h3><p>Creates templates, guides, prompt packs, and courses. Lists them on Stripe with auto-delivery.</p></div>
+                <div class="feat reveal reveal-delay-1"><div class="feat-icon">&#128231;</div><h3>Email Outreach</h3><p>Discovers leads, runs cold email sequences, multi-provider routing (SMTP, SendGrid, Mailgun, SES).</p></div>
+                <div class="feat reveal reveal-delay-2"><div class="feat-icon">&#129504;</div><h3>AI Strategy Reviewer</h3><p>LLM continuously reviews all strategies, optimizes parameters, identifies opportunities, prunes dead weight.</p></div>
+            </div>
+        </div>
+
+        <!-- How it works -->
+        <div class="section">
+            <div class="sh">
+                <h2>Up and Running in 15 Minutes</h2>
+                <p>Start earning with free API keys. No credit card required to begin.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal"><div class="step-num">1</div><div class="step-body"><h3>Install</h3><p><code>pip install -r requirements.txt</code></p></div></div>
+                <div class="step reveal"><div class="step-num">2</div><div class="step-body"><h3>Configure</h3><p>Add your free API keys in the dashboard (Groq, Gemini, GitHub).</p></div></div>
+                <div class="step reveal"><div class="step-num">3</div><div class="step-body"><h3>Launch</h3><p><code>python main.py --dashboard</code> — monitor everything at localhost:8888.</p></div></div>
+                <div class="step reveal"><div class="step-num">4</div><div class="step-body"><h3>Earn</h3><p>AutoHustle runs 24/7, optimizing strategies and generating revenue automatically.</p></div></div>
+            </div>
+        </div>
+
+        <!-- Pricing -->
+        <div class="section" id="pricing">
+            <div class="sh">
+                <h2>Choose Your Plan</h2>
+                <p>Start with Pro. Upgrade anytime.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card featured reveal">
+                    <div class="price-name">Pro</div>
+                    <div class="price-amount">$149</div>
+                    <div class="price-billing">per month</div>
+                    <ul class="price-features">
+                        <li>All 15 revenue strategies</li>
+                        <li>Real-time dashboard</li>
+                        <li>14 LLM providers</li>
+                        <li>Shopify + Stripe integration</li>
+                        <li>Solana sniper bot</li>
+                        <li>Email support</li>
+                        <li>5 downloads per license</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/bJe28r5WN18Of3g6Zu6c03w" class="price-btn primary">Get Pro &rarr;</a>
+                    <div class="price-alt">
+                        <a href="https://buy.stripe.com/fZubJ1bh79Fk2gu3Ni6c03m">Annual ($1,190/yr — save 33%)</a>
+                        &nbsp;&middot;&nbsp;
+                        <a href="https://buy.stripe.com/fZu9ATbh704KcV8bfK6c03x">Lifetime ($499)</a>
+                    </div>
+                </div>
+                <div class="price-card reveal reveal-delay-1">
+                    <div class="price-name">Enterprise</div>
+                    <div class="price-amount">$349</div>
+                    <div class="price-billing">per month</div>
+                    <ul class="price-features">
+                        <li>Everything in Pro</li>
+                        <li>Up to 3 installations</li>
+                        <li>Priority email support</li>
+                        <li>Setup assistance</li>
+                        <li>10 downloads per license</li>
+                        <li>Priority setup guide</li>
+                        <li>Custom strategy consulting</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/fZu4gzbh72cS1cq4Rm6c03y" class="price-btn secondary">Get Enterprise &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section">
+            <div class="sh"><h2>FAQ</h2></div>
+            <div class="faq">
+                <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What do I need to get started?</div><div class="faq-a">Python 3.11+, Git, and a few free API keys (Groq, Gemini, GitHub). You can start earning with $0 upfront cost for services.</div></div>
+                <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does license delivery work?</div><div class="faq-a">After purchase, you receive an email with your license key and download link. Enter your key on the download page to get the software package.</div></div>
+                <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is crypto trading risky?</div><div class="faq-a">Yes — crypto trading carries risk. AutoHustle includes safety systems: trading guards with max drawdown limits, daily loss caps, and a kill switch. Start with paper trading mode.</div></div>
+                <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I cancel anytime?</div><div class="faq-a">Yes. Monthly and annual subscriptions can be canceled anytime. Lifetime licenses never expire.</div></div>
+                <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if I need help setting up?</div><div class="faq-a">Pro includes email support. Enterprise includes priority support and setup assistance. Reply to your purchase confirmation email with any questions.</div></div>
+            </div>
         </div>
     </div>
 
-    <h2>What AutoHustle Does</h2>
-    <p>AutoHustle is a fully autonomous income generation system that runs 24/7. It orchestrates 15 revenue strategies simultaneously:</p>
-    <ul>
-        <li><strong>SEO Content</strong> — Generates and publishes 100+ articles/day targeting buyer-intent keywords with affiliate links</li>
-        <li><strong>Shopify Store</strong> — Runs a complete e-commerce store: sources products from CJ Dropshipping, writes descriptions, manages collections, auto-fulfills orders</li>
-        <li><strong>Crypto Trading</strong> — HFT scalping mode: buys top momentum movers, holds 3 minutes, repeats every 5 minutes</li>
-        <li><strong>Digital Products</strong> — Creates and lists templates, guides, and prompt packs on Stripe</li>
-        <li><strong>Micro-SaaS Tools</strong> — Deploys 10 web utility tools to GitHub Pages with premium tiers</li>
-        <li><strong>Email Outreach</strong> — B2B lead discovery and automated email campaigns</li>
-        <li><strong>Course Creator</strong> — Generates and lists online courses on Gumroad</li>
-        <li><strong>Marketing Engine</strong> — Runs email campaigns, social posts, and blog content for the Shopify store</li>
-    </ul>
-
-    <h2>System Requirements</h2>
-    <ul>
-        <li>Python 3.11+ (Windows, Mac, or Linux)</li>
-        <li>4GB+ RAM recommended (8GB for running Ollama locally)</li>
-        <li>Git installed and configured</li>
-        <li>Internet connection (for API calls)</li>
-    </ul>
-
-    <h2>Quick Start (15 Minutes)</h2>
-
-    <div class="step">
-        <h3>Step 1: Install Python Dependencies</h3>
-        <pre><code>git clone https://github.com/theartofsound/autohustle.git
-cd autohustle
-pip install -r requirements.txt</code></pre>
+    <footer class="ah-footer">
+    <div class="ah-footer-inner">
+        <div class="ah-footer-brand">AutoHustle</div>
+        <div class="ah-footer-links">
+            <a href="https://theartofsound.github.io/autohustle-content/blog/">Blog</a>
+            <a href="https://theartofsound.github.io/autohustle-content/products/">Products</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/store/">Store</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/">Free Tools</a>
+            <a href="https://theartofsound.github.io/autohustle-content/getting-started/">Get Started</a>
+        </div>
+        <div class="ah-footer-copy">&copy; 2026 <a href="https://autohustle.online" style="color:#6366f1;text-decoration:none;">AutoHustle.online</a></div>
+        <div class="ah-footer-disc">As an Amazon Associate we earn from qualifying purchases. Some links on this site may earn us a small commission at no extra cost to you.</div>
     </div>
-
-    <div class="step">
-        <h3>Step 2: Configure Your API Keys</h3>
-        <p>Run the interactive setup wizard:</p>
-        <pre><code>python main.py --setup</code></pre>
-        <p>You'll be prompted for each API key. Start with these free ones:</p>
-        <ul>
-            <li><strong>GitHub Token</strong> — For publishing to GitHub Pages (free)</li>
-            <li><strong>Groq API Key</strong> — For AI content generation (free 500K/day)</li>
-            <li><strong>Gemini API Key</strong> — Backup AI provider (free 1K/day)</li>
-        </ul>
-    </div>
-
-    <div class="step">
-        <h3>Step 3: Set Up GitHub Pages</h3>
-        <ol>
-            <li>Create two GitHub repos: <code>autohustle-content</code> and <code>autohustle-tools</code></li>
-            <li>Enable GitHub Pages in each repo's Settings → Pages → Deploy from main branch</li>
-            <li>Add your GitHub token + username in AutoHustle settings</li>
-        </ol>
-    </div>
-
-    <div class="step">
-        <h3>Step 4: Start AutoHustle</h3>
-        <pre><code># Start main agent (runs 24/7)
-python main.py
-
-# Start with dashboard (localhost:8888)
-python main.py --dashboard
-
-# Run one cycle then exit (for testing)
-python main.py --once</code></pre>
-    </div>
-
-    <h2>API Keys Reference</h2>
-    <p>Configure these in AutoHustle settings. Start with free tiers — upgrade only when you're earning revenue:</p>
-
-    <table>
-        <tr><th>Service</th><th>Purpose</th><th>Cost</th><th>Priority</th></tr>
-        <tr><td>GitHub Token</td><td>Publish content to GitHub Pages</td><td>Free</td><td>Required</td></tr>
-        <tr><td>Groq API</td><td>AI content generation (Llama 3.3 70B)</td><td>Free (500K/day)</td><td>High</td></tr>
-        <tr><td>Google Gemini</td><td>Backup AI provider</td><td>Free (1K/day)</td><td>High</td></tr>
-        <tr><td>Stripe</td><td>Sell digital products</td><td>2.9% + $0.30</td><td>High</td></tr>
-        <tr><td>Shopify</td><td>E-commerce store</td><td>$29/mo basic</td><td>Medium</td></tr>
-        <tr><td>CJ Dropshipping</td><td>Product sourcing</td><td>Free</td><td>Medium</td></tr>
-        <tr><td>Coinbase</td><td>Crypto trading</td><td>Trading fees</td><td>Optional</td></tr>
-        <tr><td>Amazon Associates</td><td>Affiliate commissions</td><td>Free</td><td>Medium</td></tr>
-        <tr><td>SendGrid</td><td>Email marketing</td><td>Free (100/day)</td><td>Low</td></tr>
-    </table>
-
-    <h2>Configuration Guide</h2>
-    <p>All settings are in <code>config.yaml</code>. Key sections:</p>
-    <pre><code>brand:
-  name: "YourBrand"
-  domain: "yourdomain.com"
-  github_username: "yourusername"
-  content_repo: "your-content-repo"
-  tools_repo: "your-tools-repo"
-
-strategies:
-  shopify_store:
-    enabled: true
-    store_name: "Your Store"
-    price_min: 15
-    price_max: 79
-
-  crypto_trading:
-    enabled: true
-    max_daily_loss_usd: 50  # Safety limit</code></pre>
-
-    <h2>Safety Systems</h2>
-    <ul>
-        <li><strong>Kill Switch</strong>: Create file <code>data/.kill_switch</code> to immediately halt all activity</li>
-        <li><strong>Trading Guard</strong>: Auto-halts crypto trading if daily loss exceeds $50</li>
-        <li><strong>Circuit Breaker</strong>: Auto-pauses failing strategies after 5 consecutive errors</li>
-        <li><strong>Budget Guard</strong>: Hard cap on daily spending ($0 by default — free tier only)</li>
-    </ul>
-
-    <h2>Monitoring Your Progress</h2>
-    <ul>
-        <li><strong>Dashboard</strong>: Run <code>python main.py --dashboard</code> → open <code>localhost:8888</code></li>
-        <li><strong>Logs</strong>: Check <code>logs/autohustle-YYYY-MM-DD.log</code></li>
-        <li><strong>Database</strong>: Query <code>data/autohustle.db</code> with any SQLite client</li>
-    </ul>
-
-    <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:12px;padding:24px;margin:40px 0;">
-        <h3 style="color:#166534;margin-bottom:12px;">Need Help?</h3>
-        <p>Reply to your purchase confirmation email with any questions. Include your log file for fastest support.</p>
-        <p style="margin-top:8px;"><strong>Common issues:</strong></p>
-        <ul>
-            <li>LLM not generating content → Check Groq/Gemini API keys in settings</li>
-            <li>Content not publishing → Check GitHub token has repo + pages write permissions</li>
-            <li>Shopify not connecting → Verify OAuth scopes in Shopify Partners dashboard</li>
-        </ul>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 <a href="https://autohustle.online">AutoHustle.online</a> &mdash;
-        <a href="https://theartofsound.github.io/autohustle-content/blog/">Blog</a> &middot;
-        <a href="https://theartofsound.github.io/autohustle-tools/store/">Products</a> &middot;
-        <a href="https://theartofsound.github.io/autohustle-tools/">Free Tools</a></p>
-    </footer>
+</footer>
+    <script>
+(function(){
+    var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+})();
+</script>
 </body>
 </html>
