@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AutoHustle</title>
+    <meta name="description" content="AutoHustle Privacy Policy. Learn how we collect, use, and protect your personal data.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://theartofsound.github.io/autohustle-content/privacy/">
+    <meta property="og:title" content="Privacy Policy - AutoHustle">
+    <meta property="og:description" content="AutoHustle Privacy Policy. Learn how we collect, use, and protect your personal data.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theartofsound.github.io/autohustle-content/privacy/">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0b10;
+            --bg-secondary: #111218;
+            --bg-card: #151621;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --green: #10b981;
+            --green-light: #34d399;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --border: #1e293b;
+            --border-light: #334155;
+            --glow-primary: rgba(99, 102, 241, 0.15);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { color: var(--primary-light); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--green-light); }
+        ul { list-style: none; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all 0.3s ease;
+            background: rgba(10, 11, 16, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .navbar-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .navbar-links a:hover { color: var(--text); }
+
+        .navbar-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .navbar-links a:hover::after { width: 100%; }
+
+        .navbar-cta {
+            padding: 8px 20px;
+            background: var(--primary);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: white !important;
+            transition: all 0.2s;
+        }
+
+        .navbar-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .navbar-cta::after { display: none !important; }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .mobile-toggle span {
+            width: 24px; height: 2px;
+            background: var(--text);
+            transition: all 0.3s;
+        }
+
+        /* ===== PAGE CONTENT ===== */
+        .page-header {
+            padding: 140px 0 40px;
+            text-align: center;
+            background: radial-gradient(ellipse at top, var(--glow-primary), transparent 60%);
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .page-header .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .legal-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 24px 0 10px;
+            color: var(--primary-light);
+        }
+
+        .legal-content p {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        .legal-content ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 14px;
+        }
+
+        .legal-content ul li {
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            line-height: 1.7;
+        }
+
+        .legal-content strong {
+            color: var(--text);
+        }
+
+        .legal-content .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--primary);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .legal-content .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            max-width: 300px;
+        }
+
+        .footer-heading {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { font-size: 0.9rem; color: var(--text-dim); transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-links { display: none; }
+            .navbar-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(10, 11, 16, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+                animation: slideDown 0.3s ease;
+            }
+            .mobile-toggle { display: flex; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="/autohustle-content/" class="navbar-brand">AutoHustle</a>
+        <div class="navbar-links" id="navLinks">
+            <a href="/autohustle-content/">Home</a>
+            <a href="/autohustle-content/products/">Products</a>
+            <a href="/autohustle-content/blog/">Blog</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/">Tools</a>
+            <a href="https://hustle.autohustle.online/">SaaS Platform</a>
+            <a href="https://hustle.autohustle.online/register" class="navbar-cta">Get Started</a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Last updated: March 2026</p>
+    </div>
+</div>
+
+<!-- ===== LEGAL CONTENT ===== -->
+<div class="legal-content">
+
+    <p>AutoHustle ("we," "us," or "our") operates the website at <strong>autohustle.online</strong> and the SaaS platform at <strong>hustle.autohustle.online</strong>. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Service.</p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>Account Information</h3>
+    <p>When you create an account, we collect:</p>
+    <ul>
+        <li>Email address</li>
+        <li>Password (hashed, never stored in plaintext)</li>
+        <li>Display name (if provided)</li>
+    </ul>
+
+    <h3>Payment Information</h3>
+    <p>Payments are processed by <strong>Stripe</strong>. We do not store your credit card number, CVV, or full payment details on our servers. Stripe handles all payment data in compliance with PCI-DSS standards. We receive only a transaction ID, subscription status, and the last four digits of your card for display purposes.</p>
+
+    <h3>Usage Data</h3>
+    <p>We automatically collect certain data when you use our platform:</p>
+    <ul>
+        <li>Pages visited and features used within the dashboard</li>
+        <li>Strategy configurations and execution logs</li>
+        <li>API usage metrics (calls made, tokens consumed)</li>
+        <li>Browser type, IP address, and device information</li>
+        <li>Timestamps of login sessions</li>
+    </ul>
+
+    <h3>API Keys and Secrets</h3>
+    <p>When you provide third-party API keys (for LLM providers, exchanges, etc.), they are stored using <strong>Fernet symmetric encryption</strong> on our servers. Only your running instance can decrypt these keys at runtime.</p>
+
+    <h2>2. How We Use Your Information</h2>
+
+    <p>We use the information we collect to:</p>
+    <ul>
+        <li>Provide, operate, and maintain the AutoHustle platform</li>
+        <li>Process your subscription and manage billing</li>
+        <li>Execute your configured strategies (content creation, trading, publishing)</li>
+        <li>Send transactional emails (account confirmations, billing receipts, security alerts)</li>
+        <li>Monitor system health, prevent abuse, and improve service reliability</li>
+        <li>Provide customer support when you contact us</li>
+    </ul>
+
+    <p>We do <strong>not</strong> sell, rent, or share your personal information with advertisers or data brokers.</p>
+
+    <h2>3. Third-Party Services</h2>
+
+    <p>AutoHustle integrates with third-party services to deliver its functionality. When you configure and use these services, your data may be transmitted to them under their respective privacy policies:</p>
+
+    <ul>
+        <li><strong>Stripe</strong> &mdash; Payment processing and subscription management</li>
+        <li><strong>LLM Providers</strong> &mdash; Groq, Google Gemini, Cerebras, OpenRouter, Together AI, Fireworks AI, Mistral, DeepSeek, Hyperbolic, Novita, OpenAI, xAI, Anthropic Claude, and local Ollama. Prompts and generated content are sent to these APIs based on your configuration.</li>
+        <li><strong>Shopify</strong> &mdash; E-commerce store management (if configured)</li>
+        <li><strong>GitHub Pages</strong> &mdash; Content publishing and hosting</li>
+        <li><strong>Email Services</strong> &mdash; SendGrid, Mailgun, or Amazon SES (if configured for outreach)</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p>You are responsible for reviewing the privacy policies of any third-party service you connect to AutoHustle. We only transmit data to these services when required by your configured strategies.</p>
+    </div>
+
+    <h2>4. Data Security</h2>
+
+    <p>We take reasonable measures to protect your information:</p>
+    <ul>
+        <li><strong>Encryption at rest</strong> &mdash; All API keys and sensitive secrets are encrypted using Fernet (AES-128-CBC) before storage</li>
+        <li><strong>Server-side sessions</strong> &mdash; Authentication uses secure, server-side session tokens; no sensitive data is stored in client-side cookies</li>
+        <li><strong>Admin authentication</strong> &mdash; Dashboard access is protected by SHA-256 hashed credentials with rate limiting and lockout protection</li>
+        <li><strong>CORS restrictions</strong> &mdash; API endpoints are restricted to authorized origins</li>
+        <li><strong>HTTPS</strong> &mdash; All communications between your browser and our servers are encrypted in transit</li>
+    </ul>
+
+    <p>While we strive to protect your personal information, no method of transmission or storage is 100% secure. We cannot guarantee absolute security.</p>
+
+    <h2>5. Cookies</h2>
+
+    <p>We use minimal cookies strictly necessary for the Service to function:</p>
+    <ul>
+        <li><strong>Session cookie</strong> &mdash; Maintains your authenticated session. Expires when you close your browser or after 24 hours of inactivity.</li>
+    </ul>
+
+    <p>We do not use advertising cookies, tracking pixels, or analytics cookies from third parties.</p>
+
+    <h2>6. Data Retention</h2>
+
+    <p>We retain your data as follows:</p>
+    <ul>
+        <li><strong>Account data</strong> &mdash; Retained as long as your account is active</li>
+        <li><strong>Execution logs and metrics</strong> &mdash; Retained for up to 90 days, then automatically purged</li>
+        <li><strong>Payment records</strong> &mdash; Retained as required by applicable tax and financial regulations</li>
+    </ul>
+
+    <p>When you delete your account, we will delete or anonymize your personal data within 30 days, except where retention is required by law.</p>
+
+    <h2>7. Your Rights</h2>
+
+    <p>You have the right to:</p>
+    <ul>
+        <li><strong>Access</strong> &mdash; Request a copy of the personal data we hold about you</li>
+        <li><strong>Correction</strong> &mdash; Request correction of inaccurate data</li>
+        <li><strong>Deletion</strong> &mdash; Request deletion of your account and associated data</li>
+        <li><strong>Export</strong> &mdash; Request a machine-readable export of your data</li>
+        <li><strong>Objection</strong> &mdash; Object to processing of your data for specific purposes</li>
+    </ul>
+
+    <p>To exercise any of these rights, email us at <a href="mailto:support@autohustle.online">support@autohustle.online</a>. We will respond within 30 days.</p>
+
+    <h2>8. California Residents (CCPA)</h2>
+
+    <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
+    <ul>
+        <li>The right to know what personal information we collect and how it is used</li>
+        <li>The right to request deletion of your personal information</li>
+        <li>The right to opt out of the sale of personal information &mdash; we do not sell personal information</li>
+        <li>The right to non-discrimination for exercising your privacy rights</li>
+    </ul>
+
+    <h2>9. European Residents (GDPR)</h2>
+
+    <p>If you are located in the European Economic Area (EEA) or the United Kingdom, we process your personal data under the following legal bases:</p>
+    <ul>
+        <li><strong>Contract performance</strong> &mdash; Processing necessary to provide the Service you subscribed to</li>
+        <li><strong>Legitimate interests</strong> &mdash; Processing for system security, fraud prevention, and service improvement</li>
+        <li><strong>Consent</strong> &mdash; Where you have explicitly opted into optional features</li>
+    </ul>
+
+    <p>You may also have the right to lodge a complaint with your local data protection authority.</p>
+
+    <h2>10. Children's Privacy</h2>
+
+    <p>AutoHustle is not intended for use by anyone under the age of 18. We do not knowingly collect personal information from minors. If you believe a child has provided us with personal data, please contact us and we will promptly delete it.</p>
+
+    <h2>11. Changes to This Policy</h2>
+
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this page periodically. Continued use of the Service after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>12. Contact Us</h2>
+
+    <p>If you have questions about this Privacy Policy or your personal data, contact us at:</p>
+
+    <div class="highlight-box">
+        <p><strong>AutoHustle</strong><br>
+        Email: <a href="mailto:support@autohustle.online">support@autohustle.online</a><br>
+        Website: <a href="https://autohustle.online">autohustle.online</a></p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">AutoHustle</div>
+                <p class="footer-desc">AI-powered autonomous revenue system. 13 strategies. 15+ LLM providers. One platform.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Product</div>
+                <ul class="footer-links">
+                    <li><a href="/autohustle-content/autohustle-system/">How It Works</a></li>
+                    <li><a href="/autohustle-content/products/">Products</a></li>
+                    <li><a href="https://theartofsound.github.io/autohustle-tools/">Tools</a></li>
+                    <li><a href="https://hustle.autohustle.online/">SaaS Platform</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Resources</div>
+                <ul class="footer-links">
+                    <li><a href="/autohustle-content/blog/">Blog</a></li>
+                    <li><a href="/autohustle-content/autohustle-system/">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="/autohustle-content/privacy/">Privacy Policy</a></li>
+                    <li><a href="/autohustle-content/terms/">Terms of Service</a></li>
+                    <li><a href="/autohustle-content/refund/">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 AutoHustle. All rights reserved.</span>
+            <span>Built with AI. Powered by ambition.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+</script>
+
+</body>
+</html>

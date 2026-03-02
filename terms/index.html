@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - AutoHustle</title>
+    <meta name="description" content="AutoHustle Terms of Service. Read the terms and conditions governing your use of the AutoHustle platform.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://theartofsound.github.io/autohustle-content/terms/">
+    <meta property="og:title" content="Terms of Service - AutoHustle">
+    <meta property="og:description" content="AutoHustle Terms of Service. Read the terms and conditions governing your use of the AutoHustle platform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theartofsound.github.io/autohustle-content/terms/">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0b10;
+            --bg-secondary: #111218;
+            --bg-card: #151621;
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --primary-light: #818cf8;
+            --green: #10b981;
+            --green-light: #34d399;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+            --border: #1e293b;
+            --border-light: #334155;
+            --glow-primary: rgba(99, 102, 241, 0.15);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { color: var(--primary-light); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--green-light); }
+        ul { list-style: none; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all 0.3s ease;
+            background: rgba(10, 11, 16, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .navbar-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .navbar-links a:hover { color: var(--text); }
+
+        .navbar-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .navbar-links a:hover::after { width: 100%; }
+
+        .navbar-cta {
+            padding: 8px 20px;
+            background: var(--primary);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: white !important;
+            transition: all 0.2s;
+        }
+
+        .navbar-cta:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .navbar-cta::after { display: none !important; }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .mobile-toggle span {
+            width: 24px; height: 2px;
+            background: var(--text);
+            transition: all 0.3s;
+        }
+
+        /* ===== PAGE CONTENT ===== */
+        .page-header {
+            padding: 140px 0 40px;
+            text-align: center;
+            background: radial-gradient(ellipse at top, var(--glow-primary), transparent 60%);
+        }
+
+        .page-header h1 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .page-header .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .legal-content h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 40px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .legal-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 24px 0 10px;
+            color: var(--primary-light);
+        }
+
+        .legal-content p {
+            margin-bottom: 14px;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        .legal-content ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-bottom: 14px;
+        }
+
+        .legal-content ul li {
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            line-height: 1.7;
+        }
+
+        .legal-content strong {
+            color: var(--text);
+        }
+
+        .legal-content .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--primary);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .legal-content .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .legal-content .warning-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid #f59e0b;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+
+        .legal-content .warning-box p {
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-desc {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+            max-width: 300px;
+        }
+
+        .footer-heading {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text);
+            margin-bottom: 16px;
+        }
+
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { font-size: 0.9rem; color: var(--text-dim); transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text); }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-links { display: none; }
+            .navbar-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(10, 11, 16, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+                animation: slideDown 0.3s ease;
+            }
+            .mobile-toggle { display: flex; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="/autohustle-content/" class="navbar-brand">AutoHustle</a>
+        <div class="navbar-links" id="navLinks">
+            <a href="/autohustle-content/">Home</a>
+            <a href="/autohustle-content/products/">Products</a>
+            <a href="/autohustle-content/blog/">Blog</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/">Tools</a>
+            <a href="https://hustle.autohustle.online/">SaaS Platform</a>
+            <a href="https://hustle.autohustle.online/register" class="navbar-cta">Get Started</a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<div class="page-header">
+    <div class="container">
+        <h1>Terms of Service</h1>
+        <p class="subtitle">Last updated: March 2026</p>
+    </div>
+</div>
+
+<!-- ===== LEGAL CONTENT ===== -->
+<div class="legal-content">
+
+    <p>These Terms of Service ("Terms") govern your access to and use of the AutoHustle platform, website, and related services (collectively, the "Service") operated by AutoHustle ("we," "us," or "our"). By creating an account or using the Service, you agree to be bound by these Terms.</p>
+
+    <h2>1. Service Description</h2>
+
+    <p>AutoHustle is an autonomous AI-powered revenue system that operates multiple monetization strategies on your behalf. The platform currently runs up to 13 strategies, including but not limited to:</p>
+    <ul>
+        <li>SEO content creation and publishing</li>
+        <li>Digital product generation and sales</li>
+        <li>E-commerce store management (Shopify integration)</li>
+        <li>Cryptocurrency trading and analysis</li>
+        <li>Course creation and distribution</li>
+        <li>Market intelligence reporting</li>
+        <li>Email marketing and outreach</li>
+    </ul>
+
+    <p>The Service leverages multiple LLM (Large Language Model) providers and third-party APIs to execute these strategies autonomously based on your configuration.</p>
+
+    <h2>2. Account Registration</h2>
+
+    <p>To use AutoHustle, you must:</p>
+    <ul>
+        <li>Be at least 18 years of age</li>
+        <li>Provide accurate and complete registration information</li>
+        <li>Maintain the security of your account credentials</li>
+        <li>Notify us immediately of any unauthorized access to your account</li>
+    </ul>
+
+    <p>You are responsible for all activity that occurs under your account.</p>
+
+    <h2>3. Subscription and Billing</h2>
+
+    <h3>Pricing</h3>
+    <p>AutoHustle is offered as a monthly subscription at <strong>$99 per month</strong>. Prices are in US dollars and may be updated with 30 days advance notice.</p>
+
+    <h3>Billing Cycle</h3>
+    <p>Your subscription is billed monthly on the anniversary of your signup date. Payments are processed through Stripe.</p>
+
+    <h3>Cancellation</h3>
+    <p>You may cancel your subscription at any time from your account dashboard or by emailing <a href="mailto:support@autohustle.online">support@autohustle.online</a>. Upon cancellation:</p>
+    <ul>
+        <li>Your access continues until the end of the current billing period</li>
+        <li>No further charges will be made</li>
+        <li>Strategy execution will stop at the end of the billing period</li>
+        <li>Your data will be retained for 30 days, then deleted</li>
+    </ul>
+
+    <h3>30-Day Money-Back Guarantee</h3>
+    <p>New subscribers are eligible for a full refund within 30 days of their initial purchase. See our <a href="/autohustle-content/refund/">Refund Policy</a> for details.</p>
+
+    <h2>4. Acceptable Use</h2>
+
+    <p>You agree not to use the Service to:</p>
+    <ul>
+        <li>Violate any applicable laws or regulations</li>
+        <li>Generate, publish, or distribute illegal, harmful, or misleading content</li>
+        <li>Engage in market manipulation, pump-and-dump schemes, or fraudulent trading activity</li>
+        <li>Spam, phish, or engage in abusive email practices</li>
+        <li>Attempt to gain unauthorized access to our systems or other users' accounts</li>
+        <li>Reverse-engineer, decompile, or extract the source code of the platform</li>
+        <li>Exceed rate limits or abuse API connections in a way that degrades the Service for others</li>
+        <li>Use the platform to compete directly with AutoHustle</li>
+    </ul>
+
+    <p>We reserve the right to suspend or terminate accounts that violate these terms, with or without notice.</p>
+
+    <h2>5. API Keys and Third-Party Services</h2>
+
+    <p>AutoHustle integrates with various third-party services. You are responsible for:</p>
+    <ul>
+        <li>Providing your own API keys for services that require them (LLM providers, exchanges, Shopify, etc.)</li>
+        <li>Ensuring you comply with the terms of service of each third-party provider</li>
+        <li>Any costs incurred through your use of third-party APIs (e.g., OpenAI credits, exchange fees)</li>
+        <li>Maintaining the validity and security of your API keys</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p>AutoHustle encrypts your API keys at rest using Fernet encryption. However, you should treat API keys as sensitive credentials and revoke them if you suspect compromise.</p>
+    </div>
+
+    <h2>6. Revenue and Income Disclaimer</h2>
+
+    <div class="warning-box">
+        <p><strong>Important:</strong> AutoHustle does not guarantee any specific income, revenue, or financial results. The performance of each strategy depends on many factors outside our control, including market conditions, competition, API availability, content quality, and third-party platform policies.</p>
+    </div>
+
+    <p>By using the Service, you acknowledge that:</p>
+    <ul>
+        <li>Past performance of any strategy does not guarantee future results</li>
+        <li>Cryptocurrency trading involves substantial risk of loss</li>
+        <li>Revenue from content, products, and e-commerce varies widely and is not guaranteed</li>
+        <li>You are solely responsible for any financial decisions made based on the platform's output</li>
+        <li>AutoHustle is a tool, not financial advice &mdash; consult qualified professionals for investment decisions</li>
+    </ul>
+
+    <h2>7. Intellectual Property</h2>
+
+    <h3>Our Property</h3>
+    <p>The AutoHustle platform, including its code, design, algorithms, branding, and documentation, is owned by AutoHustle and protected by intellectual property laws. Your subscription grants you a limited, non-exclusive, non-transferable license to use the Service.</p>
+
+    <h3>Your Content</h3>
+    <p>Content generated by the Service on your behalf (blog posts, products, reports, etc.) is yours. You retain ownership of all content created through your account. However, you grant us a limited license to host, display, and transmit that content as necessary to deliver the Service.</p>
+
+    <h2>8. Limitation of Liability</h2>
+
+    <p>To the maximum extent permitted by law:</p>
+    <ul>
+        <li>AutoHustle is provided on an "as is" and "as available" basis without warranties of any kind, whether express or implied</li>
+        <li>We do not warrant that the Service will be uninterrupted, error-free, or that any strategy will produce revenue</li>
+        <li>We are not liable for any indirect, incidental, special, consequential, or punitive damages, including lost profits, lost revenue, or lost data</li>
+        <li>Our total liability for any claim arising from the Service is limited to the amount you paid us in the 3 months preceding the claim</li>
+        <li>We are not responsible for losses resulting from cryptocurrency market volatility, third-party API failures, or content platform policy changes</li>
+    </ul>
+
+    <h2>9. Indemnification</h2>
+
+    <p>You agree to indemnify and hold harmless AutoHustle, its officers, employees, and agents from any claims, damages, losses, or expenses (including legal fees) arising from:</p>
+    <ul>
+        <li>Your use of the Service</li>
+        <li>Your violation of these Terms</li>
+        <li>Content created or published through your account</li>
+        <li>Your violation of any third-party rights</li>
+    </ul>
+
+    <h2>10. Termination</h2>
+
+    <p>We may suspend or terminate your access to the Service at any time if:</p>
+    <ul>
+        <li>You breach these Terms</li>
+        <li>Your payment fails and is not resolved within 7 days</li>
+        <li>We reasonably believe your use poses a security risk or could harm other users</li>
+        <li>We are required to do so by law</li>
+    </ul>
+
+    <p>You may terminate your account at any time by canceling your subscription and contacting <a href="mailto:support@autohustle.online">support@autohustle.online</a>.</p>
+
+    <p>Upon termination, all running strategies will be stopped, and your data will be handled as described in our <a href="/autohustle-content/privacy/">Privacy Policy</a>.</p>
+
+    <h2>11. Modifications to Terms</h2>
+
+    <p>We may modify these Terms at any time. If we make material changes, we will notify you via email or through the dashboard at least 30 days before the changes take effect. Continued use of the Service after changes take effect constitutes acceptance of the new Terms.</p>
+
+    <h2>12. Governing Law</h2>
+
+    <p>These Terms are governed by and construed in accordance with the laws of the United States. Any disputes arising from these Terms or the Service will be resolved through binding arbitration, except where prohibited by law.</p>
+
+    <h2>13. Contact Us</h2>
+
+    <p>If you have questions about these Terms of Service, contact us at:</p>
+
+    <div class="highlight-box">
+        <p><strong>AutoHustle</strong><br>
+        Email: <a href="mailto:support@autohustle.online">support@autohustle.online</a><br>
+        Website: <a href="https://autohustle.online">autohustle.online</a></p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">AutoHustle</div>
+                <p class="footer-desc">AI-powered autonomous revenue system. 13 strategies. 15+ LLM providers. One platform.</p>
+            </div>
+            <div>
+                <div class="footer-heading">Product</div>
+                <ul class="footer-links">
+                    <li><a href="/autohustle-content/autohustle-system/">How It Works</a></li>
+                    <li><a href="/autohustle-content/products/">Products</a></li>
+                    <li><a href="https://theartofsound.github.io/autohustle-tools/">Tools</a></li>
+                    <li><a href="https://hustle.autohustle.online/">SaaS Platform</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Resources</div>
+                <ul class="footer-links">
+                    <li><a href="/autohustle-content/blog/">Blog</a></li>
+                    <li><a href="/autohustle-content/autohustle-system/">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="footer-heading">Legal</div>
+                <ul class="footer-links">
+                    <li><a href="/autohustle-content/privacy/">Privacy Policy</a></li>
+                    <li><a href="/autohustle-content/terms/">Terms of Service</a></li>
+                    <li><a href="/autohustle-content/refund/">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 AutoHustle. All rights reserved.</span>
+            <span>Built with AI. Powered by ambition.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+</script>
+
+</body>
+</html>
