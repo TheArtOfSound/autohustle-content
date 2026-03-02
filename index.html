@@ -1027,6 +1027,72 @@
             background: var(--bg-secondary);
         }
 
+        /* Ecosystem strip */
+        .ecosystem {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .ecosystem-label {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-dim);
+            margin-bottom: 24px;
+        }
+        .ecosystem-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .eco-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 24px;
+            text-decoration: none;
+            transition: all 0.25s;
+            min-width: 260px;
+        }
+        .eco-card:hover {
+            border-color: var(--primary);
+            background: rgba(99,102,241,0.06);
+            transform: translateY(-2px);
+        }
+        .eco-icon {
+            font-size: 1.6rem;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(99,102,241,0.1);
+            flex-shrink: 0;
+        }
+        .eco-card h4 {
+            font-size: 0.92rem;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .eco-card p {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            margin: 0;
+        }
+        .eco-card .eco-url {
+            font-size: 0.7rem;
+            color: var(--primary);
+            font-family: monospace;
+            margin-top: 2px;
+        }
+
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -1482,6 +1548,47 @@
     </div>
 </section>
 
+<!-- ===== ECOSYSTEM ===== -->
+<section class="ecosystem">
+    <div class="container">
+        <div class="ecosystem-label">AutoHustle Ecosystem</div>
+        <div class="ecosystem-grid">
+            <a href="https://hustle.autohustle.online/" class="eco-card" target="_blank">
+                <div class="eco-icon">&#128640;</div>
+                <div>
+                    <h4>SaaS Dashboard</h4>
+                    <p>AI revenue platform &mdash; manage strategies, settings &amp; analytics</p>
+                    <div class="eco-url">hustle.autohustle.online</div>
+                </div>
+            </a>
+            <a href="https://bot.autohustle.online/" class="eco-card" target="_blank">
+                <div class="eco-icon">&#9889;</div>
+                <div>
+                    <h4>Vol Bot</h4>
+                    <p>Pump.fun volume bot &mdash; Solana memecoin volume generation engine</p>
+                    <div class="eco-url">bot.autohustle.online</div>
+                </div>
+            </a>
+            <a href="https://social.autohustle.online/" class="eco-card" target="_blank">
+                <div class="eco-icon">&#128242;</div>
+                <div>
+                    <h4>Social Hub</h4>
+                    <p>Social media automation &mdash; multi-platform posting &amp; growth</p>
+                    <div class="eco-url">social.autohustle.online</div>
+                </div>
+            </a>
+            <a href="https://theartofsound.github.io/autohustle-tools/" class="eco-card" target="_blank">
+                <div class="eco-icon">&#128295;</div>
+                <div>
+                    <h4>Free Tools</h4>
+                    <p>Free AI-powered micro tools &mdash; calculators, generators &amp; more</p>
+                    <div class="eco-url">autohustle-tools</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
     <div class="container">
@@ -1498,6 +1605,8 @@
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="https://theartofsound.github.io/autohustle-tools/">Tools</a></li>
                     <li><a href="https://hustle.autohustle.online/">SaaS Platform</a></li>
+                    <li><a href="https://bot.autohustle.online/">Vol Bot</a></li>
+                    <li><a href="https://social.autohustle.online/">Social Hub</a></li>
                 </ul>
             </div>
             <div>
