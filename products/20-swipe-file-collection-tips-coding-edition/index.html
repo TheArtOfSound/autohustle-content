@@ -55,116 +55,177 @@
 <h2>1. Error Handling Template</h2>
 <p><strong>Use case:</strong> When starting a new project to ensure robust error handling from the outset.</p>
 
-<p>Try-except blocks are fundamental in managing errors. Here's a basic template:</p>
-<p>```python</p>
+<p>Try-except blocks are fundamental in managing errors. A basic template looks like this:</p>
+<p>```</p>
 <p>try:</p>
-<h2>Code that might throw an exception</h2>
-<p>except Exception as e:</p>
+<h2>Code that might raise an exception</h2>
+<p>except ExceptionType as e:</p>
 <h2>Handle the exception</h2>
 <p>print(f"An error occurred: {e}")</p>
 <p>```</p>
+<p>Replace <code>ExceptionType</code> with the specific exception you're handling and adjust the handling code as needed.</p>
 
 <hr>
 
 <h2>2. Code Commenting Guidelines</h2>
-<p><strong>Use case:</strong> For maintaining clear, understandable codebases.</p>
+<p><strong>Use case:</strong> For maintaining readability and understanding of code by including clear, concise comments.</p>
 
-<p>Comments should explain why, not what. Example:</p>
+<p>Comments should explain why, not what. Use them to:</p>
+<ul>
+<li>Clarify complex logic</li>
+<li>Explain variables or functions with ambiguous names</li>
+<li>Note assumptions made in the code</li>
+</ul>
+<p>Example:</p>
 <p>```python</p>
-<h2>Calculate the area of a rectangle</h2>
-<h2>To understand the purpose of this function, consider the mathematical formula: area = length * width</h2>
+<h2>Calculate the area assuming the input is in square meters</h2>
 <p>def calculate_area(length, width):</p>
 <p>return length * width</p>
 <p>```</p>
 
 <hr>
 
-<h2>3. API Documentation Template</h2>
-<p><strong>Use case:</strong> When creating APIs to ensure users understand how to interact with them.</p>
+<h2>3. Project Structure Skeleton</h2>
+<p><strong>Use case:</strong> For organizing code in a logical and easily navigable manner.</p>
 
-<p>API endpoints should be clearly documented. For example:</p>
-<p>```markdown</p>
-<h3>GET /users</h3>
-<p>#### Description</p>
-<p>Retrieves a list of all users.</p>
+<p>A basic project structure might include:</p>
+<p>```</p>
+<p>project/</p>
+<p>│</p>
+<p>├── src/</p>
+<p>│   ├── main.py</p>
+<p>│   ├── utils/</p>
+<p>│   │   ├── __init__.py</p>
+<p>│   │   ├── helper_functions.py</p>
+<p>│   ├── models/</p>
+<p>│   │   ├── __init__.py</p>
+<p>│   │   ├── data_model.py</p>
+<p>│</p>
+<p>├── tests/</p>
+<p>│   ├── test_main.py</p>
+<p>│   ├── test_utils/</p>
+<p>│   │   ├── test_helper_functions.py</p>
+<p>│</p>
+<p>├── requirements.txt</p>
+<p>├── README.md</p>
+<p>```</p>
+<p>Adjust based on the project's specific needs.</p>
 
-<p>#### Parameters</p>
+<hr>
+
+<h2>4. Git Commit Message Template</h2>
+<p><strong>Use case:</strong> For writing clear, informative commit messages.</p>
+
+<p>Use the following template:</p>
+<p>```</p>
+<p>type(scope): brief description</p>
+
+<p>body</p>
+<p>```</p>
+<p>Where <code>type</code> is one of <code>feat</code>, <code>fix</code>, <code>docs</code>, <code>style</code>, <code>refactor</code>, <code>perf</code>, <code>test</code>, <code>build</code>, <code>ci</code>, <code>chore</code>, <code>revert</code>, and <code>scope</code> is optional. The <code>body</code> should provide more details if necessary.</p>
+
+<hr>
+
+<h2>5. API Documentation Example</h2>
+<p><strong>Use case:</strong> For documenting APIs to make them understandable and usable by others.</p>
+
+<p>API documentation should include:</p>
 <ul>
-<li><strong>limit</strong>: The number of users to return.</li>
-<li><strong>offset</strong>: The offset from where to start returning users.</li>
+<li>Endpoint URL</li>
+<li>HTTP Method</li>
+<li>Request Body (if applicable)</li>
+<li>Response Examples</li>
+</ul>
+<p>Example:</p>
+<p>```</p>
+<h3>GET /users</h3>
+<p>Retrieve a list of all users.</p>
+
+<p>#### Request</p>
+<ul>
+<li>Method: GET</li>
+<li>URL: /users</li>
+<li>Headers: Authorization: Bearer <token></li>
 </ul>
 
 <p>#### Response</p>
-<p>A JSON array of user objects.</p>
+<p>200 OK</p>
+<p>```json</p>
+<p>[</p>
+<p>{</p>
+<p>"id": 1,</p>
+<p>"name": "John Doe"</p>
+<p>}</p>
+<p>]</p>
 <p>```</p>
-
-<hr>
-
-<h2>4. Commit Message Guidelines</h2>
-<p><strong>Use case:</strong> For writing meaningful commit messages that follow a standard format.</p>
-
-<p>Use the imperative mood and keep it concise:</p>
-<p>```</p>
-<p>Fix bug in login functionality</p>
-<p>```</p>
-<p>Or for more complex changes:</p>
-<p>```</p>
-<p>Refactor database queries for performance improvement</p>
-
-<ul>
-<li>Changed query structure for better indexing</li>
-<li>Added comments for clarity</li>
-</ul>
-<p>```</p>
-
-<hr>
-
-<h2>5. Database Schema Design</h2>
-<p><strong>Use case:</strong> When designing a database to ensure it is scalable and efficient.</p>
-
-<p>Consider normalization and relationships:</p>
-<p>```sql</p>
-<p>CREATE TABLE users (</p>
-<p>id INT PRIMARY KEY,</p>
-<p>name VARCHAR(255),</p>
-<p>email VARCHAR(255) UNIQUE</p>
-<p>);</p>
-
-<p>CREATE TABLE posts (</p>
-<p>id INT PRIMARY KEY,</p>
-<p>title VARCHAR(255),</p>
-<p>content TEXT,</p>
-<p>user_id INT,</p>
-<p>FOREIGN KEY (user_id) REFERENCES users(id)</p>
-<p>);</p>
 <p>```</p>
 
 <hr>
 
 <h2>6. Code Review Checklist</h2>
-<p><strong>Use case:</strong> For conducting thorough code reviews.</p>
+<p><strong>Use case:</strong> For ensuring code quality and best practices during review.</p>
 
 <ol>
-<li><strong>Readability</strong>: Is the code easy to understand?</li>
-<li><strong>Performance</strong>: Does the code optimize resources?</li>
-<li><strong>Security</strong>: Are there potential security vulnerabilities?</li>
-<li><strong>Tests</strong>: Are there sufficient tests covering the code?</li>
+<li>Does the code follow the project's coding standards?</li>
+<li>Are there sufficient comments explaining the logic?</li>
+<li>Are functions/methods short and focused on a single task?</li>
+<li>Are there any potential security vulnerabilities?</li>
+<li>Are tests included for new functionality?</li>
 </ol>
 
 <hr>
 
-<h2>7. Unit Test Template</h2>
-<p><strong>Use case:</strong> When writing unit tests to ensure code reliability.</p>
+<h2>7. SQL Query Optimization Tips</h2>
+<p><strong>Use case:</strong> When database queries are impacting application performance.</p>
 
-<p>Structure tests with setup, execution, and assertion:</p>
+<ol>
+<li>Use indexes on columns used in WHERE and JOIN clauses.</li>
+<li>Limit result sets with LIMIT.</li>
+<li>Avoid SELECT *; instead, specify needed columns.</li>
+<li>Optimize queries with EXPLAIN.</li>
+</ol>
+
+<p>Example:</p>
+<p>```sql</p>
+<p>CREATE INDEX idx_name ON users (name);</p>
+<p>SELECT id, name FROM users WHERE name = 'John' LIMIT 10;</p>
+<p>```</p>
+
+<hr>
+
+<h2>8. Regular Expression Pattern Library</h2>
+<p><strong>Use case:</strong> For commonly used string matching and validation tasks.</p>
+
+<p>Example patterns:</p>
+<ul>
+<li>Email: <code>^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$</code></li>
+<li>Password (at least 8 characters, 1 uppercase, 1 lowercase, 1 number): <code>^(?=.<em>[a-z])(?=.</em>[A-Z])(?=.*\d).{8,}$</code></li>
+</ul>
+<p>Use in code like:</p>
+<p>```python</p>
+<p>import re</p>
+<p>if re.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$", email):</p>
+<p>print("Valid email")</p>
+<p>```</p>
+
+<hr>
+
+<h2>9. Testing Framework Setup</h2>
+<p><strong>Use case:</strong> For unit testing and integration testing of code.</p>
+
+<p>For Python using unittest:</p>
 <p>```python</p>
 <p>import unittest</p>
 
-<p>class TestCalculator(unittest.TestCase):</p>
+<p>def add(x, y):</p>
+<p>return x + y</p>
+
+<p>class TestAddFunction(unittest.TestCase):</p>
+
 <p>def test_add(self):</p>
-<p>calculator = Calculator()</p>
-<p>result = calculator.add(2, 2)</p>
-<p>self.assertEqual(result, 4)</p>
+<p>self.assertEqual(add(1, 2), 3)</p>
+<p>self.assertEqual(add(-1, 1), 0)</p>
+<p>self.assertEqual(add(-1, -1), -2)</p>
 
 <p>if __name__ == '__main__':</p>
 <p>unittest.main()</p>
@@ -172,14 +233,189 @@
 
 <hr>
 
-<h2>8. Continuous Integration Pipeline</h2>
-<p><strong>Use case:</strong> For automating build, test, and deployment processes.</p>
+<h2>10. Debugging Techniques Checklist</h2>
+<p><strong>Use case:</strong> For systematically identifying and fixing bugs in code.</p>
 
-<p>Example using Jenkins:</p>
+<ol>
+<li>Reproduce the bug consistently.</li>
+<li>Use print statements or a debugger to trace variable values.</li>
+<li>Check for off-by-one errors.</li>
+<li>Verify API calls and their responses.</li>
+<li>Test with different inputs and edge cases.</li>
+</ol>
+
+<hr>
+
+<h2>11. Secure Password Storage Guidelines</h2>
+<p><strong>Use case:</strong> To protect user passwords in databases.</p>
+
+<ol>
+<li>Use a secure hashing algorithm like bcrypt, Argon2, or PBKDF2.</li>
+<li>Salt each password uniquely.</li>
+<li>Store the salt and hashed password in the database.</li>
+</ol>
+<p>Example with bcrypt in Python:</p>
+<p>```python</p>
+<p>import bcrypt</p>
+
+<p>password = "mypassword".encode('utf-8')</p>
+<p>salt = bcrypt.gensalt()</p>
+<p>hashed_password = bcrypt.hashpw(password, salt)</p>
+<p>```</p>
+
+<hr>
+
+<h2>12. JavaScript Console Logging Tips</h2>
+<p><strong>Use case:</strong> For debugging JavaScript code in web applications.</p>
+
+<p>Use <code>console.log()</code> for basic logging. For more complex logging:</p>
+<ul>
+<li><code>console.error()</code> for errors</li>
+<li><code>console.warn()</code> for warnings</li>
+<li><code>console.table()</code> for tabular data</li>
+<li><code>console.time()</code> and <code>console.timeEnd()</code> for measuring execution time</li>
+</ul>
+
+<hr>
+
+<h2>13. Python Virtual Environment Setup</h2>
+<p><strong>Use case:</strong> For managing dependencies and isolating project environments.</p>
+
+<ol>
+<li>Install <code>virtualenv</code> or use <code>venv</code> (for Python 3.x).</li>
+<li>Create a new virtual environment: <code>python -m venv myenv</code></li>
+<li>Activate it: <code>myenv\Scripts\activate</code> (on Windows) or <code>source myenv/bin/activate</code> (on Unix)</li>
+<li>Install dependencies with pip.</li>
+</ol>
+
+<hr>
+
+<h2>14. CSS Reset Template</h2>
+<p><strong>Use case:</strong> For normalizing browser-specific styles in web development.</p>
+
+<p>Use a CSS reset like Normalize.css or create your own:</p>
+<p>```css</p>
+<ul>
+<li>{</li>
+</ul>
+<p>margin: 0;</p>
+<p>padding: 0;</p>
+<p>box-sizing: border-box;</p>
+<p>}</p>
+
+<p>body {</p>
+<p>font-family: Arial, sans-serif;</p>
+<p>line-height: 1.6;</p>
+<p>color: #333;</p>
+<p>background-color: #f4f4f4;</p>
+<p>}</p>
+<p>```</p>
+
+<hr>
+
+<h2>15. Accessibility Guidelines for Web Development</h2>
+<p><strong>Use case:</strong> For ensuring web applications are accessible to all users.</p>
+
+<ol>
+<li>Use semantic HTML for structure.</li>
+<li>Provide alt text for images.</li>
+<li>Ensure color contrast is sufficient.</li>
+<li>Make interactive elements keyboard-navigable.</li>
+<li>Use ARIA attributes for dynamic content.</li>
+</ol>
+
+<hr>
+
+<h2>16. Version Control Best Practices</h2>
+<p><strong>Use case:</strong> For effective management of code changes.</p>
+
+<ol>
+<li>Commit often with meaningful messages.</li>
+<li>Use feature branches for new development.</li>
+<li>Merge regularly to stay up-to-date.</li>
+<li>Use <code>git status</code> and <code>git diff</code> to review changes before committing.</li>
+<li>Consider using <code>git flow</code> for complex workflows.</li>
+</ol>
+
+<hr>
+
+<h2>17. JSON Data Validation Example</h2>
+<p><strong>Use case:</strong> For verifying the structure and content of JSON data.</p>
+
+<p>Use a schema validation library like jsonschema:</p>
+<p>```python</p>
+<p>import json</p>
+<p>from jsonschema import validate</p>
+
+<p>schema = {</p>
+<p>"type" : "object",</p>
+<p>"properties" : {</p>
+<p>"name" : {"type" : "string"},</p>
+<p>"age" : {"type" : "integer"}</p>
+<p>},</p>
+<p>"required": ["name", "age"]</p>
+<p>}</p>
+
+<p>data = {'name': 'John', 'age': 30}</p>
+<p>validate(instance=data, schema=schema)</p>
+<p>```</p>
+
+<hr>
+
+<h2>18. XML Parsing Techniques</h2>
+<p><strong>Use case:</strong> For reading and processing XML data in applications.</p>
+
+<p>Use a parsing library like <code>xml.etree.ElementTree</code> in Python:</p>
+<p>```python</p>
+<p>import xml.etree.ElementTree as ET</p>
+
+<p>data = '''</p>
+<p><person></p>
+<p><name>John</name></p>
+<p><age>30</age></p>
+<p></person></p>
+<p>'''</p>
+
+<p>root = ET.fromstring(data)</p>
+<p>print(root.find('name').text)  # Outputs: John</p>
+<p>```</p>
+
+<hr>
+
+<h2>19. Responsive Web Design Patterns</h2>
+<p><strong>Use case:</strong> For creating web pages that adapt to different screen sizes and devices.</p>
+
+<ol>
+<li>Use the meta viewport tag: <code><meta name="viewport" content="width=device-width, initial-scale=1.0"></code></li>
+<li>Apply CSS media queries for different breakpoints.</li>
+<li>Use flexible grids and images.</li>
+</ol>
+<p>Example:</p>
+<p>```css</p>
+<p>@media only screen and (max-width: 600px) {</p>
+<p>body {</p>
+<p>background-color: lightblue;</p>
+<p>}</p>
+<p>}</p>
+<p>```</p>
+
+<hr>
+
+<h2>20. Continuous Integration/Continuous Deployment (CI/CD) Pipeline Template</h2>
+<p><strong>Use case:</strong> For automating testing, building, and deployment of software.</p>
+
+<p>A basic pipeline might include:</p>
+<ol>
+<li>Clone the repository.</li>
+<li>Install dependencies.</li>
+<li>Run unit tests and integration tests.</li>
+<li>Build the application.</li>
+<li>Deploy to a staging or production environment.</li>
+</ol>
+<p>Example with Jenkinsfile (Groovy):</p>
 <p>```groovy</p>
 <p>pipeline {</p>
 <p>agent any</p>
-
 <p>stages {</p>
 <p>stage('Build') {</p>
 <p>steps {</p>
@@ -200,462 +436,213 @@
 <p>}</p>
 <p>```</p>
 
+<h2>6. Debugging Mindset Reminder</h2>
+<p><strong>Use case:</strong> When overwhelmed during a complex debugging session</p>
+
+<p>Take a breath. Isolate the problem. Reproduce it. Check assumptions. Read the error message. Verify inputs. Use logging or a debugger. Break it down. You've solved harder things before.</p>
+
 <hr>
 
-<h2>9. Security Audit Checklist</h2>
-<p><strong>Use case:</strong> For identifying potential security vulnerabilities.</p>
+<h2>7. Code Review Request Template</h2>
+<p><strong>Use case:</strong> Before submitting pull requests for team review</p>
 
+<p>Hi team,</p>
+
+<p>I’ve implemented [brief feature/fix] in this PR. Key changes:</p>
+<ul>
+<li>[Change 1: e.g., Refactored user auth flow to use JWT middleware]</li>
+<li>[Change 2: e.g., Added input validation for /api/v1/profile]</li>
+<li>[Change 3: e.g., Fixed race condition in session cleanup]</li>
+</ul>
+
+<p>Tested:</p>
+<p>✅ Locally with [test suite/manual steps]</p>
+<p>✅ Edge case: [describe one edge case handled]</p>
+
+<p>Looking for feedback on:</p>
+<ul>
+<li>[Specific concern, e.g., error handling pattern]</li>
+<li>[Another concern, e.g., scalability of approach]</li>
+</ul>
+
+<p>Thanks!</p>
+
+<hr>
+
+<h2>8. Production Incident Update Script</h2>
+<p><strong>Use case:</strong> Communicating status during an ongoing outage</p>
+
+<p>We’re currently investigating an issue affecting [service/feature]. Initial data shows [symptom, e.g., elevated 5xx errors from API gateway]. Our team is actively engaged, rolling back the last deployment as a precaution. No user data is at risk. Updates will follow every 15 minutes until resolved.</p>
+
+<hr>
+
+<h2>9. Refactoring Justification Note</h2>
+<p><strong>Use case:</strong> Explaining technical debt cleanup to non-technical stakeholders</p>
+
+<p>This refactoring reduces future bug risk and speeds up feature delivery. Current code is tightly coupled, making changes to [X] likely to break [Y]. By restructuring now, we cut estimated time for upcoming [Feature Z] by ~40% and improve system stability.</p>
+
+<hr>
+
+<h2>10. Pair Programming Kickoff Prompt</h2>
+<p><strong>Use case:</strong> Starting a productive pairing session</p>
+
+<p>Let’s sync on goals:</p>
 <ol>
-<li><strong>Input Validation</strong>: Are all inputs validated and sanitized?</li>
-<li><strong>Authentication</strong>: Is user authentication secure and properly implemented?</li>
-<li><strong>Authorization</strong>: Are access controls in place and enforced?</li>
-<li><strong>Data Encryption</strong>: Is sensitive data encrypted both in transit and at rest?</li>
+<li>What are we trying to achieve today?</li>
+<li>Who’s driving first?</li>
+<li>Any known blockers or edge cases?</li>
+<li>How will we know we’re done?</li>
 </ol>
+<p>Let’s keep communication open and switch roles every 25 minutes.</p>
 
 <hr>
 
-<h2>10. Logging Best Practices</h2>
-<p><strong>Use case:</strong> For implementing effective logging in applications.</p>
+<h2>11. API Error Response Template</h2>
+<p><strong>Use case:</strong> Designing consistent backend error payloads</p>
 
-<p>Log levels should be used appropriately:</p>
-<p>```python</p>
-<p>import logging</p>
-
-<p>logging.debug('This is a debug message')</p>
-<p>logging.info('This is an info message')</p>
-<p>logging.warning('This is a warning message')</p>
-<p>logging.error('This is an error message')</p>
-<p>logging.critical('This is a critical message')</p>
+<p>```json</p>
+<p>{</p>
+<p>"error": {</p>
+<p>"code": "VALIDATION_ERROR",</p>
+<p>"message": "Email address is invalid.",</p>
+<p>"details": [</p>
+<p>{</p>
+<p>"field": "email",</p>
+<p>"issue": "invalid_format",</p>
+<p>"value": "user@invalid"</p>
+<p>}</p>
+<p>],</p>
+<p>"timestamp": "2024-04-05T12:34:56Z",</p>
+<p>"requestId": "req-abc123"</p>
+<p>}</p>
+<p>}</p>
 <p>```</p>
 
 <hr>
 
-<h2>11. Code Refactoring Guidelines</h2>
-<p><strong>Use case:</strong> When improving code quality and readability.</p>
+<h2>12. Onboarding Task List for New Devs</h2>
+<p><strong>Use case:</strong> First-day setup and orientation</p>
 
-<ol>
-<li><strong>Simplify Conditional Statements</strong>: Reduce nesting and complexity.</li>
-<li><strong>Extract Methods</strong>: Break down long methods into smaller, focused ones.</li>
-<li><strong>Remove Duplicate Code</strong>: Extract common logic into reusable functions.</li>
-</ol>
+<p>✅ Clone and build the main repo</p>
+<p>✅ Set up local .env and database</p>
+<p>✅ Run the test suite (all pass)</p>
+<p>✅ Deploy to staging via CI/CD</p>
+<p>✅ Make a “Hello World” API endpoint and test it</p>
+<p>✅ Attend architecture overview meeting</p>
+<p>✅ Review codebase conventions doc</p>
 
 <hr>
 
-<h2>12. RESTful API Design</h2>
-<p><strong>Use case:</strong> For designing RESTful APIs that are intuitive and follow standards.</p>
+<h2>13. Commit Message Template</h2>
+<p><strong>Use case:</strong> Writing clear, standardized git commits</p>
 
-<p>Use HTTP methods correctly:</p>
+<p>feat(auth): add OAuth2 support for Google login</p>
 <ul>
-<li><strong>GET</strong>: Retrieve a resource</li>
-<li><strong>POST</strong>: Create a new resource</li>
-<li><strong>PUT</strong>: Update an existing resource</li>
-<li><strong>DELETE</strong>: Delete a resource</li>
+<li>Implement Google Passport strategy</li>
+<li>Add /auth/google and callback routes</li>
+<li>Store provider ID in user meta</li>
+<li>Update docs/Auth.md</li>
 </ul>
 
-<hr>
-
-<h2>13. Git Branching Strategy</h2>
-<p><strong>Use case:</strong> For managing different versions of codebases efficiently.</p>
-
-<p>Use feature branches for new developments:</p>
-<p>```bash</p>
-<p>git checkout -b feature/new-login-system</p>
-<p>```</p>
-<p>And release branches for preparing new releases:</p>
-<p>```bash</p>
-<p>git checkout -b release/v1.2</p>
-<p>```</p>
+<p>Fixes #1245</p>
 
 <hr>
 
-<h2>14. Database Backup Script</h2>
-<p><strong>Use case:</strong> For regularly backing up databases to prevent data loss.</p>
+<h2>14. Interview Coding Problem Prompt</h2>
+<p><strong>Use case:</strong> Assessing candidate problem-solving skills</p>
 
-<p>Example using MySQL:</p>
-<p>```bash</p>
-<p>mysqldump -u [username] -p[password] [database_name] > backup.sql</p>
-<p>```</p>
+<p>Write a function <code>groupAnagrams(words)</code> that takes an array of strings and returns an array of arrays, grouping words that are anagrams of each other. Optimize for time complexity. Include test cases.</p>
 
-<hr>
-
-<h2>15. Load Balancing Configuration</h2>
-<p><strong>Use case:</strong> For distributing traffic across multiple servers to improve responsiveness and reliability.</p>
-
-<p>Example using HAProxy:</p>
-<p>```bash</p>
-<p>frontend http</p>
-<p>bind *:80</p>
-
-<p>default_backend nodes</p>
-
-<p>backend nodes</p>
-<p>mode http</p>
-<p>balance roundrobin</p>
-<p>option httpchk GET /healthcheck</p>
-<p>server node1 192.168.1.1:80 check</p>
-<p>server node2 192.168.1.2:80 check</p>
-<p>```</p>
+<p>Example:</p>
+<p><code>groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])</code></p>
+<p>→ <code>[["eat","tea","ate"],["tan","nat"],["bat"]]</code></p>
 
 <hr>
 
-<h2>16. Monitoring and Alerting Tools</h2>
-<p><strong>Use case:</strong> For keeping track of application performance and receiving notifications for issues.</p>
+<h2>15. Tech Debt Backlog Entry</h2>
+<p><strong>Use case:</strong> Logging technical debt for future tracking</p>
 
-<p>Tools like Prometheus and Grafana can monitor metrics and alert on anomalies:</p>
-<p>```yml</p>
-<p>alert: InstanceDown</p>
-<p>expr: up == 0</p>
-<p>for: 5m</p>
-<p>labels:</p>
-<p>severity: critical</p>
-<p>annotations:</p>
-<p>summary: "Instance {{ $labels.instance }} is down"</p>
-<p>```</p>
+<p><strong>Title:</strong> Migrate legacy user session storage from Redis to DynamoDB</p>
+<p><strong>Impact:</strong> Current setup limits horizontal scaling and increases failover latency</p>
+<p><strong>Root cause:</strong> Built before global table support existed</p>
+<p><strong>Effort:</strong> ~3 sprints</p>
+<p><strong>Risk if unaddressed:</strong> Increasing downtime during peak load</p>
+<p><strong>Link to ticket:</strong> TECHDEBT-88</p>
 
 <hr>
 
-<h2>17. Deployment Script</h2>
-<p><strong>Use case:</strong> For automating the deployment of applications to production environments.</p>
+<h2>16. Sprint Retrospective Prompt</h2>
+<p><strong>Use case:</strong> Guiding team reflection at end of sprint</p>
 
-<p>Example using Ansible:</p>
-<p>```yml</p>
-<hr>
+<p>Let’s reflect:</p>
 <ul>
-<li>name: Deploy Application</li>
+<li>What went well this sprint?</li>
+<li>What slowed us down?</li>
+<li>Did we meet our Definition of Done consistently?</li>
+<li>One thing to start, stop, continue doing?</li>
 </ul>
-<p>hosts: production</p>
-<p>become: yes</p>
-
-<p>tasks:</p>
-<ul>
-<li>name: Update repository</li>
-</ul>
-<p>git:</p>
-<p>repo: https://github.com/user/repository.git</p>
-<p>dest: /path/to/deploy</p>
-<ul>
-<li>name: Restart service</li>
-</ul>
-<p>service:</p>
-<p>name: myservice</p>
-<p>state: restarted</p>
-<p>```</p>
+<p>Keep it blameless. Focus on process, not people.</p>
 
 <hr>
 
-<h2>18. Coding Standards Document</h2>
-<p><strong>Use case:</strong> For establishing a common coding style across a project or organization.</p>
+<h2>17. Security Audit Request Template</h2>
+<p><strong>Use case:</strong> Submitting code for formal security review</p>
 
-<p>Include guidelines for naming conventions, indentation, and commenting:</p>
-<p>```markdown</p>
-<h3>Naming Conventions</h3>
+<p><strong>Project:</strong> Payment Processing Module v2</p>
+<p><strong>Changes:</strong> Added new webhook listener for third-party processor</p>
+<p><strong>Sensitive data handled:</strong> Payment tokens, user billing info</p>
+<p><strong>Auth mechanisms:</strong> HMAC-signed payloads, IP allowlist</p>
+<p><strong>Dependencies added:</strong> stripe@14.2.0, joi@17.9.0</p>
+<p><strong>Request:</strong> Full penetration test and dependency scan by SecOps</p>
+
+<hr>
+
+<h2>18. Documentation Update Snippet</h2>
+<p><strong>Use case:</strong> Adding a new endpoint to API docs</p>
+
+<h3><code>POST /v1/invoices/generate</code></h3>
+<p>Generates a PDF invoice from line items.</p>
+
+<p><strong>Request Body</strong></p>
+<p>```json</p>
+<p>{</p>
+<p>"customerId": "cust_123",</p>
+<p>"lineItems": [</p>
+<p>{ "desc": "Service fee", "amount": 99.99, "qty": 1 }</p>
+<p>]</p>
+<p>}</p>
+<p>```</p>
+
+<p><strong>Responses</strong></p>
 <ul>
-<li>Use camelCase for variable and function names.</li>
-<li>Use PascalCase for class names.</li>
+<li><code>201</code>: Returns <code>{ "invoiceId": "inv_456", "pdfUrl": "..." }</code></li>
+<li><code>400</code>: Validation error</li>
+<li><code>500</code>: Generation failed</li>
 </ul>
 
-<h3>Indentation</h3>
+<p>Requires <code>invoices:write</code> scope.</p>
+
+<hr>
+
+<h2>19. Dependency Upgrade Justification</h2>
+<p><strong>Use case:</strong> Proposing a critical library update</p>
+
+<p>Upgrading <code>axios</code> from v0.21.4 to v1.6.0 to resolve CVE-2023-45857 (high severity), which enables SSRF attacks via malformed URLs. New version also includes performance improvements and TypeScript support. All existing tests pass; no breaking changes in our usage pattern.</p>
+
+<hr>
+
+<h2>20. Exit Interview Feedback Script</h2>
+<p><strong>Use case:</strong> Capturing honest feedback from departing developers</p>
+
+<p>Thank you for your time and contributions. To help us improve:</p>
 <ul>
-<li>Use 4 spaces for each level of indentation.</li>
+<li>What did we do well as an engineering team?</li>
+<li>What slowed you down day-to-day?</li>
+<li>Was technical onboarding effective?</li>
+<li>How could leadership better support engineers?</li>
+<li>Any suggestions for tooling, processes, or culture?</li>
 </ul>
-<p>```</p>
-
-<hr>
-
-<h2>19. Project Management Template</h2>
-<p><strong>Use case:</strong> For planning and tracking progress in software development projects.</p>
-
-<p>Include sections for project description, goals, timelines, and resource allocation:</p>
-<p>```markdown</p>
-<h3>Project Description</h3>
-<p>Brief overview of the project.</p>
-
-<h3>Goals</h3>
-<p>List of specific objectives.</p>
-
-<h3>Timelines</h3>
-<p>Gantt chart or calendar view of milestones and deadlines.</p>
-
-<h3>Resource Allocation</h3>
-<p>Table of team members and their roles.</p>
-<p>```</p>
-
-<hr>
-
-<h2>20. Technical Debt Tracking</h2>
-<p><strong>Use case:</strong> For identifying, prioritizing, and managing technical debt in codebases.</p>
-
-<p>Use a spreadsheet or tool to track items:</p>
-<p>| Item | Description | Priority | Estimated Effort |</p>
-<p>|------|-------------|----------|------------------|</p>
-<p>| Refactor login module | Improve security and performance | High | 3 days |</p>
-
-<h2>5. Error Handling in Code</h2>
-<p><strong>Use case:</strong> When writing robust and reliable code to handle potential errors and exceptions.</p>
-
-<p>Try-catch blocks are essential for handling errors in code. For example, in Python, you can use:</p>
-<p>```</p>
-<p>try:</p>
-<h2>code that may raise an error</h2>
-<p>except Exception as e:</p>
-<h2>handle the error</h2>
-<p>print(f"An error occurred: {e}")</p>
-<p>```</p>
-<p>This ensures your program doesn't crash when an error occurs, providing a better user experience.</p>
-
-<hr>
-
-<h2>6. Code Comments for Clarity</h2>
-<p><strong>Use case:</strong> When writing code that needs to be understood by others or yourself in the future.</p>
-
-<p>Using clear and concise comments in your code can significantly improve readability. For instance, in JavaScript:</p>
-<p>```javascript</p>
-<p>// Calculate the area of a rectangle</p>
-<p>function calculateArea(width, height) {</p>
-<p>// Return the product of width and height</p>
-<p>return width * height;</p>
-<p>}</p>
-<p>```</p>
-<p>This helps other developers understand the purpose and functionality of your code.</p>
-
-<hr>
-
-<h2>7. Efficient Data Structures</h2>
-<p><strong>Use case:</strong> When dealing with large datasets and performance is critical.</p>
-
-<p>Choosing the right data structure can greatly impact the efficiency of your code. For example, using a hash table (dictionary) in Python for fast lookups:</p>
-<p>```python</p>
-<h2>Create a dictionary for fast lookups</h2>
-<p>data = {"key1": "value1", "key2": "value2"}</p>
-<h2>Lookup a value by key</h2>
-<p>value = data.get("key1")</p>
-<p>```</p>
-<p>This reduces the time complexity of lookups from O(n) to O(1), significantly improving performance.</p>
-
-<hr>
-
-<h2>8. Secure Password Storage</h2>
-<p><strong>Use case:</strong> When storing user passwords securely to protect against unauthorized access.</p>
-
-<p>Storing passwords securely is crucial for protecting user data. For instance, using bcrypt in Python to hash and store passwords:</p>
-<p>```python</p>
-<p>import bcrypt</p>
-<h2>Hash a password</h2>
-<p>hashed_password = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())</p>
-<h2>Verify a password</h2>
-<p>if bcrypt.checkpw(password.encode("utf-8"), hashed_password):</p>
-<p>print("Password is valid")</p>
-<p>```</p>
-<p>This ensures passwords are stored securely and reduces the risk of password breaches.</p>
-
-<hr>
-
-<h2>9. API Request Handling</h2>
-<p><strong>Use case:</strong> When making API requests to external services and handling responses.</p>
-
-<p>Handling API requests and responses can be challenging. For example, using the <code>requests</code> library in Python to make a GET request:</p>
-<p>```python</p>
-<p>import requests</p>
-<h2>Make a GET request</h2>
-<p>response = requests.get("https://api.example.com/data")</p>
-<h2>Check if the request was successful</h2>
-<p>if response.status_code == 200:</p>
-<h2>Parse the response data</h2>
-<p>data = response.json()</p>
-<p>```</p>
-<p>This simplifies the process of making API requests and handling responses.</p>
-
-<hr>
-
-<h2>10. Code Refactoring for Readability</h2>
-<p><strong>Use case:</strong> When improving the readability and maintainability of existing code.</p>
-
-<p>Refactoring code can make it more readable and maintainable. For instance, simplifying a complex conditional statement in JavaScript:</p>
-<p>```javascript</p>
-<p>// Before refactoring</p>
-<p>if (x > 5 && y < 10 || z === 0) {</p>
-<p>// code</p>
-<p>}</p>
-<p>// After refactoring</p>
-<p>const isValid = x > 5 && y < 10 || z === 0;</p>
-<p>if (isValid) {</p>
-<p>// code</p>
-<p>}</p>
-<p>```</p>
-<p>This improves the readability of the code and reduces complexity.</p>
-
-<hr>
-
-<h2>11. Testing for Edge Cases</h2>
-<p><strong>Use case:</strong> When writing tests to ensure code handles unexpected input and edge cases.</p>
-
-<p>Testing for edge cases is crucial for ensuring code reliability. For example, using Pytest in Python to test a function with edge cases:</p>
-<p>```python</p>
-<p>import pytest</p>
-<p>def test_function():</p>
-<h2>Test with valid input</h2>
-<p>assert function(5) == 10</p>
-<h2>Test with invalid input</h2>
-<p>with pytest.raises(ValueError):</p>
-<p>function(-1)</p>
-<p>```</p>
-<p>This ensures the code handles unexpected input and edge cases correctly.</p>
-
-<hr>
-
-<h2>12. Code Organization with Modules</h2>
-<p><strong>Use case:</strong> When organizing large codebases into manageable and reusable modules.</p>
-
-<p>Organizing code into modules can improve maintainability and reusability. For instance, creating a separate module for utility functions in Python:</p>
-<p>```python</p>
-<h2>utilities.py</h2>
-<p>def calculate_area(width, height):</p>
-<p>return width * height</p>
-<h2>main.py</h2>
-<p>import utilities</p>
-<p>area = utilities.calculate_area(5, 10)</p>
-<p>```</p>
-<p>This simplifies code organization and promotes reusability.</p>
-
-<hr>
-
-<h2>13. Handling Asynchronous Code</h2>
-<p><strong>Use case:</strong> When working with asynchronous code and ensuring correct execution order.</p>
-
-<p>Handling asynchronous code can be challenging. For example, using async/await in JavaScript to handle asynchronous operations:</p>
-<p>```javascript</p>
-<p>async function fetchData() {</p>
-<p>// Fetch data asynchronously</p>
-<p>const data = await fetch("https://api.example.com/data");</p>
-<p>// Process the data</p>
-<p>console.log(data);</p>
-<p>}</p>
-<p>```</p>
-<p>This ensures correct execution order and simplifies asynchronous code handling.</p>
-
-<hr>
-
-<h2>14. Implementing Caching Mechanisms</h2>
-<p><strong>Use case:</strong> When improving performance by reducing repeated computations or database queries.</p>
-
-<p>Implementing caching mechanisms can significantly improve performance. For instance, using a cache library in Python to store frequently accessed data:</p>
-<p>```python</p>
-<p>import cache</p>
-<h2>Cache a function result</h2>
-<p>@cache.memoize</p>
-<p>def expensive_computation(x):</p>
-<h2>Simulate an expensive computation</h2>
-<p>return x * x</p>
-<p>```</p>
-<p>This reduces the number of repeated computations and improves performance.</p>
-
-<hr>
-
-<h2>15. Logging and Debugging Techniques</h2>
-<p><strong>Use case:</strong> When identifying and fixing issues in code using logging and debugging techniques.</p>
-
-<p>Logging and debugging are essential for identifying and fixing issues. For example, using the <code>logging</code> module in Python to log errors:</p>
-<p>```python</p>
-<p>import logging</p>
-<p>try:</p>
-<h2>Code that may raise an error</h2>
-<p>x = 5 / 0</p>
-<p>except ZeroDivisionError:</p>
-<h2>Log the error</h2>
-<p>logging.error("Division by zero occurred")</p>
-<p>```</p>
-<p>This helps identify and fix issues in the code.</p>
-
-<hr>
-
-<h2>16. Security Best Practices for Code</h2>
-<p><strong>Use case:</strong> When ensuring code security and protecting against common vulnerabilities.</p>
-
-<p>Following security best practices is crucial for protecting code against vulnerabilities. For instance, validating user input in Python to prevent SQL injection:</p>
-<p>```python</p>
-<p>import sqlite3</p>
-<h2>Validate user input</h2>
-<p>username = input("Enter username: ")</p>
-<h2>Use parameterized queries to prevent SQL injection</h2>
-<p>cursor.execute("SELECT * FROM users WHERE username = ?", (username,))</p>
-<p>```</p>
-<p>This prevents common vulnerabilities and ensures code security.</p>
-
-<hr>
-
-<h2>17. Code Review and Pair Programming</h2>
-<p><strong>Use case:</strong> When improving code quality and knowledge sharing through code reviews and pair programming.</p>
-
-<p>Code reviews and pair programming can improve code quality and knowledge sharing. For example, using a code review tool to review and discuss code changes:</p>
-<p>```python</p>
-<h2>Code review comment</h2>
-<h2>This function can be simplified using a list comprehension</h2>
-<p>def calculate_areas(rectangles):</p>
-<p>return [rectangle["width"] * rectangle["height"] for rectangle in rectangles]</p>
-<p>```</p>
-<p>This promotes knowledge sharing and improves code quality.</p>
-
-<hr>
-
-<h2>18. Continuous Integration and Deployment</h2>
-<p><strong>Use case:</strong> When automating testing, building, and deployment of code to ensure reliability and efficiency.</p>
-
-<p>Continuous integration and deployment (CI/CD) can improve code reliability and efficiency. For instance, using a CI/CD tool like Jenkins to automate testing and deployment:</p>
-<p>```python</p>
-<h2>Jenkinsfile</h2>
-<p>pipeline {</p>
-<p>agent any</p>
-<p>stages {</p>
-<p>stage("Build") {</p>
-<p>steps {</p>
-<p>// Build the code</p>
-<p>sh "make build"</p>
-<p>}</p>
-<p>}</p>
-<p>stage("Test") {</p>
-<p>steps {</p>
-<p>// Run tests</p>
-<p>sh "make test"</p>
-<p>}</p>
-<p>}</p>
-<p>stage("Deploy") {</p>
-<p>steps {</p>
-<p>// Deploy the code</p>
-<p>sh "make deploy"</p>
-<p>}</p>
-<p>}</p>
-<p>}</p>
-<p>}</p>
-<p>```</p>
-<p>This automates the testing, building, and deployment process, ensuring reliability and efficiency.</p>
-
-<hr>
-
-<h2>19. Code Metrics and Analysis</h2>
-<p><strong>Use case:</strong> When measuring and analyzing code quality, complexity, and maintainability.</p>
-
-<p>Code metrics and analysis can help measure and improve code quality. For example, using a code analysis tool like SonarQube to measure code complexity and coverage:</p>
-<p>```python</p>
-<h2>SonarQube report</h2>
-<h2>Code coverage: 80%</h2>
-<h2>Code complexity: 10</h2>
-<h2>Bugs: 5</h2>
-<h2>Vulnerabilities: 2</h2>
-<p>```</p>
-<p>This provides insights into code quality and helps identify areas for improvement.</p>
-
-<hr>
-
-<h2>20. Staying Up-to-Date with Industry Trends</h2>
-<p><strong>Use case:</strong> When staying current with the latest technologies, frameworks, and best practices in the industry.</p>
-
-<p>Staying up-to-date with industry trends is essential for professional growth and code quality. For instance, following industry leaders and blogs to stay informed about the latest developments:</p>
-<p>```python</p>
-<h2>Industry trend report</h2>
-<h2>Top 5 programming languages: Python, JavaScript, Java, C++, C#</h2>
-<h2>Emerging trends: AI, machine learning, cloud computing, cybersecurity</h2>
-<p>```</p>
-<p>This helps stay current with the latest technologies and best practices, ensuring code quality and relevance.</p>
+<p>All feedback is confidential and appreciated.</p>
     </article>
     <div style="background:linear-gradient(135deg,#13151d,#1a1d28);border:2px solid #6366f1;border-radius:12px;padding:28px;margin:40px 0;text-align:center;">
         <p style="color:#6366f1;font-weight:700;font-size:0.85em;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">RECOMMENDED FOR YOU</p>
