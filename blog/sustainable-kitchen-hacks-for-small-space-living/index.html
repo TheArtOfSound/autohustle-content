@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2300ff88'/%3E%3Cstop offset='100%25' stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='%230a0a14'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='800' font-size='20' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E">
     <meta name="theme-color" content="#0a0a14">
-    <meta name="description" content="For those living in tiny homes or apartments, kitchen space is precious. Here are 4 hacks to maximize your kitchen: 1) Use a wall-mounted spice rack to fre...">
+    <meta name="description" content="Maximize your tiny kitchen with these 4 eco-friendly tips: 1) Use a wall-mounted pot rack to free up cabinet space. 2) Invest in a compact, energy-efficien...">
     <link rel="canonical" href="https://theartofsound.github.io/autohustle-content/blog/sustainable-kitchen-hacks-for-small-space-living/">
     <meta property="og:title" content="Sustainable Kitchen Hacks for Small Space Living">
-    <meta property="og:description" content="For those living in tiny homes or apartments, kitchen space is precious. Here are 4 hacks to maximize your kitchen: 1) Use a wall-mounted spice rack to fre...">
+    <meta property="og:description" content="Maximize your tiny kitchen with these 4 eco-friendly tips: 1) Use a wall-mounted pot rack to free up cabinet space. 2) Invest in a compact, energy-efficien...">
     <meta property="og:url" content="https://theartofsound.github.io/autohustle-content/blog/sustainable-kitchen-hacks-for-small-space-living/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="AutoHustle">
@@ -184,9 +184,9 @@
     
     <div class="post-body">
         <h1>Sustainable Kitchen Hacks for Small Space Living</h1>
-        <p class="date">Published: March 04, 2026</p>
-        <div class="tags"><span class="tag">kitchenhacks</span><span class="tag">smallspaceliving</span></div>
-        <p>For those living in tiny homes or apartments, kitchen space is precious. Here are 4 hacks to maximize your kitchen: 1) Use a wall-mounted spice rack to free up counter space. 2) Invest in a collapsible kitchen cart for extra storage. 3) Utilize the space above your cabinets with stackable baskets. 4) Opt for multi-functional appliances like a toaster oven that can also air fry.</p>
+        <p class="date">Published: March 05, 2026</p>
+        <div class="tags"><span class="tag">sustainability</span><span class="tag">smallspaces</span><span class="tag">kitchengadgets</span></div>
+        <p>Maximize your tiny kitchen with these 4 eco-friendly tips: 1) Use a wall-mounted pot rack to free up cabinet space. 2) Invest in a compact, energy-efficient slow cooker. 3) Utilize a foldable kitchen cart for extra counter space. 4) Repurpose old jars for storage and organization.</p>
 
         <div class="skill-box">
             <p style="margin:0 0 10px;font-weight:700;color:#166534;font-size:1em;">Related Products</p>
@@ -246,4 +246,11 @@
     </script>
     <script>
 (function(){
-    var obs = new IntersectionObserver(function(entr
+    var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+})();
+</script>
+</body>
+</html>
