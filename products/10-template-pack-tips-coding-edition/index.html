@@ -52,539 +52,812 @@
 
 <hr>
 
-<h2>Template 1: Project Setup Checklist</h2>
-<p><strong>When to use:</strong> At the beginning of a new project to ensure all necessary components are accounted for.</p>
+<h2>Template 1: Basic HTML5 Page Structure</h2>
+<p><strong>When to use:</strong> Creating a new web page from scratch</p>
 
-<p>```markdown</p>
-<h2>Project Setup Checklist</h2>
+<p>```</p>
+<p><!DOCTYPE html></p>
+<p><html lang="[LANGUAGE)"></p>
+<p><head></p>
+<p><meta charset="[CHARSET]"></p>
+<p><meta name="viewport" content="width=[WIDTH], initial-scale=[SCALE]"></p>
+<p><title>[TITLE]</title></p>
+<p><link rel="stylesheet" href="[STYLESHEET_URL]"></p>
+<p></head></p>
+<p><body></p>
+<p><header>[HEADER_CONTENT]</header></p>
+<p><main>[MAIN_CONTENT]</main></p>
+<p><footer>[FOOTER_CONTENT]</footer></p>
+<p><script src="[SCRIPT_URL]"></script></p>
+<p></body></p>
+<p></html></p>
+<p>```</p>
 
-<h2>Project Basics</h2>
+<h2>Template 2: Responsive Navigation Menu</h2>
+<p><strong>When to use:</strong> Building a navigation menu that adapts to different screen sizes</p>
+
+<p>```</p>
+<p><nav></p>
+<p><ul></p>
+<p><li><a href="[LINK1_URL]">[LINK1_TEXT]</a></li></p>
+<p><li><a href="[LINK2_URL]">[LINK2_TEXT]</a></li></p>
+<p><li><a href="[LINK3_URL]">[LINK3_TEXT]</a></li></p>
+<p></ul></p>
+<p><button class="menu-toggle" onclick="[TOGGLE_FUNCTION]">[TOGGLE_TEXT]</button></p>
+<p><style></p>
+<p>@media only screen and (max-width: [MAX_WIDTH]) {</p>
+<p>/<em> [ADDITIONAL_STYLES] </em>/</p>
+<p>}</p>
+<p></style></p>
+<p></nav></p>
+<p>```</p>
+
+<h2>Template 3: JavaScript Modal Window</h2>
+<p><strong>When to use:</strong> Creating a modal window for displaying important information</p>
+
+<p>```</p>
+<p><!-- Modal structure --></p>
+<p><div id="[MODAL_ID]" class="modal"></p>
+<p><div class="modal-content"></p>
+<p><span class="close">&times;</span></p>
+<p><p>[MODAL_CONTENT]</p></p>
+<p></div></p>
+<p></div></p>
+
+<p><!-- Modal script --></p>
+<p><script></p>
+<p>var modal = document.getElementById("[MODAL_ID]");</p>
+<p>var span = document.getElementsByClassName("close")[0];</p>
+<p>span.onclick = function() {</p>
+<p>modal.style.display = "none";</p>
+<p>}</p>
+<p>window.onclick = function(event) {</p>
+<p>if (event.target == modal) {</p>
+<p>modal.style.display = "none";</p>
+<p>}</p>
+<p>}</p>
+<p></script></p>
+<p>```</p>
+
+<h2>Template 4: CSS Grid Layout</h2>
+<p><strong>When to use:</strong> Building a responsive grid-based layout</p>
+
+<p>```</p>
+<p><style></p>
+<p>.grid-container {</p>
+<p>display: grid;</p>
+<p>grid-template-columns: repeat([COLUMNS], [COLUMN_WIDTH]);</p>
+<p>grid-gap: [GAP_SIZE];</p>
+<p>}</p>
+<p>.grid-item {</p>
+<p>background-color: [BACKGROUND_COLOR];</p>
+<p>padding: [PADDING];</p>
+<p>}</p>
+<p></style></p>
+<p><div class="grid-container"></p>
+<p><div class="grid-item">[GRID_ITEM1]</div></p>
+<p><div class="grid-item">[GRID_ITEM2]</div></p>
+<p><div class="grid-item">[GRID_ITEM3]</div></p>
+<p></div></p>
+<p>```</p>
+
+<h2>Template 5: PHP Database Connection</h2>
+<p><strong>When to use:</strong> Establishing a connection to a MySQL database using PHP</p>
+
+<p>```</p>
+<p><?php</p>
+<p>$servername = "[SERVERNAME]";</p>
+<p>$username = "[USERNAME]";</p>
+<p>$password = "[PASSWORD]";</p>
+<p>$dbname = "[DBNAME}";</p>
+
+<p>$conn = new mysqli($servername, $username, $password, $dbname);</p>
+
+<p>if ($conn->connect_error) {</p>
+<p>die("Connection failed: " . $conn->connect_error);</p>
+<p>}</p>
+<p>echo "Connected successfully";</p>
+<p>$conn->close();</p>
+<p>?></p>
+<p>```</p>
+
+<h2>Template 6: Python Data Analysis Script</h2>
+<p><strong>When to use:</strong> Analyzing data using the Pandas library in Python</p>
+
+<p>```</p>
+<p>import pandas as pd</p>
+
+<h2>Load data</h2>
+<p>data = pd.read_csv("[DATA_FILE]")</p>
+
+<h2>Perform analysis</h2>
+<p>[ANALYSIS_CODE]</p>
+
+<h2>Print results</h2>
+<p>print("[RESULTS]")</p>
+<p>```</p>
+
+<h2>Template 7: React Component</h2>
+<p><strong>When to use:</strong> Building a reusable React component</p>
+
+<p>```</p>
+<p>import React from 'react';</p>
+
+<p>function <a href="props" target="_blank" rel="nofollow noopener">ComponentName</a> {</p>
+<p>return (</p>
+<p><div></p>
+<p><h1>[HEADING]</h1></p>
+<p><p>[PARAGRAPH]</p></p>
+<p></div></p>
+<p>);</p>
+<p>}</p>
+
+<p>export default [ComponentName];</p>
+<p>```</p>
+
+<h2>Template 8: Angular Service</h2>
+<p><strong>When to use:</strong> Creating a reusable service in an Angular application</p>
+
+<p>```</p>
+<p>import { Injectable } from '@angular/core';</p>
+
+<p>@Injectable({</p>
+<p>providedIn: 'root'</p>
+<p>})</p>
+<p>export class [ServiceName] {</p>
+
+<p>constructor() { }</p>
+
+<p>[FUNCTION_NAME](): [RETURN_TYPE] {</p>
+<p>// [FUNCTION_BODY]</p>
+<p>}</p>
+
+<p>}</p>
+<p>```</p>
+
+<h2>Template 1: [Code Review Request Template]</h2>
+<p><strong>When to use:</strong> When submitting a pull request and requesting feedback from team members</p>
+
+<p>```</p>
+<p>Subject: Code Review Request: [Feature/Bugfix Name] – [PR # or Link]</p>
+
+<p>Hi [Team Member Name(s)],</p>
+
+<p>I’ve completed the implementation for [brief description of feature/fix, e.g., "user profile validation"] and would appreciate your review when you have time.</p>
+
+<p><strong>Summary:</strong></p>
 <ul>
-<li>[ ] Project Name: [PROJECT_NAME]</li>
-<li>[ ] Description: [PROJECT_DESCRIPTION]</li>
-<li>[ ] Start Date: [START_DATE]</li>
-<li>[ ] Deadline: [DEADLINE]</li>
-<li>[ ] Team Members: [TEAM_MEMBERS]</li>
+<li>Purpose: [Explain the goal of the changes]</li>
+<li>Changes: [List key files/functions modified]</li>
+<li>Testing: [Describe testing completed – unit, integration, manual]</li>
+<li>Dependencies: [List any required updates or related PRs]</li>
 </ul>
 
-<h2>Repository Setup</h2>
-<ul>
-<li>[ ] Repository Created: [REPO_URL]</li>
-<li>[ ] README.md Created: [README_URL]</li>
-<li>[ ] License Added: [LICENSE_TYPE]</li>
-<li>[ ] Git Ignore File: [GIT_IGNORE_FILE]</li>
-</ul>
+<p>PR Link: [Insert PR URL]</p>
+<p>Branch: [branch-name]</p>
 
-<h2>Development Environment</h2>
-<ul>
-<li>[ ] Programming Languages: [LANGUAGES]</li>
-<li>[ ] Frameworks: [FRAMEWORKS]</li>
-<li>[ ] Dependencies: [DEPENDENCIES]</li>
-<li>[ ] Development Tools: [TOOLS]</li>
-</ul>
+<p>Please let me know if you have any feedback or suggestions. I’d like to merge by [target date/time] if all looks good.</p>
 
-<h2>Project Management</h2>
-<ul>
-<li>[ ] Project Management Tool: [TOOL_NAME]</li>
-<li>[ ] Task Breakdown: [TASK_LIST_URL]</li>
-<li>[ ] Milestones: [MILESTONES]</li>
-</ul>
-
-<h2>Communication</h2>
-<ul>
-<li>[ ] Communication Channel: [CHANNEL_NAME]</li>
-<li>[ ] Meeting Schedule: [MEETING_SCHEDULE]</li>
-</ul>
+<p>Thanks,</p>
+<p>[Your Name]</p>
 <p>```</p>
 
 <hr>
 
-<h2>Template 2: Code Review Request</h2>
-<p><strong>When to use:</strong> When you need to request a code review from your team members.</p>
+<h2>Template 2: [Bug Report for Development Team]</h2>
+<p><strong>When to use:</strong> When documenting a reproducible bug for your engineering team</p>
 
-<p>```markdown</p>
-<h2>Code Review Request</h2>
+<p>```</p>
+<p><strong>Bug Title:</strong> [Brief descriptive title, e.g., "Login fails with 500 error when password contains special characters"]</p>
 
-<h2>Basic Information</h2>
+<p><strong>Environment:</strong></p>
 <ul>
-<li><strong>Requester:</strong> [YOUR_NAME]</li>
-<li><strong>Date:</strong> [DATE]</li>
-<li><strong>Branch:</strong> [BRANCH_NAME]</li>
-<li><strong>Related Ticket:</strong> [TICKET_NUMBER]</li>
+<li>Environment: [e.g., Staging, Production, Local]</li>
+<li>Browser/OS: [e.g., Chrome 125 / macOS Sonoma]</li>
+<li>Version: [App or service version, e.g., v2.3.1]</li>
 </ul>
 
-<h2>Description</h2>
-<p>[DESCRIPTION_OF_CHANGES]</p>
+<p><strong>Steps to Reproduce:</strong></p>
+<ol>
+<li>[Step 1]</li>
+<li>[Step 2]</li>
+<li>[Step 3]</li>
+</ol>
 
-<h2>Changes Made</h2>
+<p><strong>Expected Behavior:</strong></p>
+<p>[Describe what should happen]</p>
+
+<p><strong>Actual Behavior:</strong></p>
+<p>[Describe what actually happens, including error messages]</p>
+
+<p><strong>Evidence:</strong></p>
 <ul>
-<li>[ ] [CHANGE_1]</li>
-<li>[ ] [CHANGE_2]</li>
-<li>[ ] [CHANGE_3]</li>
+<li>Screenshot: [Attach or link]</li>
+<li>Console/Error Logs: [Paste relevant log snippet]</li>
+<li>Network Request: [Include failed request payload/response if applicable]</li>
 </ul>
 
-<h2>Testing</h2>
-<ul>
-<li>[ ] [TEST_1]</li>
-<li>[ ] [TEST_2]</li>
-<li>[ ] [TEST_3]</li>
-</ul>
-
-<h2>Reviewers</h2>
-<ul>
-<li>[ ] [REVIEWER_1]</li>
-<li>[ ] [REVIEWER_2]</li>
-<li>[ ] [REVIEWER_3]</li>
-</ul>
+<p><strong>Priority:</strong> [Low / Medium / High / Critical]</p>
+<p><strong>Reported By:</strong> [Your Name]</p>
+<p><strong>Date:</strong> [YYYY-MM-DD]</p>
 <p>```</p>
 
 <hr>
 
-<h2>Template 3: Bug Report</h2>
-<p><strong>When to use:</strong> When you encounter a bug that needs to be documented and addressed.</p>
+<h2>Template 3: [Technical Design Document (TDD) Outline]</h2>
+<p><strong>When to use:</strong> When proposing a new feature or system architecture change</p>
 
-<p>```markdown</p>
-<h2>Bug Report</h2>
+<p>```</p>
+<h2>Technical Design: [Feature/System Name]</h2>
 
-<h2>Bug ID: [BUG_ID]</h2>
+<h2>1. Overview</h2>
+<ul>
+<li>Purpose: [Describe the problem or goal]</li>
+<li>Stakeholders: [List teams/individuals involved]</li>
+</ul>
+
+<h2>2. Requirements</h2>
+<ul>
+<li>Functional:</li>
+<li>[Requirement 1]</li>
+<li>[Requirement 2]</li>
+<li>Non-Functional:</li>
+<li>[e.g., Performance, Security, Scalability]</li>
+</ul>
+
+<h2>3. Proposed Solution</h2>
+<ul>
+<li>High-Level Design: [Describe approach, e.g., "Add new microservice using Node.js and Kafka"]</li>
+<li>Data Flow: [Diagram or step-by-step flow description]</li>
+<li>Key Components:</li>
+<li>[Component 1]: [Role]</li>
+<li>[Component 2]: [Role]</li>
+</ul>
+
+<h2>4. Alternatives Considered</h2>
+<ul>
+<li>Option 1: [Description] – [Pros/Cons]</li>
+<li>Option 2: [Description] – [Pros/Cons]</li>
+</ul>
+
+<h2>5. Risks & Mitigations</h2>
+<ul>
+<li>[Risk 1]: [Mitigation plan]</li>
+<li>[Risk 2]: [Mitigation plan]</li>
+</ul>
+
+<h2>6. Testing Strategy</h2>
+<ul>
+<li>Unit Tests: [Coverage plan]</li>
+<li>Integration Tests: [Key scenarios]</li>
+<li>Load Testing: [If applicable]</li>
+</ul>
+
+<h2>7. Rollout Plan</h2>
+<ul>
+<li>Phase 1: [e.g., Canary release to 5% users]</li>
+<li>Phase 2: [Full rollout]</li>
+<li>Rollback Plan: [Steps to revert if needed]</li>
+</ul>
+
+<h2>8. Open Questions</h2>
+<ul>
+<li>[Question 1]</li>
+<li>[Question 2]</li>
+</ul>
+
+<p>Prepared by: [Your Name]</p>
+<p>Date: [YYYY-MM-DD]</p>
+<p>```</p>
+
+<hr>
+
+<h2>Template 4: [On-Call Incident Postmortem]</h2>
+<p><strong>When to use:</strong> After resolving a production incident requiring post-incident analysis</p>
+
+<p>```</p>
+<h2>Incident Postmortem: [Incident Title]</h2>
+
+<p><strong>Date:</strong> [YYYY-MM-DD]</p>
+<p><strong>Incident ID:</strong> [e.g., INC-2024-056]</p>
+<p><strong>Severity:</strong> [P0 / P1 / P2]</p>
+<p><strong>Lead:</strong> [Name of incident commander]</p>
 
 <h2>Summary</h2>
-<p>[SUMMARY_OF_BUG]</p>
+<p>[Brief 2-3 sentence overview of the incident, e.g., "API service degraded for 45 minutes due to database connection exhaustion."]</p>
 
-<h2>Steps to Reproduce</h2>
-<ol>
-<li>[STEP_1]</li>
-<li>[STEP_2]</li>
-<li>[STEP_3]</li>
-</ol>
-
-<h2>Expected Behavior</h2>
-<p>[EXPECTED_BEHAVIOR]</p>
-
-<h2>Actual Behavior</h2>
-<p>[ACTUAL_BEHAVIOR]</p>
-
-<h2>Environment</h2>
+<h2>Timeline (UTC)</h2>
 <ul>
-<li><strong>OS:</strong> [OS_VERSION]</li>
-<li><strong>Browser:</strong> [BROWSER_VERSION]</li>
-<li><strong>Device:</strong> [DEVICE_TYPE]</li>
+<li>[HH:MM]: [Event, e.g., "Alert triggered for high error rate"]</li>
+<li>[HH:MM]: [Action taken, e.g., "On-call engineer paged"]</li>
+<li>[HH:MM]: [Root cause identified]</li>
+<li>[HH:MM]: [Fix deployed / service restored]</li>
 </ul>
 
-<h2>Severity</h2>
+<h2>Root Cause</h2>
+<p>[Clear technical explanation of what failed, e.g., "Connection pool size not scaled with traffic; max connections reached."]</p>
+
+<h2>Impact</h2>
 <ul>
-<li>[ ] Low</li>
-<li>[ ] Medium</li>
-<li>[ ] High</li>
-<li>[ ] Critical</li>
+<li>Duration: [e.g., 45 minutes]</li>
+<li>Affected Services: [List]</li>
+<li>User Impact: [e.g., "Login failures for 15% of users"]</li>
 </ul>
 
-<h2>Additional Information</h2>
-<p>[ADDITIONAL_INFO]</p>
+<h2>Corrective Actions</h2>
+<p>| Action | Owner | Due Date | Status |</p>
+<p>|--------|-------|----------|--------|</p>
+<p>| [e.g., Increase DB connection pool] | [Name] | [YYYY-MM-DD] | [Pending/Completed] |</p>
+<p>| [Implement auto-scaling for pool] | [Name] | [YYYY-MM-DD] | [Pending] |</p>
+
+<p><strong>Lessons Learned:</strong></p>
+<ul>
+<li>[What went well]</li>
+<li>[What could be improved]</li>
+</ul>
+
+<p>Reported by: [Your Name]</p>
 <p>```</p>
 
 <hr>
 
-<h2>Template 4: Meeting Agenda</h2>
-<p><strong>When to use:</strong> Before a meeting to outline the topics that will be discussed.</p>
+<h2>Template 5: [Feature Launch Announcement – Internal]</h2>
+<p><strong>When to use:</strong> To inform internal teams (e.g., QA, Product, Support) about a new feature launch</p>
 
-<p>```markdown</p>
-<h2>Meeting Agenda</h2>
+<p>```</p>
+<p>Subject: Launch Announcement: [Feature Name] – Live on [Date]</p>
 
-<h2>Meeting Details</h2>
+<p>Hi [Team Name],</p>
+
+<p>The [Feature Name] is scheduled to go live on [Launch Date] at [Time] [Timezone]. This email outlines what's launching and how it may affect your team.</p>
+
+<h2>What’s New</h2>
 <ul>
-<li><strong>Date:</strong> [DATE]</li>
-<li><strong>Time:</strong> [TIME]</li>
-<li><strong>Location:</strong> [LOCATION]</li>
-<li><strong>Facilitator:</strong> [FACILITATOR_NAME]</li>
+<li>[Feature summary, e.g., "Real-time chat integration in dashboard"]</li>
+<li>Key Benefits: [e.g., "Reduces support ticket volume by enabling in-app assistance"]</li>
 </ul>
 
-<h2>Attendees</h2>
+<h2>Technical Details</h2>
 <ul>
-<li>[ ] [ATTENDEE_1]</li>
-<li>[ ] [ATTENDEE_2]</li>
-<li>[ ] [ATTENDEE_3]</li>
+<li>Endpoint(s): [e.g., POST /api/v1/chat/start]</li>
+<li>UI Changes: [e.g., "Chat icon in top-right corner"]</li>
+<li>Data Impact: [e.g., "New messages table in analytics DB"]</li>
 </ul>
 
-<h2>Agenda Items</h2>
-<ol>
-<li>[ITEM_1]</li>
-<li>[ITEM_2]</li>
-<li>[ITEM_3]</li>
-</ol>
+<h2>Rollout Plan</h2>
+<ul>
+<li>Canary: [e.g., "10% of users starting at 10:00 AM"]</li>
+<li>Full Release: [e.g., "12:00 PM if no issues"]</li>
+<li>Rollback: [e.g., "Feature flag toggle available"]</li>
+</ul>
+
+<h2>Support Resources</h2>
+<ul>
+<li>Documentation: [Link to internal docs]</li>
+<li>Known Issues:</li>
+<li>[Issue 1, if any]</li>
+<li>Contact: [Name/Slack channel for urgent questions]</li>
+</ul>
+
+<p>Please review and prepare accordingly.</p>
+
+<p>Best,</p>
+<p>[Your Name]</p>
+<p>[Role, e.g., Lead Engineer]</p>
+<p>```</p>
+
+<hr>
+
+<h2>Template 6: [Pair Programming Session Summary]</h2>
+<p><strong>When to use:</strong> After a collaborative coding session to document outcomes and next steps</p>
+
+<p>```</p>
+<h2>Pair Programming Summary: [Session Topic]</h2>
+
+<p><strong>Date:</strong> [YYYY-MM-DD]</p>
+<p><strong>Participants:</strong> [Name 1], [Name 2]</p>
+<p><strong>Duration:</strong> [e.g., 90 minutes]</p>
+
+<h2>Objective</h2>
+<p>[Original goal, e.g., "Refactor legacy payment service to improve testability"]</p>
+
+<h2>Work Completed</h2>
+<ul>
+<li>[Task 1, e.g., "Extracted PaymentProcessor into interface"]</li>
+<li>[Task 2, e.g., "Wrote unit tests for new processor logic"]</li>
+<li>[Task 3, e.g., "Updated DI configuration in AppModule"]</li>
+</ul>
+
+<h2>Code Changes</h2>
+<ul>
+<li>Branch: [branch-name]</li>
+<li>PR Created: [Yes/No] – [PR # or link if available]</li>
+<li>Key Files Modified:</li>
+<li>[file/path/service.ts]</li>
+<li>[file/path/tests.spec.ts]</li>
+</ul>
+
+<h2>Challenges Faced</h2>
+<ul>
+<li>[e.g., "Legacy code had tight coupling with external API"]</li>
+<li>[e.g., "Test environment timeouts"]</li>
+</ul>
+
+<h2>Decisions Made</h2>
+<ul>
+<li>[e.g., "Will mock third-party API in unit tests"]</li>
+<li>[e.g., "Agreed on naming convention: I[ServiceName]"]</li>
+</ul>
+
+<h2>Next Steps</h2>
+<ul>
+<li>[ ] [Task, e.g., "Complete integration tests"] – Owner: [Name]</li>
+<li>[ ] [Task, e.g., "Request review from backend team"] – Owner: [Name]</li>
+</ul>
+
+<h2>Feedback</h2>
+<ul>
+<li>[What worked well]</li>
+<li>[Suggestions for next session]</li>
+</ul>
+
+<p>Prepared by: [Your Name]</p>
+<p>```</p>
+
+<hr>
+
+<h2>Template 7: [API Specification Template – OpenAPI Draft]</h2>
+<p><strong>When to use:</strong> When defining a new REST API endpoint for team review</p>
+
+<p>```</p>
+<h2>API Specification: [Endpoint Name]</h2>
+
+<p><strong>Version:</strong> [e.g., v1.0]</p>
+<p><strong>Author:</strong> [Your Name]</p>
+<p><strong>Last Updated:</strong> [YYYY-MM-DD]</p>
+
+<h2>Endpoint</h2>
+<p><code>[HTTP METHOD] /api/[version]/[resource-path]</code></p>
+<p><strong>Summary:</strong> [e.g., "Retrieve user profile data"]</p>
+
+<h2>Request</h2>
+<h3>Headers</h3>
+<ul>
+<li>Authorization: Bearer [token]</li>
+<li>Content-Type: application/json</li>
+</ul>
+
+<h3>Path Parameters</h3>
+<p>| Name | Type | Required | Description |</p>
+<p>|------|------|----------|-------------|</p>
+<p>| [userId] | string | yes | Unique ID of the user |</p>
+
+<h3>Query Parameters</h3>
+<p>| Name | Type | Required | Description |</p>
+<p>|------|------|----------|-------------|</p>
+<p>| [fields] | string | no | Comma-separated list of fields to return |</p>
+
+<h3>Body (if applicable)</h3>
+<p>```json</p>
+<p>{</p>
+<p>"[field]": "[value]",</p>
+<p>"[nested]": {</p>
+<p>"[subfield]": "[value]"</p>
+<p>}</p>
+<p>}</p>
+<p>```</p>
+
+<h2>Response</h2>
+<h3>200 OK</h3>
+<p>```json</p>
+<p>{</p>
+<p>"status": "success",</p>
+<p>"data": {</p>
+<p>"id": "[userId]",</p>
+<p>"name": "[User Name]",</p>
+<p>"email": "[User Email]"</p>
+<p>}</p>
+<p>}</p>
+<p>```</p>
+
+<h3>400 Bad Request</h3>
+<p>```json</p>
+<p>{</p>
+<p>"status": "error",</p>
+<p>"code": "invalid_input",</p>
+<p>"message": "[Description]"</p>
+<p>}</p>
+<p>```</p>
+
+<h3>404 Not Found</h3>
+<p>[Describe when this occurs]</p>
+
+<h2>Authentication</h2>
+<p>[OAuth2 / API Key / JWT – specify method]</p>
+
+<h2>Rate Limiting</h2>
+<p>[Requests per minute: e.g., 100]</p>
 
 <h2>Notes</h2>
 <ul>
-<li>[NOTE_1]</li>
-<li>[NOTE_2]</li>
-<li>[NOTE_3]</li>
+<li>[e.g., "Caches response for 5 minutes"]</li>
+<li>[e.g., "Logs all access for audit"]</li>
 </ul>
 <p>```</p>
 
 <hr>
 
-<h2>Template 5: Technical Documentation</h2>
-<p><strong>When to use:</strong> When creating documentation for a new feature, module, or system.</p>
+<h2>Template 8: [Engineering Status Update – Weekly]</h2>
+<p><strong>When to use:</strong> For regular team or stakeholder updates on project progress</p>
 
-<p>```markdown</p>
-<h2>[DOCUMENT_TITLE]</h2>
+<p>```</p>
+<h2>Weekly Engineering Update – [Week of YYYY-MM-DD]</h2>
 
-<h2>Overview</h2>
-<p>[OVERVIEW_OF_DOCUMENT]</p>
+<p><strong>Team:</strong> [Team Name]</p>
+<p><strong>Prepared by:</strong> [Your Name]</p>
 
-<h2>Table of Contents</h2>
-<ol>
-<li>[SECTION_1]</li>
-<li>[SECTION_2]</li>
-<li>[SECTION_3]</li>
-</ol>
-
-<h2>Introduction</h2>
-<p>[INTRODUCTION_CONTENT]</p>
-
-<h2>Installation</h2>
-<p>[INSTALLATION_INSTRUCTIONS]</p>
-
-<h2>Configuration</h2>
-<p>[CONFIGURATION_INSTRUCTIONS]</p>
-
-<h2>Usage</h2>
-<p>[USAGE_INSTRUCTIONS]</p>
-
-<h2>API Reference</h2>
-<p>[API_REFERENCE_CONTENT]</p>
-
-<h2>Examples</h2>
-<p>[EXAMPLE_CODE]</p>
-
-<h2>Troubleshooting</h2>
-<p>[TROUBLESHOOTING_GUIDE]</p>
-
-<h2>FAQs</h2>
+<h2>This Week’s Progress</h2>
+<p>✅ Completed:</p>
 <ul>
-<li>[ ] [FAQ_1]</li>
-<li>[ ] [FAQ_2]</li>
-<li>[ ] [FAQ_3]</li>
+<li>[Feature/Task 1, e.g., "Migrated user auth to OAuth2"]</li>
+<li>[Feature/Task 2, e.g., "Fixed race condition in order processing"]</li>
+<li>[Feature/Task 3, e.g., "Deployed v1.8.0 to production"]</li>
 </ul>
+
+<p>🔄 In Progress:</p>
+<ul>
+<li>[Task 1, e.g., "Implementing audit logging – 70% done"]</li>
+<li>[Task 2, e.g., "Refactoring database layer – PR open"]</li>
+</ul>
+
+<h2>Blockers & Challenges</h2>
+<ul>
+<li>[e.g., "Waiting on third-party API documentation"]</li>
+<li>[e.g., "Performance bottleneck in image upload service"]</li>
+</ul>
+
+<h2>Next Week’s Priorities</h2>
+<ul>
+<li>[Priority 1, e.g., "Complete audit logging integration"]</li>
+<li>[Priority 2, e.g., "Begin load testing for new endpoint"]</li>
+<li>[Priority 3, e.g., "Review TDD for search upgrade"]</li>
+</ul>
+
+<h2>Metrics & Observability</h2>
+<ul>
+<li>Uptime: [e.g., 99.98%]</li>
+<li>Avg. Response Time: [e.g., 120ms]</li>
+<li>Error Rate: [e.g., 0.02%]</li>
+<li>Deployments: [e.g., 3 successful]</li>
+</ul>
+
+<h2>Shoutouts</h2>
+<ul>
+<li>[Name]: [Recognition, e.g., "Led incident response with clarity"]</li>
+<li>[Name]: [e.g., "Improved test coverage by 15%"]</li>
+</ul>
+
+<p>Let me know if you’d like more detail on any item.</p>
+
+<p>Best,</p>
+<p>[Your Name]</p>
 <p>```</p>
 
-<hr>
+<h2>Template 4: Bug Report Template</h2>
+<p><strong>When to use:</strong> When reporting bugs or issues in the code to the development team.</p>
 
-<h2>Template 6: Deployment Checklist</h2>
-<p><strong>When to use:</strong> Before deploying a new version of your application to ensure all steps are completed.</p>
+<p>Subject: Bug Report - [PROJECT_NAME]</p>
 
-<p>```markdown</p>
-<h2>Deployment Checklist</h2>
+<p>Dear [DEVELOPMENT_TEAM],</p>
 
-<h2>Pre-Deployment</h2>
+<p>I am writing to report a bug in [PROJECT_NAME] that I encountered on [DATE]. The bug is described below:</p>
+
 <ul>
-<li>[ ] Code Review Completed</li>
-<li>[ ] Tests Passed</li>
-<li>[ ] Documentation Updated</li>
-<li>[ ] Backup Created</li>
-</ul>
-
-<h2>Deployment Steps</h2>
-<ul>
-<li>[ ] Update Version Number</li>
-<li>[ ] Build Application</li>
-<li>[ ] Deploy to Staging Environment</li>
-<li>[ ] Run Smoke Tests</li>
-<li>[ ] Deploy to Production Environment</li>
-</ul>
-
-<h2>Post-Deployment</h2>
-<ul>
-<li>[ ] Verify Deployment</li>
-<li>[ ] Notify Team</li>
-<li>[ ] Monitor Application</li>
-<li>[ ] Update Project Management Tool</li>
-</ul>
-<p>```</p>
-
-<hr>
-
-<h2>Template 7: Pull Request Template</h2>
-<p><strong>When to use:</strong> When creating a pull request to merge changes into the main branch.</p>
-
-<p>```markdown</p>
-<h2>Pull Request</h2>
-
-<h2>Description</h2>
-<p>[DESCRIPTION_OF_CHANGES]</p>
-
-<h2>Related Issues</h2>
-<ul>
-<li>[ ] [ISSUE_1]</li>
-<li>[ ] [ISSUE_2]</li>
-<li>[ ] [ISSUE_3]</li>
-</ul>
-
-<h2>Changes Made</h2>
-<ul>
-<li>[ ] [CHANGE_1]</li>
-<li>[ ] [CHANGE_2]</li>
-<li>[ ] [CHANGE_3]</li>
-</ul>
-
-<h2>Testing</h2>
-<ul>
-<li>[ ] [TEST_1]</li>
-<li>[ ] [TEST_2]</li>
-<li>[ ] [TEST_3]</li>
-</ul>
-
-<h2>Reviewers</h2>
-<ul>
-<li>[ ] [REVIEWER_1]</li>
-<li>[ ] [REVIEWER_2]</li>
-<li>[ ] [REVIEWER_3]</li>
-</ul>
-<p>```</p>
-
-<hr>
-
-<h2>Template 8: Retrospective Meeting Template</h2>
-<p><strong>When to use:</strong> After completing a project or sprint to reflect on what went well and what could be improved.</p>
-
-<p>```markdown</p>
-<h2>Retrospective Meeting</h2>
-
-<h2>Meeting Details</h2>
-<ul>
-<li><strong>Date:</strong> [DATE]</li>
-<li><strong>Time:</strong> [TIME]</li>
-<li><strong>Location:</strong> [LOCATION]</li>
-<li><strong>Facilitator:</strong> [FACILITATOR_NAME]</li>
-</ul>
-
-<h2>Attendees</h2>
-<ul>
-<li>[ ] [ATTENDEE_1]</li>
-<li>[ ] [ATTENDEE_2]</li>
-<li>[ ] [ATTENDEE_3]</li>
-</ul>
-
-<h2>Agenda</h2>
-<ol>
-<li>[ITEM_1]</li>
-<li>[ITEM_2]</li>
-<li>[ITEM_3]</li>
-</ol>
-
-<h2>What Went Well</h2>
-<ul>
-<li>[ ] [ITEM_1]</li>
-<li>[ ] [ITEM_2]</li>
-<li>[ ] [ITEM_3]</li>
-</ul>
-
-<h2>What Could Be Improved</h2>
-<ul>
-<li>[ ] [ITEM_1]</li>
-<li>[ ] [ITEM_2]</li>
-<li>[ ] [ITEM_3]</li>
-</ul>
-
-<h2>Action Items</h2>
-<ul>
-<li>[ ] [ACTION_ITEM_1]</li>
-<li>[ ] [ACTION_ITEM_2]</li>
-<li>[ ] [ACTION_ITEM_3]</li>
-</ul>
-
-<h2>Notes</h2>
-<ul>
-<li>[NOTE_1]</li>
-<li>[NOTE_2]</li>
-<li>[NOTE_3]</li>
-</ul>
-<p>```</p>
-
-<h2>Template 4: Project Initialization Document</h2>
-<p><strong>When to use:</strong> When starting a new coding project to outline the scope, goals, and initial setup.</p>
-
-<p>Project Initialization Document</p>
-<p>===============================</p>
-<p>Project Name: [PROJECT_NAME]</p>
-<p>Project Description: [PROJECT_DESCRIPTION]</p>
-<p>Project Goals:</p>
-<ul>
-<li>[GOAL_1]</li>
-<li>[GOAL_2]</li>
-<li>[GOAL_3]</li>
-</ul>
-
-<p>Project Scope:</p>
-<p>[PROJECT_SCOPE]</p>
-
-<p>Initial Setup Requirements:</p>
-<ul>
-<li>Operating System: [OPERATING_SYSTEM]</li>
-<li>Programming Languages: [PROGRAMMING_LANGUAGES]</li>
-<li>Required Tools: [REQUIRED_TOOLS]</li>
-</ul>
-
-<hr>
-
-<h2>Template 5: Code Review Checklist</h2>
-<p><strong>When to use:</strong> During code reviews to ensure consistency and quality in the codebase.</p>
-
-<p>Code Review Checklist</p>
-<p>======================</p>
-<p>Project Name: [PROJECT_NAME]</p>
-<p>File/Module Name: [FILE_MODULE_NAME]</p>
-<p>Reviewer: [REVIEWER_NAME]</p>
-<p>Date: [DATE]</p>
-
-<h3>Code Quality</h3>
-<ol>
-<li>Does the code follow the project's coding standards? [YES/NO]</li>
-<li>Are there any syntax errors? [YES/NO]</li>
-<li>Are variable names descriptive? [YES/NO]</li>
-</ol>
-
-<h3>Functionality</h3>
-<ol>
-<li>Does the code achieve its intended purpose? [YES/NO]</li>
-<li>Are there any logical errors? [YES/NO]</li>
-<li>Are inputs validated properly? [YES/NO]</li>
-</ol>
-
-<h3>Security</h3>
-<ol>
-<li>Are there any potential security vulnerabilities? [YES/NO]</li>
-<li>Is user input sanitized? [YES/NO]</li>
-<li>Are passwords stored securely? [YES/NO]</li>
-</ol>
-
-<hr>
-
-<h2>Template 6: Bug Report Template</h2>
-<p><strong>When to use:</strong> When reporting bugs or issues found in the code to ensure clear and concise communication.</p>
-
-<p>Bug Report Template</p>
-<p>====================</p>
-<p>Project Name: [PROJECT_NAME]</p>
-<p>Bug Description: [BUG_DESCRIPTION]</p>
-<p>Steps to Reproduce:</p>
-<ol>
-<li>[STEP_1]</li>
-<li>[STEP_2]</li>
-<li>[STEP_3]</li>
-</ol>
-
-<p>Expected Result: [EXPECTED_RESULT]</p>
-<p>Actual Result: [ACTUAL_RESULT]</p>
-
-<p>Error Messages: [ERROR_MESSAGES]</p>
-<p>System Information:</p>
-<ul>
-<li>Operating System: [OPERATING_SYSTEM]</li>
-<li>Browser/Environment: [BROWSER_ENVIRONMENT]</li>
+<li>Bug Description: [BUG_DESCRIPTION]</li>
+<li>Steps to Reproduce: [STEPS_TO_REPRODUCE]</li>
+<li>Expected Result: [EXPECTED_RESULT]</li>
+<li>Actual Result: [ACTUAL_RESULT]</li>
+<li>Error Message: [ERROR_MESSAGE]</li>
+<li>Browser/OS: [BROWSER_OS]</li>
 <li>Version: [VERSION]</li>
 </ul>
 
+<p>Please let me know if you need any further information from me to resolve this issue.</p>
+
+<p>Best,</p>
+<p>[YOUR_NAME]</p>
+
 <hr>
 
-<h2>Template 7: Feature Request Form</h2>
-<p><strong>When to use:</strong> When proposing new features or enhancements to the existing codebase.</p>
+<h2>Template 5: Code Review Template</h2>
+<p><strong>When to use:</strong> When conducting a code review for a colleague's code.</p>
 
-<p>Feature Request Form</p>
-<p>=====================</p>
-<p>Project Name: [PROJECT_NAME]</p>
-<p>Feature Name: [FEATURE_NAME]</p>
-<p>Description: [FEATURE_DESCRIPTION]</p>
-<p>Reason for Request: [REASON_FOR_REQUEST]</p>
+<p>Code Review for [CODE_OWNER]</p>
 
-<p>Expected Benefits:</p>
 <ul>
-<li>[BENEFIT_1]</li>
-<li>[BENEFIT_2]</li>
-<li>[BENEFIT_3]</li>
+<li>Code File: [CODE_FILE]</li>
+<li>Reviewer: [REVIEWER]</li>
+<li>Date: [DATE]</li>
 </ul>
 
-<p>Proposed Implementation:</p>
-<p>[PROPOSED_IMPLEMENTATION]</p>
+<p>Summary:</p>
+<p>[SUMMARY_OF_CHANGES]</p>
 
-<p>Priority Level: [PRIORITY_LEVEL]</p>
+<p>Comments:</p>
+
+<ul>
+<li>[COMMENT_1]</li>
+<li>[COMMENT_2]</li>
+<li>[COMMENT_3]</li>
+</ul>
+
+<p>Suggestions:</p>
+
+<ul>
+<li>[SUGGESTION_1]</li>
+<li>[SUGGESTION_2]</li>
+<li>[SUGGESTION_3]</li>
+</ul>
+
+<p>Rating: [RATING]</p>
+
+<p>Next Steps: [NEXT_STEPS]</p>
 
 <hr>
 
-<h2>Template 8: Code Merge Request</h2>
-<p><strong>When to use:</strong> When requesting to merge changes into the main codebase.</p>
+<h2>Template 6: Feature Request Template</h2>
+<p><strong>When to use:</strong> When requesting a new feature to be added to the project.</p>
 
-<p>Code Merge Request</p>
-<p>===================</p>
-<p>Project Name: [PROJECT_NAME]</p>
-<p>Branch Name: [BRANCH_NAME]</p>
-<p>Description of Changes: [DESCRIPTION_OF_CHANGES]</p>
-<p>Related Issues: [RELATED_ISSUES]</p>
+<p>Feature Request for [PROJECT_NAME]</p>
 
-<p>Changes Included:</p>
+<ul>
+<li>Feature Name: [FEATURE_NAME]</li>
+<li>Description: [FEATURE_DESCRIPTION]</li>
+<li>Reason: [REASON_FOR_FEATURE]</li>
+<li>Priority: [PRIORITY]</li>
+</ul>
+
+<p>Use Cases:</p>
+
+<ul>
+<li>[USE_CASE_1]</li>
+<li>[USE_CASE_2]</li>
+<li>[USE_CASE_3]</li>
+</ul>
+
+<p>Acceptance Criteria:</p>
+
+<ul>
+<li>[ACCEPTANCE_CRITERIA_1]</li>
+<li>[ACCEPTANCE_CRITERIA_2]</li>
+<li>[ACCEPTANCE_CRITERIA_3]</li>
+</ul>
+
+<p>Estimated Effort: [ESTIMATED_EFFORT]</p>
+
+<hr>
+
+<h2>Template 7: Meeting Minutes Template</h2>
+<p><strong>When to use:</strong> When documenting meeting minutes for a project discussion.</p>
+
+<p>Meeting Minutes for [PROJECT_NAME]</p>
+
+<ul>
+<li>Date: [DATE]</li>
+<li>Time: [TIME]</li>
+<li>Attendees: [ATTENDEES]</li>
+</ul>
+
+<p>Discussion Points:</p>
+
+<ul>
+<li>[DISCUSSION_POINT_1]</li>
+<li>[DISCUSSION_POINT_2]</li>
+<li>[DISCUSSION_POINT_3]</li>
+</ul>
+
+<p>Action Items:</p>
+
+<ul>
+<li>[ACTION_ITEM_1] - [ASSIGNED_TO]</li>
+<li>[ACTION_ITEM_2] - [ASSIGNED_TO]</li>
+<li>[ACTION_ITEM_3] - [ASSIGNED_TO]</li>
+</ul>
+
+<p>Next Steps: [NEXT_STEPS]</p>
+
+<hr>
+
+<h2>Template 8: Project Plan Template</h2>
+<p><strong>When to use:</strong> When creating a project plan for a new project.</p>
+
+<p>Project Plan for [PROJECT_NAME]</p>
+
+<ul>
+<li>Project Description: [PROJECT_DESCRIPTION]</li>
+<li>Goals: [PROJECT_GOALS]</li>
+<li>Objectives: [PROJECT_OBJECTIVES]</li>
+</ul>
+
+<p>Timeline:</p>
+
+<ul>
+<li>[TASK_1] - [START_DATE] - [END_DATE]</li>
+<li>[TASK_2] - [START_DATE] - [END_DATE]</li>
+<li>[TASK_3] - [START_DATE] - [END_DATE]</li>
+</ul>
+
+<p>Resources:</p>
+
+<ul>
+<li>[RESOURCE_1]</li>
+<li>[RESOURCE_2]</li>
+<li>[RESOURCE_3]</li>
+</ul>
+
+<p>Risks: [RISKS]</p>
+
+<hr>
+
+<h2>Template 9: Release Notes Template</h2>
+<p><strong>When to use:</strong> When documenting release notes for a new version of the project.</p>
+
+<p>Release Notes for [PROJECT_NAME] - [VERSION]</p>
+
+<ul>
+<li>Release Date: [RELEASE_DATE]</li>
+<li>Changes:</li>
+</ul>
+
 <ul>
 <li>[CHANGE_1]</li>
 <li>[CHANGE_2]</li>
 <li>[CHANGE_3]</li>
 </ul>
 
-<p>Testing Performed:</p>
+<p>Fixes:</p>
+
 <ul>
-<li>[TEST_1]</li>
-<li>[TEST_2]</li>
-<li>[TEST_3]</li>
+<li>[FIX_1]</li>
+<li>[FIX_2]</li>
+<li>[FIX_3]</li>
 </ul>
+
+<p>Known Issues: [KNOWN_ISSUES]</p>
+
+<p>Upgrade Instructions: [UPGRADE_INSTRUCTIONS]</p>
 
 <hr>
 
-<h2>Template 9: Technical Debt Tracker</h2>
-<p><strong>When to use:</strong> To track and manage technical debt within the codebase.</p>
+<h2>Template 10: Technical Specification Template</h2>
+<p><strong>When to use:</strong> When creating a technical specification document for a project.</p>
 
-<p>Technical Debt Tracker</p>
-<p>=======================</p>
-<p>Project Name: [PROJECT_NAME]</p>
-<p>Item Description: [ITEM_DESCRIPTION]</p>
-<p>Reason for Debt: [REASON_FOR_DEBT]</p>
-<p>Priority Level: [PRIORITY_LEVEL]</p>
+<p>Technical Specification for [PROJECT_NAME]</p>
 
-<p>Estimated Time to Resolve: [ESTIMATED_TIME_TO_RESOLVE]</p>
-<p>Assigned to: [ASSIGNED_TO]</p>
-<p>Status: [STATUS]</p>
-
-<hr>
-
-<h2>Template 10: Release Notes Template</h2>
-<p><strong>When to use:</strong> When documenting changes and updates for a new release of the software.</p>
-
-<p>Release Notes Template</p>
-<p>======================</p>
-<p>Project Name: [PROJECT_NAME]</p>
-<p>Release Version: [RELEASE_VERSION]</p>
-<p>Release Date: [RELEASE_DATE]</p>
-
-<p>Changes and Updates:</p>
 <ul>
-<li>[CHANGE_1]</li>
-<li>[CHANGE_2]</li>
-<li>[CHANGE_3]</li>
+<li>Introduction: [INTRODUCTION]</li>
+<li>Requirements: [REQUIREMENTS]</li>
 </ul>
 
-<p>Fixed Issues:</p>
+<p>Functional Requirements:</p>
+
 <ul>
-<li>[ISSUE_1]</li>
-<li>[ISSUE_2]</li>
-<li>[ISSUE_3]</li>
+<li>[FUNCTIONAL_REQUIREMENT_1]</li>
+<li>[FUNCTIONAL_REQUIREMENT_2]</li>
+<li>[FUNCTIONAL_REQUIREMENT_3]</li>
 </ul>
 
-<p>Known Issues:</p>
+<p>Non-Functional Requirements:</p>
+
 <ul>
-<li>[KNOWN_ISSUE_1]</li>
-<li>[KNOWN_ISSUE_2]</li>
-<li>[KNOWN_ISSUE_3]</li>
+<li>[NON_FUNCTIONAL_REQUIREMENT_1]</li>
+<li>[NON_FUNCTIONAL_REQUIREMENT_2]</li>
+<li>[NON_FUNCTIONAL_REQUIREMENT_3]</li>
 </ul>
 
-<p>Upgrade Instructions:</p>
-<p>[UPGRADE_INSTRUCTIONS]</p>
+<p>System Architecture: [SYSTEM_ARCHITECTURE]</p>
+
+<p>Data Model: [DATA_MODEL]</p>
     </article>
     <div style="background:linear-gradient(135deg,#13151d,#1a1d28);border:2px solid #6366f1;border-radius:12px;padding:28px;margin:40px 0;text-align:center;">
         <p style="color:#6366f1;font-weight:700;font-size:0.85em;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">RECOMMENDED FOR YOU</p>
