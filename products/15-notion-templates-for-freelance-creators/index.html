@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="15 Notion templates designed for freelance creators to organize projects, clients, and finances in one workspace.">
+    <link rel="canonical" href="https://theartofsound.github.io/autohustle-content/products/15-notion-templates-for-freelance-creators/">
+    <meta property="og:title" content="15 Notion Templates for Freelance Creators">
+    <meta property="og:description" content="15 Notion templates designed for freelance creators to organize projects, clients, and finances in one workspace.">
+    <meta property="og:url" content="https://theartofsound.github.io/autohustle-content/products/15-notion-templates-for-freelance-creators/">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary">
+    <title>15 Notion Templates for Freelance Creators</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        nav { margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        nav a { color: #6366f1; text-decoration: none; font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 2em; margin: 20px 0; color: #1a1a1a; }
+        h2 { font-size: 1.4em; margin: 30px 0 15px; color: #2a2a2a; }
+        h3 { font-size: 1.2em; margin: 20px 0 10px; }
+        p { margin: 12px 0; }
+        ul, ol { margin: 12px 0; padding-left: 30px; }
+        li { margin: 6px 0; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #f5f5f5; }
+        blockquote { border-left: 4px solid #0066cc; padding: 10px 20px; margin: 20px 0; background: #f8f9fa; }
+        .faq { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        a { color: #0066cc; }
+        .date { color: #666; font-size: 0.9em; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #999; font-size: 0.85em; }
+        footer a { color: #6366f1; }
+    </style>
+    
+</head>
+<body>
+    <nav><a href="https://theartofsound.github.io/autohustle-content/">&larr; AutoHustle.online</a></nav>
+    <article>
+        <h1>15 Notion Templates for Freelance Creators</h1>
+        <p class="date">Updated: April 01, 2026</p>
+        <p>15 Notion templates designed for freelance creators to organize projects, clients, and finances in one workspace.</p>
+
+<h2>What's Inside</h2>
+
+<ul>
+<li>15 ready-to-use Notion templates</li>
+<li>covers projects, clients, and finances</li>
+<li>fully customizable</li>
+</ul>
+
+<hr>
+
+<h2>Template 1: Client Pipeline Manager</h2>
+<p><strong>When to use:</strong> Track leads, pitches, and client relationships from first contact to project completion.</p>
+
+<p>```</p>
+<h2>Client Pipeline Manager 🚀</h2>
+
+<h2>📌 Current Clients</h2>
+<p>```dataview</p>
+<p>table status, project_deadline, retainer_fee, last_contact</p>
+<p>from "Clients"</p>
+<p>where status = "Active"</p>
+<p>sort project_deadline asc</p>
+<p>```</p>
+
+<h2>🔍 Lead Funnel</h2>
+<h3>New Leads (Last 7 Days)</h3>
+<p>```dataview</p>
+<p>table company, contact_person, pitch_sent, estimated_value</p>
+<p>from "Clients"</p>
+<p>where status = "Lead" and date(pitch_sent) >= date(now) - duration("7 days")</p>
+<p>sort pitch_sent desc</p>
+<p>```</p>
+
+<h3>Pitches Sent (This Month)</h3>
+<p>```dataview</p>
+<p>table company, contact_person, pitch_sent, estimated_value</p>
+<p>from "Clients"</p>
+<p>where pitch_sent >= date(now) - duration("30 days") and (status = "Lead" or status = "Negotiation")</p>
+<p>sort pitch_sent desc</p>
+<p>```</p>
+
+<h2>📝 Client Notes</h2>
+<h3>[CLIENT NAME]</h3>
+<ul>
+<li><strong>Status:</strong> [Active/Lead/Past Client]</li>
+<li><strong>Contact:</strong> [Email/Phone]</li>
+<li><strong>Project:</strong> [Project Name/Description]</li>
+<li><strong>Budget:</strong> [$XXX - $XXX]</li>
+<li><strong>Deadline:</strong> [MM/DD/YYYY]</li>
+<li><strong>Last Contact:</strong> [MM/DD/YYYY]</li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+<ul>
+<li>[Add client-specific notes here]</li>
+<li>[Track key conversations]</li>
+<li>[Document preferences/feedback]</li>
+</ul>
+
+<h2>📅 Upcoming Deadlines</h2>
+<p>```dataview</p>
+<p>table company, project_deadline, status</p>
+<p>from "Clients"</p>
+<p>where project_deadline >= date(now) and status != "Past Client"</p>
+<p>sort project_deadline asc</p>
+<p>```</p>
+
+<h2>💡 Next Actions</h2>
+<ul>
+<li>[ ] Follow up with [CLIENT NAME] on [DATE]</li>
+<li>[ ] Send proposal to [CLIENT NAME] by [DATE]</li>
+<li>[ ] Schedule call with [CLIENT NAME] on [DATE]</li>
+</ul>
+<p>```</p>
+
+<hr>
+
+<h2>Template 2: Project Tracker Pro</h2>
+<p><strong>When to use:</strong> Manage multiple client projects with deadlines, deliverables, and status updates.</p>
+
+<p>```</p>
+<h2>Project Tracker Pro 📊</h2>
+
+<h2>🚀 Active Projects</h2>
+<p>```dataview</p>
+<p>table project_name, client, status, deadline, priority</p>
+<p>from "Projects"</p>
+<p>where status = "Active"</p>
+<p>sort deadline asc</p>
+<p>```</p>
+
+<h2>📋 Project Overview</h2>
+<h3>[Project Name]</h3>
+<ul>
+<li><strong>Client:</strong> [Client Name]</li>
+<li><strong>Status:</strong> [Active/Paused/Completed]</li>
+<li><strong>Priority:</strong> [High/Medium/Low]</li>
+<li><strong>Deadline:</strong> [MM/DD/YYYY]</li>
+<li><strong>Budget:</strong> [$XXX]</li>
+<li><strong>Contract Signed:</strong> [Yes/No]</li>
+</ul>
+
+<h3>📌 Deliverables</h3>
+<ul>
+<li>[ ] [Deliverable 1]</li>
+<li>[ ] [Deliverable 2]</li>
+<li>[ ] [Deliverable 3]</li>
+</ul>
+
+<h3>📝 Notes & Requirements</h3>
+<p>[Add project-specific notes, client requirements, and scope details here]</p>
+
+<h2>📅 Project Timeline</h2>
+<p>```mermaid</p>
+<p>gantt</p>
+<p>title Project Timeline</p>
+<p>dateFormat  YYYY-MM-DD</p>
+<p>section Project Phases</p>
+<p>Discovery       :a1, 2023-10-01, 7d</p>
+<p>Design          :a2, after a1, 14d</p>
+<p>Development     :a3, after a2, 21d</p>
+<p>Testing         :a4, after a3, 7d</p>
+<p>Delivery        :a5, after a4, 1d</p>
+<p>```</p>
+
+<h2>💰 Budget Tracker</h2>
+<p>| Item | Estimated Cost | Actual Cost | Notes |</p>
+<p>|------|----------------|-------------|-------|</p>
+<p>| [Item 1] | [$XXX] | [$XXX] | [Notes] |</p>
+<p>| [Item 2] | [$XXX] | [$XXX] | [Notes] |</p>
+<p>| <strong>Total</strong> | | | |</p>
+
+<h2>📂 Project Assets</h2>
+<ul>
+<li>[ ] [Link to project folder]</li>
+<li>[ ] [Link to design files]</li>
+<li>[ ] [Link to contracts]</li>
+<li>[ ] [Link to invoices]</li>
+</ul>
+<p>```</p>
+
+<hr>
+
+<h2>Template 3: Content Calendar Hub</h2>
+<p><strong>When to use:</strong> Plan, schedule, and track all content creation across platforms and clients.</p>
+
+<p>```</p>
+<h2>Content Calendar Hub 📅</h2>
+
+<h2>📆 Weekly Content Schedule</h2>
+<p>```dataview</p>
+<p>table platform, content_type, publish_date, status, client</p>
+<p>from "Content"</p>
+<p>where publish_date >= date(now) - duration("7 days") and publish_date <= date(now) + duration("7 days")</p>
+<p>sort publish_date asc</p>
+<p>```</p>
+
+<h2>📝 Content Pipeline</h2>
+<h3>Ideas Bank</h3>
+<ul>
+<li>[ ] [Content Idea 1]</li>
+<li>[ ] [Content Idea 2]</li>
+<li>[ ] [Content Idea 3]</li>
+</ul>
+
+<h3>Content in Progress</h3>
+<p>```dataview</p>
+<p>table content_title, platform, content_type, status, due_date</p>
+<p>from "Content"</p>
+<p>where status != "Published" and status != "Archived"</p>
+<p>sort due_date asc</p>
+<p>```</p>
+
+<h2>📊 Performance Dashboard</h2>
+<h3>Last 30 Days Content Performance</h3>
+<p>```dataview</p>
+<p>table content_title, platform, views, engagement_rate, client</p>
+<p>from "Content"</p>
+<p>where publish_date >= date(now) - duration("30 days")</p>
+<p>sort views desc</p>
+<p>```</p>
+
+<h2>🎯 Content Strategy</h2>
+<h3>Platform Breakdown</h3>
+<p>```chart</p>
+<p>type: pie</p>
+<p>labels: ["Instagram", "Blog", "Twitter", "YouTube", "Newsletter"]</p>
+<p>data: [25, 35, 20, 10, 10]</p>
+<p>```</p>
+
+<h3>Content Types</h3>
+<p>```chart</p>
+<p>type: bar</p>
+<p>labels: ["Reels", "Articles", "Threads", "Videos", "Emails"]</p>
+<p>data: [30, 40, 20, 10, 25]</p>
+<p>```</p>
+
+<h2>📌 Content Guidelines</h2>
+<ul>
+<li><strong>Brand Voice:</strong> [Describe your brand voice]</li>
+<li><strong>Tone Guidelines:</strong> [Specify tone for different platforms]</li>
+<li><strong>Hashtag Strategy:</strong> [List key hashtags]</li>
+<li><strong>Posting Frequency:</strong> [Specify per platform]</li>
+</ul>
+<p>```</p>
+
+<hr>
+
+<h2>Template 4: Invoice & Payment Tracker</h2>
+<p><strong>When to use:</strong> Generate, track, and manage invoices for all client projects.</p>
+
+<p>```</p>
+<h2>Invoice & Payment Tracker 💰</h2>
+
+<h2>📋 Unpaid Invoices</h2>
+<p>```dataview</p>
+<p>table invoice_number, client, project, amount, due_date, status</p>
+<p>from "Invoices"</p>
+<p>where status = "Sent" or status = "Overdue"</p>
+<p>sort due_date asc</p>
+<p>```</p>
+
+<h2>📄 Recent Invoices</h2>
+<p>```dataview</p>
+<p>table invoice_number, client, project, amount, issue_date, due_date, status</p>
+<p>from "Invoices"</p>
+<p>sort issue_date desc</p>
+<p>limit 5</p>
+<p>```</p>
+
+<h2>💸 Invoice Generator</h2>
+<h3>New Invoice</h3>
+<p><strong>Invoice #:</strong> [INV-001]</p>
+<p><strong>Client:</strong> [Client Name]</p>
+<p><strong>Project:</strong> [Project Name]</p>
+<p><strong>Issue Date:</strong> [MM/DD/YYYY]</p>
+<p><strong>Due Date:</strong> [MM/DD/YYYY]</p>
+
+<p><strong>Services:</strong></p>
+<p>| Description | Quantity | Rate | Amount |</p>
+<p>|-------------|----------|------|--------|</p>
+<p>| [Service 1] | [X] | [$XX] | [$XXX] |</p>
+<p>| [Service 2] | [X] | [$XX] | [$XXX] |</p>
+<p>| <strong>Subtotal</strong> | | | [$XXX] |</p>
+<p>| <strong>Tax</strong> | | [X]% | [$XXX] |</p>
+<p>| <strong>Total Due</strong> | | | [$XXX] |</p>
+
+<p><strong>Payment Terms:</strong></p>
+<ul>
+<li>[Specify payment terms]</li>
+<li>[Include late fees if applicable]</li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+<p>[Add any additional notes or special instructions]</p>
+
+<hr>
+
+<h2>📊 Payment History</h2>
+<h3>Client Payment Summary</h3>
+<p>```dataview</p>
+<p>table client, sum(amount) as Total, sum(where(status = "Paid", amount, 0)) as Paid, sum(where(status = "Unpaid", amount, 0)) as Unpaid</p>
+<p>from "Invoices"</p>
+<p>group by client</p>
+<p>```</p>
+
+<h3>Monthly Earnings</h3>
+<p>```chart</p>
+<p>type: line</p>
+<p>labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]</p>
+<p>data: [5000, 6000, 4500, 7000, 8000, 9000, 10000, 8500, 9500, 11000, 12000, 13000]</p>
+<p>```</p>
+
+<h2>📌 Payment Reminders</h2>
+<ul>
+<li>[ ] Follow up with [Client Name] on [Date] for unpaid invoice [Invoice #]</li>
+<li>[ ] Send thank you note to [Client Name] after payment received</li>
+</ul>
+<p>```</p>
+
+<hr>
+
+<h2>Template 5: Creative Assets Library</h2>
+<p><strong>When to use:</strong> Organize and store all creative assets, templates, and reference materials.</p>
+
+<p>```</p>
+<h2>Creative Assets Library 🎨</h2>
+
+<h2>📂 Asset Categories</h2>
+<h3>Brand Assets</h3>
+<ul>
+<li>[ ] [Logo - Primary]</li>
+<li>[ ] [Logo - Secondary]</li>
+<li>[ ] [Brand Colors]</li>
+<li>[ ] [Typography Guide]</li>
+<li>[ ] [Brand Voice Guide]</li>
+</ul>
+
+<h3>Design Templates</h3>
+<ul>
+<li>[ ] [Instagram Post Template]</li>
+<li>[ ] [Instagram Story Template]</li>
+<li>[ ] [Blog Header Template]</li>
+<li>[ ] [Email Header Template]</li>
+<li>[ ] [Presentation Template]</li>
+</ul>
+
+<h3>Stock Resources</h3>
+<ul>
+<li>[ ] [Stock Photos - [TOPIC]]</li>
+<li>[ ] [Stock Videos - [TOPIC]]</li>
+<li>[ ] [Sound Effects]</li>
+<li>[ ] [Music Tracks]</li>
+</ul>
+
+<h2>📁 Folder Structure</h2>
+<p>/Creative Assets</p>
+<p>├── /Brand Assets</p>
+<p>│   ├── Logo</p>
+<p>│   ├── Colors</p>
+<p>│   └── Typography</p>
+<p>├── /Design Templates</p>
+<p>│   ├── Social Media</p>
+<p>│   ├── Web</p>
+<p>│   └── Print</p>
+<p>├── /Stock Resources</p>
+<p>│   ├── Photos</p>
+<p>│   ├── Videos</p>
+<p>│   └── Audio</p>
+<p>└── /Reference Materials</p>
+<p>├── Inspiration</p>
+<p>└── Competitor Examples</p>
+
+<h2>🔍 Asset Search</h2>
+<p>```dataview</p>
+<p>table file.name, file.folder, file.creationDate</p>
+<p>from "Creative Assets"</p>
+<p>where contains(file.name, "[SEARCH TERM]") or contains(file.folder, "[SEARCH TERM]")</p>
+<p>sort file.creationDate desc</p>
+<p>```</p>
+
+<h2>📝 Asset Details</h2>
+<h3>[Asset Name]</h3>
+<ul>
+<li><strong>Type:</strong> [Photo/Video/Template/Document]</li>
+<li><strong>Category:</strong> [Brand Assets/Design Templates/Stock Resources]</li>
+<li><strong>Usage Rights:</strong> [Rights-Managed/Royalty-Free/Creative Commons]</li>
+<li><strong>Last Used:</strong> [MM/DD/YYYY]</li>
+<li><strong>Notes:</strong> [Any relevant notes about usage or credits]</li>
+</ul>
+<p>```</p>
+
+<hr>
+
+<h2>Template 6: Time Tracking Vault</h2>
+<p><strong>When to use:</strong> Track billable hours, project time, and productivity across all work.</p>
+
+<p>```</p>
+<h2>Time Tracking Vault ⏱️</h2>
+
+<h2>🕒 Weekly Time Summary</h2>
+<p>```dataview</p>
+<p>table sum(hours) as Total_Hours, sum(billable_hours) as Billable_Hours, sum(non_billable_hours) as Non_Billable_Hours</p>
+<p>from "Time Entries"</p>
+<p>where date >= date(now) - duration("7 days")</p>
+<p>group by date</p>
+<p>```</p>
+
+<h2>⏳ Today's Time Log</h2>
+<h3>[DATE]</h3>
+<ul>
+<li><strong>Total Hours:</strong> [X]h [Y]m</li>
+<li><strong>Billable Hours:</strong> [X]h [Y]m</li>
+<li><strong>Non-Billable Hours:</strong> [X]h [Y]m</li>
+</ul>
+
+<p>| Time In | Time Out | Project | Task | Billable | Notes |</p>
+<p>|---------|----------|---------|------|----------|-------|</p>
+<p>| [HH:MM] | [HH:MM] | [Project] | [Task] | [Yes/No] | [Notes] |</p>
+
+<h2>📅 Monthly Time Report</h2>
+<p>```dataview</p>
+<p>table sum(hours) as Total_Hours, sum(billable_hours) as Billable_Hours, sum(non_billable_hours) as Non_Billable_Hours</p>
+<p>from "Time Entries"</p>
+<p>where date >= date(now) - duration("30 days")</p>
+<p>group by date</p>
+<p>sort date desc</p>
+<p>```</p>
+
+<h2>💼 Project Time Breakdown</h2>
+<p>```dataview</p>
+<p>table project, sum(billable_hours) as Billable_Hours, sum(non_billable_hours) as Non_Billable_Hours, sum(hours) as Total_Hours</p>
+<p>from "Time Entries"</p>
+<p>group by project</p>
+<p>sort Total_Hours desc</p>
+<p>```</p>
+
+<h2>📌 Time Entry Template</h2>
+<p><strong>Date:</strong> [MM/DD/YYYY]</p>
+<p><strong>Project:</strong> [Project Name]</p>
+<p><strong>Task:</strong> [Task Description]</p>
+<p><strong>Billable:</strong> [Yes/No]</p>
+<p><strong>Time In:</strong> [HH:MM]</p>
+<p><strong>Time Out:</strong> [HH:MM]</p>
+<p><strong>Total Time:</strong> [X]h [Y]m</p>
+<p><strong>Notes:</strong> [Add any relevant notes or context]</p>
+<p>```</p>
+
+<hr>
+
+<h2>Template 7: Expense Tracker Extra</h2>
+<p><strong>When to use:</strong> Monitor business expenses, categorize spending, and track tax-deductible costs.</p>
+
+<p>```</p>
+<h2>Expense Tracker Extra 💸</h2>
+
+<h2>📊 Monthly Expense Summary</h2>
+<p>```dataview</p>
+<p>table sum(amount) as Total_Spent</p>
+<p>from "Expenses"</p>
+<p>where date >= date(now) - duration("30 days")</p>
+<p>group by category</p>
+<p>```</p>
+
+<h2>📋 Recent Expenses</h2>
+<p>```dataview</p>
+<p>table date, description, category, amount, payment_method, receipt_attached</p>
+<p>from "Expenses"</p>
+<p>sort date desc</p>
+<p>limit 10</p>
+<p>```</p>
+
+<h2>📝 Add New Expense</h2>
+<p><strong>Date:</strong> [MM/DD/YYYY]</p>
+<p><strong>Description:</strong> [Expense Description]</p>
+<p><strong>Category:</strong> [Software/Office Supplies/Travel/Marketing/Other]</p>
+<p><strong>Amount:</strong> [$XXX.XX]</p>
+<p><strong>Payment Method:</strong> [Credit Card/PayPal/Bank Transfer/Cash]</p>
+<p><strong>Tax Deductible:</strong> [Yes/No]</p>
+<p><strong>Receipt Attached:</strong> [Yes/No]</p>
+
+<p><strong>Notes:</strong></p>
+<p>[Add any additional details about the expense]</p>
+
+<h2>📂 Expense Categories</h2>
+<h3>Software</h3>
+<ul>
+<li>[ ] [Subscription Name]</li>
+<li>[ ] [Software License]</li>
+<li>[ ] [Cloud Services]</li>
+</ul>
+
+<h3>Office Supplies</h3>
+<ul>
+<li>[ ] [Stationery]</li>
+<li>[ ] [Equipment]</li>
+<li>[ ] [Furniture]</li>
+</ul>
+
+<h3>Travel</h3>
+<ul>
+<li>[ ] [Transportation]</li>
+<li>[ ] [Accommodation]</li>
+<li>[ ] [Meals]</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul>
+<li>[ ] [Ads]</li>
+<li>[ ] [Promotions]</li>
+<li>[ ] [Events]</li>
+</ul>
+
+<h3>Other</h3>
+<ul>
+<li>[ ] [Miscellaneous Expenses]</li>
+</ul>
+
+<h2>📊 Annual Expense Report</h2>
+<p>```chart</p>
+<p>type: line</p>
+<p>labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]</p>
+<p>data: [1200, 1500, 900, 1800, 2100, 2500, 2800, 2300, 2600, 3000, 3200, 3500]</p>
+<p>```</p>
+
+<h2>💡 Expense Tips</h2>
+<ul>
+<li>[ ] Upload receipts to cloud storage and link them</li>
+<li>[ ] Categorize expenses as you incur them</li>
+<li>[ ] Review monthly expense reports to identify trends</li>
+</ul>
+<p>```</p>
+
+<hr>
+<h2>Template 8: Social Media Manager</h2>
+<p><strong>When to use:</strong> Plan, schedule, and track social media content across multiple platforms.</p>
+
+<p>```</p>
+<h2>Social Media Manager 📱</h2>
+
+<h2>📅 Platform Overview</h2>
+<h3>Instagram</h3>
+<ul>
+<li><strong>Followers:</strong> [XXX]</li>
+<li><strong>Posts/Week:</strong> [X]</li>
+<li><strong>Stories/Week:</strong> [X]</li>
+<li><strong>Reels/Week:</strong> [X]</li>
+</ul>
+
+<h3>Twitter</h3>
+<ul>
+<li><strong>Followers:</strong> [XXX]</li>
+<li><strong>Tweets/Week:</strong> [X]</li>
+<li><strong>Threads/Week:</strong> [X]</li>
+</ul>
+
+<h3>LinkedIn</h3>
+<ul>
+<li><strong>Followers:</strong> [XXX]</li>
+<li><strong>Posts/Week:</strong> [X]</li>
+<li><strong>Articles/Week:</strong> [X]</li>
+</ul>
+
+<h3>Facebook</h3>
+<ul>
+<li><strong>Followers:</strong> [XXX]</li>
+<li><strong>Posts/Week:</strong> [X]</li>
+</ul>
+
+<h3>TikTok</h3>
+<ul>
+<li><strong>Followers:</strong> [XXX]</li>
+<li><strong>Videos/Week:</strong> [X]</li>
+</ul>
+
+<h2>📝 Content Calendar</h2>
+<h3>[DATE]</h3>
+<p><strong>Instagram:</strong></p>
+<ul>
+<li>[ ] [Post Type] - [Caption Idea]</li>
+<li>[ ] [Story Type] - [Content Idea]</li>
+</ul>
+
+<p><strong>Twitter:</strong></p>
+<ul>
+<li>[ ] [Tweet Type] - [Content Idea]</li>
+</ul>
+
+<p><strong>LinkedIn:</strong></p>
+<ul>
+<li>[ ] [Post Type] - [Caption Idea]</li>
+</ul>
+
+<p><strong>Facebook:</strong></p>
+<ul>
+<li>[ ] [Post Type] - [Caption Idea]</li>
+</ul>
+
+<p><strong>TikTok:</strong></p>
+<ul>
+<li>[ ] [Video Idea] - [Script Notes]</li>
+</ul>
+
+<h2>📊 Performance Metrics</h2>
+<h3>Last 30 Days Engagement</h3>
+<p>```dataview</p>
+<p>table platform, avg(engagement_rate) as Avg_Engagement, sum(views) as Total_Views, sum(likes) as Total_Likes</p>
+<p>from "Social Media Posts"</p>
+<p>where date >= date(now) - duration("30 days")</p>
+<p>group by platform</p>
+<p>```</p>
+
+<h2>📌 Hashtag Library</h2>
+<h3>Top Hashtags</h3>
+<ul>
+<li>[ ] #freelancecreator</li>
+<li>[ ] #creativeentrepreneur</li>
+<li>[ ] #contentcreator</li>
+<li>[ ] #digitalnomad</li>
+<li>[ ] #smallbusiness</li>
+</ul>
+
+<h3>Platform-Specific Hashtags</h3>
+<p><strong>Instagram:</strong></p>
+<ul>
+<li>[ ] #instagood</li>
+<li>[ ] #instalike</li>
+<li>[ ] #photooftheday</li>
+</ul>
+
+<p><strong>Twitter:</strong></p>
+<ul>
+<li>[ ] #twitter</li>
+<li>[ ] #tweet</li>
+<li>[ ] #twittermarketing</li>
+</ul>
+
+<p><strong>LinkedIn:</strong></p>
+<ul>
+<li>[ ] #linkedin</li>
+<li>[ ] #professional</li>
+<li>[ ] #networking</li>
+</ul>
+
+<h2>📂 Content Ideas Bank</h2>
+<ul>
+<li>[ ] [Content Idea 1]</li>
+<li>[ ] [Content Idea 2]</li>
+<li>[ ] [Content Idea 3]</li>
+</ul>
+<p>```</p>
+
+<h2>Template 1: Project Pipeline Tracker</h2>
+<p><strong>When to use:</strong> Manage multiple creative projects from ideation to completion with visual progress tracking.</p>
+
+<p>```</p>
+<h2>📊 Project Pipeline Tracker</h2>
+
+<h2>🎯 Current Projects</h2>
+<p>| Project Name | Status | Priority | Client | Deadline | Budget | Notes |</p>
+<p>|--------------|--------|----------|--------|----------|--------|-------|</p>
+<p>| [PROJECT NAME] | [STATUS] | [HIGH/MEDIUM/LOW] | [CLIENT NAME] | [DEADLINE] | [BUDGET] | [NOTES] |</p>
+<p>| [PROJECT NAME] | [STATUS] | [HIGH/MEDIUM/LOW] | [CLIENT NAME] | [DEADLINE] | [BUDGET] | [NOTES] |</p>
+<p>| [PROJECT NAME] | [STATUS] | [HIGH/MEDIUM/LOW] | [CLIENT NAME] | [DEADLINE] | [BUDGET] | [NOTES] |</p>
+
+<p><strong>Status Key:</strong></p>
+<ul>
+<li>🟢 <strong>In Progress</strong> (Active work)</li>
+<li>🟡 <strong>On Hold</strong> (Waiting on client/feedback)</li>
+<li>🔵 <strong>Pending</strong> (Awaiting start)</li>
+<li>🔴 <strong>Completed</strong></li>
+<li>⚪ <strong>Backlog</strong> (Ideas not yet started)</li>
+</ul>
+
+<hr>
+
+<h2>📌 Project Backlog</h2>
+<h3>Ideas Worth Exploring</h3>
+<ul>
+<li>[IDEA DESCRIPTION]</li>
+<li>[IDEA DESCRIPTION]</li>
+<li>[IDEA DESCRIPTION]</li>
+</ul>
+
+<h3>Next Up (Prioritized)</h3>
+<ol>
+<li>[PROJECT NAME] – [BRIEF DESCRIPTION]</li>
+<li>[PROJECT NAME] – [BRIEF DESCRIPTION]</li>
+<li>[PROJECT NAME] – [BRIEF DESCRIPTION]</li>
+</ol>
+
+<hr>
+
+<h2>📅 Weekly Prioritization</h2>
+<p><strong>Top 3 Focuses This Week:</strong></p>
+<ol>
+<li>[PROJECT NAME] – [TASK] → [DEADLINE]</li>
+<li>[PROJECT NAME] – [TASK] → [DEADLINE]</li>
+<li>[PROJECT NAME] – [TASK] → [DEADLINE]</li>
+</ol>
+
+<hr>
+<p>```</p>
+
+<hr>
+
+<h2>Template 2: Client Onboarding Hub</h2>
+<p><strong>When to use:</strong> Streamline the client intake process with contracts, briefs, and communication logs.</p>
+
+<p>```</p>
+<h2>🤝 Client Onboarding Hub</h2>
+
+<h2>📝 New Client Checklist</h2>
+<p>For each new client, complete this checklist:</p>
+
+<ul>
+<li>[ ] Contract signed & stored (attach file)</li>
+<li>[ ] Project brief completed</li>
+<li>[ ] Deposit received (amount: [DEPOSIT AMOUNT])</li>
+<li>[ ] Initial payment scheduled (date: [DATE])</li>
+<li>[ ] Welcome email sent</li>
+<li>[ ] Project kickoff meeting scheduled</li>
+</ul>
+
+<hr>
+
+<h2>📄 Client Portfolio</h2>
+<h3>Active Clients</h3>
+<p>| Client Name | Project Type | Status | Last Contact | Next Action |</p>
+<p>|-------------|--------------|--------|--------------|-------------|</p>
+<p>| [CLIENT NAME] | [TYPE] | [ACTIVE/ON HOLD] | [DATE] | [ACTION] |</p>
+<p>| [CLIENT NAME] | [TYPE] | [ACTIVE/ON HOLD] | [DATE] | [ACTION] |</p>
+
+<h3>Past Clients</h3>
+<p>| Client Name | Project Type | Completion Date | Feedback Summary |</p>
+<p>|-------------|--------------|-----------------|------------------|</p>
+<p>| [CLIENT NAME] | [TYPE] | [DATE] | [SUMMARY] |</p>
+<p>| [CLIENT NAME] | [TYPE] | [DATE] | [SUMMARY] |</p>
+
+<hr>
+
+<h2>📧 Communication Log</h2>
+<p>Track all client communications in one place.</p>
+
+<p>| Date | Client | Method | Summary | Next Steps | Follow-Up Date |</p>
+<p>|------|--------|--------|---------|------------|---------------|</p>
+<p>| [DATE] | [CLIENT] | [EMAIL/CALL/MEETING] | [SUMMARY] | [NEXT STEPS] | [DATE] |</p>
+<p>| [DATE] | [CLIENT] | [EMAIL/CALL/MEETING] | [SUMMARY] | [NEXT STEPS] | [DATE] |</p>
+<p>```</p>
+
+<hr>
+
+<h2>Template 3: Content Calendar</h2>
+<p><strong>When to use:</strong> Plan and schedule all creative outputs across platforms in one view.</p>
+
+<p>```</p>
+<h2>📅 Content Calendar</h2>
+
+<h2>🗓 Monthly Overview</h2>
+<p>| Week | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |</p>
+<p>|------|--------|---------|-----------|----------|--------|----------|--------|</p>
+<p>| 1    | [TOPIC] | [TOPIC] | [TOPIC]   | [TOPIC]  | [TOPIC] | [TOPIC]  | [TOPIC] |</p>
+<p>| 2    | [TOPIC] | [TOPIC] | [TOPIC]   | [TOPIC]  | [TOPIC] | [TOPIC]  | [TOPIC] |</p>
+<p>| 3    | [TOPIC] | [TOPIC] | [TOPIC]   | [TOPIC]  | [TOPIC] | [TOPIC]  | [TOPIC] |</p>
+<p>| 4    | [TOPIC] | [TOPIC] | [TOPIC]   | [TOPIC]  | [TOPIC] | [TOPIC]  | [TOPIC] |</p>
+
+<hr>
+
+<h2>📌 Content Backlog</h2>
+<h3>Ideas & Drafts</h3>
+<ul>
+<li>[IDEA] – [PLATFORM] – [STATUS: Brainstorm/Draft/Scheduled]</li>
+<li>[IDEA] – [PLATFORM] – [STATUS]</li>
+<li>[IDEA] – [PLATFORM] – [STATUS]</li>
+</ul>
+
+<h3>Evergreen Content</h3>
+<ul>
+<li>[TOPIC] – [LAST PUBLISHED DATE]</li>
+<li>[TOPIC] – [LAST PUBLISHED DATE]</li>
+</ul>
+
+<hr>
+
+<h2>📊 Performance Metrics</h2>
+<p>Track engagement for key posts.</p>
+
+<p>| Date | Post Title | Platform | Views | Likes | Shares | Comments | Notes |</p>
+<p>|------|------------|----------|-------|-------|--------|----------|-------|</p>
+<p>| [DATE] | [TITLE] | [INSTAGRAM/TIKTOK/ETC] | [NUM] | [NUM] | [NUM] | [NUM] | [NOTES] |</p>
+<p>| [DATE] | [TITLE] | [INSTAGRAM/TIKTOK/ETC] | [NUM] | [NUM] | [NUM] | [NUM] | [NOTES] |</p>
+<p>```</p>
+
+<hr>
+
+<h2>Template 4: Invoice & Payment Tracker</h2>
+<p><strong>When to use:</strong> Track sent invoices, payments received, and outstanding balances.</p>
+
+<p>```</p>
+<h2>💰 Invoice & Payment Tracker</h2>
+
+<h2>📋 Unpaid Invoices</h2>
+<p>| Invoice # | Client | Amount | Due Date | Days Overdue | Status | Notes |</p>
+<p>|-----------|--------|--------|----------|--------------|--------|-------|</p>
+<p>| [INV-001] | [CLIENT] | $[AMOUNT] | [DATE] | [DAYS] | [PAID/UNPAID] | [NOTES] |</p>
+<p>| [INV-002] | [CLIENT] | $[AMOUNT] | [DATE] | [DAYS] | [PAID/UNPAID] | [NOTES] |</p>
+
+<p><strong>Total Outstanding:</strong> $[TOTAL]</p>
+
+<hr>
+
+<h2>📄 Sent Invoices</h2>
+<p>| Invoice # | Client | Amount | Sent Date | Due Date | Status | Payment Date | Notes |</p>
+<p>|-----------|--------|--------|-----------|----------|--------|--------------|-------|</p>
+<p>| [INV-001] | [CLIENT] | $[AMOUNT] | [DATE] | [DATE] | [PAID/PENDING] | [DATE] | [NOTES] |</p>
+<p>| [INV-002] | [CLIENT] | $[AMOUNT] | [DATE] | [DATE] | [PAID/PENDING] | [DATE] | [NOTES] |</p>
+
+<hr>
+
+<h2>💳 Payment Methods & Details</h2>
+<h3>Stripe</h3>
+<ul>
+<li>Account Email: [EMAIL]</li>
+<li>Last 4 Digits: [XXXX]</li>
+<li>Next Payout: [DATE]</li>
+</ul>
+
+<h3>PayPal</h3>
+<ul>
+<li>Email: [EMAIL]</li>
+<li>Business Account: [YES/NO]</li>
+</ul>
+
+<h3>Bank Transfer</h3>
+<ul>
+<li>Bank Name: [NAME]</li>
+<li>Account Holder: [NAME]</li>
+<li>Account #: [XXXX]</li>
+<li>Routing #: [XXXX]</li>
+</ul>
+<p>```</p>
+
+<hr>
+
+<h2>Template 5: Creative Brief Vault</h2>
+<p><strong>When to use:</strong> Standardize project requirements and client expectations for each new project.</p>
+
+<p>```</p>
+<h2>📝 Creative Brief Vault</h2>
+
+<h2>📌 Active Project Briefs</h2>
+<h3>[PROJECT NAME]</h3>
+<p><strong>Client:</strong> [CLIENT NAME]</p>
+<p><strong>Project Type:</strong> [TYPE: e.g., Branding, Social Media, Website]</p>
+<p><strong>Deadline:</strong> [DATE]</p>
+<p><strong>Budget:</strong> $[AMOUNT]</p>
+
+<p><strong>Objective:</strong></p>
+<p>[WRITE BRIEF DESCRIPTION OF PROJECT GOALS]</p>
+
+<p><strong>Target Audience:</strong></p>
+<ul>
+<li>[DEMOGRAPHIC]</li>
+<li>[DEMOGRAPHIC]</li>
+</ul>
+
+<p><strong>Deliverables:</strong></p>
+<ul>
+<li>[DELIVERABLE 1]</li>
+<li>[DELIVERABLE 2]</li>
+<li>[DELIVERABLE 3]</li>
+</ul>
+
+<p><strong>Brand Guidelines:</strong></p>
+<ul>
+<li>[LINK TO BRAND GUIDELINES]</li>
+<li>[COLOR PALETTE]</li>
+<li>[FONT STYLES]</li>
+</ul>
+
+<p><strong>Client Preferences:</strong></p>
+<ul>
+<li>[PREFERENCE 1]</li>
+<li>[PREFERENCE 2]</li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+<p>[ADDITIONAL NOTES]</p>
+
+<hr>
+
+<h2>🗃 Archive of Past Briefs</h2>
+<p>| Project Name | Client | Completion Date | Key Takeaways |</p>
+<p>|--------------|--------|-----------------|---------------|</p>
+<p>| [NAME] | [CLIENT] | [DATE] | [TAKEAWAY] |</p>
+<p>| [NAME] | [CLIENT] | [DATE] | [TAKEAWAY] |</p>
+<p>```</p>
+
+<hr>
+
+<h2>Template 6: Time Blocking Planner</h2>
+<p><strong>When to use:</strong> Allocate focused time blocks for deep work, client calls, and admin tasks.</p>
+
+<p>```</p>
+<h2>⏳ Time Blocking Planner</h2>
+
+<h2>📅 Weekly Schedule</h2>
+<p>| Time Block | Monday | Tuesday | Wednesday | Thursday | Friday | Notes |</p>
+<p>|------------|--------|---------|-----------|----------|--------|-------|</p>
+<p>| 7:00-8:00 AM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 8:00-9:00 AM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 9:00-10:00 AM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 10:00-11:00 AM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 11:00 AM-12:00 PM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 12:00-1:00 PM | [LUNCH/BREAK] | [LUNCH/BREAK] | [LUNCH/BREAK] | [LUNCH/BREAK] | [LUNCH/BREAK] | [NOTES] |</p>
+<p>| 1:00-2:00 PM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 2:00-3:00 PM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 3:00-4:00 PM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+<p>| 4:00-5:00 PM | [TASK] | [TASK] | [TASK] | [TASK] | [TASK] | [NOTES] |</p>
+
+<hr>
+
+<h2>🎯 Focus Blocks (Deep Work)</h2>
+<ul>
+<li><strong>Monday:</strong> [FOCUS TOPIC] – [TIME BLOCK]</li>
+<li><strong>Tuesday:</strong> [FOCUS TOPIC] – [TIME BLOCK]</li>
+<li><strong>Wednesday:</strong> [FOCUS TOPIC] – [TIME BLOCK]</li>
+<li><strong>Thursday:</strong> [FOCUS TOPIC] – [TIME BLOCK]</li>
+<li><strong>Friday:</strong> [FOCUS TOPIC] – [TIME BLOCK]</li>
+</ul>
+
+<p><strong>Weekly Goals:</strong></p>
+<ol>
+<li>[GOAL]</li>
+<li>[GOAL]</li>
+<li>[GOAL]</li>
+</ol>
+<p>```</p>
+
+<hr>
+
+<h2>Template 7: Freelance Rate & Pricing Guide</h2>
+<p><strong>When to use:</strong> Track and adjust your pricing strategy based on project scope, client type, and market rates.</p>
+
+<p>```</p>
+<h2>💸 Freelance Rate & Pricing Guide</h2>
+
+<h2>📊 Service Pricing</h2>
+<p>| Service | Base Rate | Add-Ons | Client Type | Notes |</p>
+<p>|---------|-----------|---------|-------------|-------|</p>
+<p>| [SERVICE] | $[RATE] | [ADD-ON 1: +$X] | [NEW/REPEAT] | [NOTES] |</p>
+<p>| [SERVICE] | $[RATE] | [ADD-ON 1: +$X] | [NEW/REPEAT] | [NOTES] |</p>
+<p>| [SERVICE] | $[RATE] | [ADD-ON 1: +$X] | [NEW/REPEAT] | [NOTES] |</p>
+
+<p><strong>Upsell Opportunities:</strong></p>
+<ul>
+<li>[SERVICE] + [ADD-ON] = $[TOTAL]</li>
+<li>[SERVICE] + [ADD-ON] = $[TOTAL]</li>
+</ul>
+
+<hr>
+
+<h2>📈 Market Research</h2>
+<h3>Competitor Rates</h3>
+<p>| Competitor | Service | Rate | Notes |</p>
+<p>|------------|---------|------|-------|</p>
+<p>| [NAME] | [SERVICE] | $[RATE] | [NOTES] |</p>
+<p>| [NAME] | [SERVICE] | $[RATE] | [NOTES] |</p>
+
+<h3>Client Budget Tiers</h3>
+<p>| Budget Range | Service Level | Example Projects |</p>
+<p>|--------------|---------------|------------------|</p>
+<p>| $[RANGE] | [LEVEL] | [EXAMPLE] |</p>
+<p>| $[RANGE] | [LEVEL] | [EXAMPLE] |</p>
+
+<hr>
+<p>```</p>
+
+<hr>
+
+<h2>Template 8: Social Media Content Repository</h2>
+<p><strong>When to use:</strong> Store, organize, and repurpose your best-performing social media content.</p>
+
+<p>```</p>
+<h2>📱 Social Media Content Repository</h2>
+
+<h2>📌 Top-Performing Posts</h2>
+<p>| Platform | Post Title | Content Type | Date Published | Engagement | Notes |</p>
+<p>|----------|------------|--------------|----------------|------------|-------|</p>
+<p>| [PLATFORM] | [TITLE] | [VIDEO/IMAGE/TEXT] | [DATE] | [LIKES/SHARES/COMMENTS] | [NOTES] |</p>
+<p>| [PLATFORM] | [TITLE] | [VIDEO/IMAGE/TEXT] | [DATE] | [LIKES/SHARES/COMMENTS] | [NOTES] |</p>
+<p>| [PLATFORM] | [TITLE] | [VIDEO/IMAGE/TEXT] | [DATE] | [LIKES/SHARES/COMMENTS] | [NOTES] |</p>
+
+<hr>
+
+<h2>🗂 Content Categories</h2>
+<h3>Branding</h3>
+<ul>
+<li>[POST IDEA]</li>
+<li>[POST IDEA]</li>
+</ul>
+
+<h3>Behind the Scenes</h3>
+<ul>
+<li>[POST IDEA]</li>
+<li>[POST IDEA]</li>
+</ul>
+
+<h3>Educational</h3>
+<ul>
+<li>[POST IDEA]</li>
+<li>[POST IDEA]</li>
+</ul>
+
+<h3>Promotional</h3>
+<ul>
+<li>[POST IDEA]</li>
+<li>[POST IDEA]</li>
+</ul>
+
+<h3>User-Generated Content</h3>
+<ul>
+<li>[POST IDEA]</li>
+<li>[POST IDEA]</li>
+</ul>
+
+<hr>
+<p>```</p>
+
+<h2>Template 4: Client Onboarding Checklist</h2>
+<p><strong>When to use:</strong> When starting a new project with a client to ensure all necessary steps are completed smoothly.</p>
+
+<hr>
+<h3><strong>Client Onboarding Checklist</strong></h3>
+
+<p>#### <strong>1. Initial Contact & Project Details</strong></p>
+<ul>
+<li>[ ] Client name: [Client Name]</li>
+<li>[ ] Project title: [Project Title]</li>
+<li>[ ] Start date: [Start Date]</li>
+<li>[ ] Deadline: [Deadline]</li>
+<li>[ ] Preferred communication method: [Email/Slack/Phone]</li>
+<li>[ ] Key project goals: [List goals]</li>
+</ul>
+
+<p>#### <strong>2. Contract & Payment</strong></p>
+<ul>
+<li>[ ] Contract signed: [Yes/No] (Link: [Contract Link])</li>
+<li>[ ] Deposit paid: [Amount] [Yes/No]</li>
+<li>[ ] Payment schedule: [Payment Terms]</li>
+<li>[ ] Invoicing details: [Invoice Email/Platform]</li>
+</ul>
+
+<p>#### <strong>3. Project Scope & Deliverables</strong></p>
+<ul>
+<li>[ ] Agreed-upon deliverables: [List deliverables]</li>
+<li>[ ] Revisions allowed: [Number]</li>
+<li>[ ] Approval process: [Who approves?]</li>
+<li>[ ] Any exclusions: [List exclusions]</li>
+</ul>
+
+<p>#### <strong>4. Assets & Access</strong></p>
+<ul>
+<li>[ ] Brand guidelines: [Link/Upload]</li>
+<li>[ ] Logo files: [Link/Upload]</li>
+<li>[ ] Access to tools/platforms: [List tools & login details]</li>
+<li>[ ] Content drafts (if applicable): [Link/Upload]</li>
+</ul>
+
+<p>#### <strong>5. Timeline & Milestones</strong></p>
+<p>| <strong>Milestone</strong>       | <strong>Due Date</strong> | <strong>Status</strong> |</p>
+<p>|---------------------|-------------|-----------|</p>
+<p>| [Milestone 1]       | [Date]      | [ ]       |</p>
+<p>| [Milestone 2]       | [Date]      | [ ]       |</p>
+<p>| [Final Delivery]    | [Date]      | [ ]       |</p>
+
+<p>#### <strong>6. Communication Plan</strong></p>
+<ul>
+<li>[ ] Weekly check-ins: [Day/Time]</li>
+<li>[ ] Emergency contact: [Name/Method]</li>
+<li>[ ] Feedback turnaround time: [e.g., 48 hours]</li>
+</ul>
+
+<p>#### <strong>7. Post-Project</strong></p>
+<ul>
+<li>[ ] Feedback form sent: [Link]</li>
+<li>[ ] Final invoice sent: [Date]</li>
+<li>[ ] Testimonial request: [Yes/No]</li>
+</ul>
+
+<hr>
+
+<h2>Template 5: Content Calendar</h2>
+<p><strong>When to use:</strong> To plan and organize content creation across multiple platforms and projects.</p>
+
+<hr>
+<h3><strong>Content Calendar [YYYY]</strong></h3>
+
+<p>#### <strong>Monthly Overview</strong></p>
+<p>| <strong>Project</strong> | <strong>Platform</strong> | <strong>Content Type</strong> | <strong>Due Date</strong> | <strong>Status</strong> | <strong>Assigned To</strong> |</p>
+<p>|-------------|-------------|------------------|-------------|-----------|-----------------|</p>
+<p>| [Project A] | [Instagram] | [Reel]           | [Date]      | [ ]       | [Your Name]     |</p>
+<p>| [Project B] | [Blog]      | [Article]        | [Date]      | [ ]       | [Writer Name]   |</p>
+<p>| [Project C] | [YouTube]   | [Script]         | [Date]      | [ ]       | [Your Name]     |</p>
+
+<p>#### <strong>Weekly Breakdown</strong></p>
+<p>| <strong>Day</strong>   | <strong>Task</strong>               | <strong>Status</strong> | <strong>Notes</strong> |</p>
+<p>|-----------|------------------------|-----------|-----------|</p>
+<p>| Monday    | [Draft blog post]      | [ ]       | [Topic]   |</p>
+<p>| Tuesday   | [Edit video]           | [ ]       | [Length]  |</p>
+<p>| Wednesday | [Social media posts]   | [ ]       | [Platforms]|</p>
+<p>| Thursday  | [Client review]        | [ ]       | [Which client]|</p>
+<p>| Friday    | [Finalize deliverables]| [ ]       | [Project] |</p>
+
+<p>#### <strong>Ideas & Backlog</strong></p>
+<ul>
+<li>[ ] [Content idea 1]</li>
+<li>[ ] [Content idea 2]</li>
+<li>[ ] [Content idea 3]</li>
+</ul>
+
+<p>#### <strong>Performance Tracking</strong></p>
+<p>| <strong>Metric</strong>       | <strong>Target</strong> | <strong>Actual</strong> |</p>
+<p>|------------------|-----------|-----------|</p>
+<p>| Engagement rate  | [X]%      | [ ]%      |</p>
+<p>| Conversion rate  | [X]%      | [ ]%      |</p>
+
+<hr>
+
+<h2>Template 6: Freelance Project Tracker</h2>
+<p><strong>When to use:</strong> To monitor progress, deadlines, and financials for multiple freelance projects.</p>
+
+<hr>
+<h3><strong>Freelance Project Tracker</strong></h3>
+
+<p>#### <strong>Active Projects</strong></p>
+<p>| <strong>Project Name</strong> | <strong>Client</strong> | <strong>Start Date</strong> | <strong>Deadline</strong> | <strong>Status</strong> | <strong>Hours Worked</strong> | <strong>Revenue Earned</strong> |</p>
+<p>|------------------|-----------|---------------|-------------|-----------|------------------|-------------------|</p>
+<p>| [Project X]      | [Client A]| [Date]        | [Date]      | [ ]       | [X]              | $[X]              |</p>
+<p>| [Project Y]      | [Client B]| [Date]        | [Date]      | [ ]       | [X]              | $[X]              |</p>
+<p>| [Project Z]      | [Client C]| [Date]        | [Date]      | [ ]       | [X]              | $[X]              |</p>
+
+<p>#### <strong>Project Status Legend</strong></p>
+<ul>
+<li>[ ] Not Started</li>
+<li>[ ] In Progress</li>
+<li>[ ] On Hold</li>
+<li>[ ] Completed</li>
+<li>[ ] Delivered (Awaiting Payment)</li>
+</ul>
+
+<p>#### <strong>Upcoming Deadlines</strong></p>
+<ul>
+<li>[ ] [Project] – [Deadline] ([Days Left])</li>
+<li>[ ] [Project] – [Deadline] ([Days Left])</li>
+</ul>
+
+<p>#### <strong>Income Summary</strong></p>
+<ul>
+<li><strong>Total Revenue (This Month):</strong> $[X]</li>
+<li><strong>Pending Payments:</strong> $[X] (Clients: [List])</li>
+<li><strong>Expenses:</strong> $[X] (Breakdown: [List])</li>
+</ul>
+
+<p>#### <strong>Notes</strong></p>
+<ul>
+<li>[Add any relevant notes or reminders]</li>
+</ul>
+
+<hr>
+
+<h2>Template 7: Client Feedback Hub</h2>
+<p><strong>When to use:</strong> To centralize and track feedback from multiple clients in one place.</p>
+
+<hr>
+<h3><strong>Client Feedback Hub</strong></h3>
+
+<p>#### <strong>Feedback Log</strong></p>
+<p>| <strong>Client</strong> | <strong>Project</strong> | <strong>Feedback Date</strong> | <strong>Type</strong>       | <strong>Details</strong> | <strong>Status</strong> | <strong>Action Taken</strong> |</p>
+<p>|------------|-------------|-------------------|----------------|-------------|-----------|------------------|</p>
+<p>| [Client 1] | [Project A] | [Date]            | [Positive/Negative/Neutral] | [Feedback details] | [ ] | [ ] |</p>
+<p>| [Client 2] | [Project B] | [Date]            | [Positive/Negative/Neutral] | [Feedback details] | [ ] | [ ] |</p>
+
+<p>#### <strong>Common Feedback Themes</strong></p>
+<ul>
+<li>[Theme 1]: [Examples]</li>
+<li>[Theme 2]: [Examples]</li>
+<li>[Theme 3]: [Examples]</li>
+</ul>
+
+<p>#### <strong>Action Items</strong></p>
+<ul>
+<li>[ ] Follow up with [Client Name] regarding [Feedback]</li>
+<li>[ ] Adjust [Process/Template] based on feedback</li>
+<li>[ ] Schedule a call to discuss [Feedback]</li>
+</ul>
+
+<p>#### <strong>Client Satisfaction Score</strong></p>
+<p>| <strong>Client</strong> | <strong>Score (1-10)</strong> | <strong>Notes</strong> |</p>
+<p>|------------|------------------|-----------|</p>
+<p>| [Client 1] | [X]              | [Notes]   |</p>
+<p>| [Client 2] | [X]              | [Notes]   |</p>
+
+<hr>
+
+<h2>Template 8: Invoice & Payment Tracker</h2>
+<p><strong>When to use:</strong> To manage invoicing, payments, and financial records for freelance projects.</p>
+
+<hr>
+<h3><strong>Invoice & Payment Tracker</strong></h3>
+
+<p>#### <strong>Outstanding Invoices</strong></p>
+<p>| <strong>Invoice #</strong> | <strong>Client</strong> | <strong>Project</strong> | <strong>Amount</strong> | <strong>Due Date</strong> | <strong>Status</strong> | <strong>Payment Date</strong> |</p>
+<p>|---------------|-----------|-------------|------------|-------------|-----------|------------------|</p>
+<p>| [INV-001]     | [Client A] | [Project X] | $[X]       | [Date]      | [ ]       | [ ]              |</p>
+<p>| [INV-002]     | [Client B] | [Project Y] | $[X]       | [Date]      | [ ]       | [ ]              |</p>
+
+<p>#### <strong>Payment Status Legend</strong></p>
+<ul>
+<li>[ ] Sent</li>
+<li>[ ] Viewed</li>
+<li>[ ] Paid (Pending Deposit)</li>
+<li>[ ] Fully Paid</li>
+<li>[ ] Overdue</li>
+</ul>
+
+<p>#### <strong>Payment Reminders</strong></p>
+<ul>
+<li>[ ] Send reminder for [Invoice #] on [Date]</li>
+<li>[ ] Follow up with [Client Name] on [Date]</li>
+</ul>
+
+<p>#### <strong>Income Summary</strong></p>
+<ul>
+<li><strong>Total Revenue (This Month):</strong> $[X]</li>
+<li><strong>Pending Payments:</strong> $[X] (Clients: [List])</li>
+<li><strong>Overdue Payments:</strong> $[X] (Clients: [List])</li>
+</ul>
+
+<p>#### <strong>Payment Methods Accepted</strong></p>
+<ul>
+<li>[ ] PayPal: [Email]</li>
+<li>[ ] Bank Transfer: [Details]</li>
+<li>[ ] Stripe: [Link]</li>
+<li>[ ] Other: [Details]</li>
+</ul>
+
+<hr>
+
+<h2>Template 9: Creative Brainstorming Board</h2>
+<p><strong>When to use:</strong> To capture, organize, and develop creative ideas for projects.</p>
+
+<hr>
+<h3><strong>Creative Brainstorming Board</strong></h3>
+
+<p>#### <strong>Idea Categories</strong></p>
+<ol>
+<li><strong>Project-Specific Ideas</strong></li>
+</ol>
+<ul>
+<li>[Project Name]: [Idea 1], [Idea 2], [Idea 3]</li>
+<li>[Project Name]: [Idea 1], [Idea 2], [Idea 3]</li>
+</ul>
+
+<ol>
+<li><strong>General Creative Ideas</strong></li>
+</ol>
+<ul>
+<li>[Idea Category]: [Idea 1], [Idea 2], [Idea 3]</li>
+<li>[Idea Category]: [Idea 1], [Idea 2], [Idea 3]</li>
+</ul>
+
+<p>#### <strong>Idea Evaluation</strong></p>
+<p>| <strong>Idea</strong>          | <strong>Feasibility (1-5)</strong> | <strong>Potential Impact (1-5)</strong> | <strong>Notes</strong> |</p>
+<p>|-------------------|-----------------------|----------------------------|-----------|</p>
+<p>| [Idea Name]       | [X]                   | [X]                        | [Notes]   |</p>
+<p>| [Idea Name]       | [X]                   | [X]                        | [Notes]   |</p>
+
+<p>#### <strong>Next Steps</strong></p>
+<ul>
+<li>[ ] Develop [Idea Name] further</li>
+<li>[ ] Pitch [Idea Name] to [Client/Team]</li>
+<li>[ ] Schedule brainstorming session</li>
+</ul>
+
+<p>#### <strong>Inspiration Sources</strong></p>
+<ul>
+<li>[ ] [Website/Article]</li>
+<li>[ ] [Competitor Analysis]</li>
+<li>[ ] [Trend Report]</li>
+</ul>
+
+<hr>
+
+<h2>Template 10: Time Blocking Planner</h2>
+<p><strong>When to use:</strong> To schedule your workday and allocate time efficiently across projects.</p>
+
+<hr>
+<h3><strong>Time Blocking Planner [Week of: [Date]]</strong></h3>
+
+<p>#### <strong>Daily Schedule</strong></p>
+<p>| <strong>Time</strong>       | <strong>Monday</strong> | <strong>Tuesday</strong> | <strong>Wednesday</strong> | <strong>Thursday</strong> | <strong>Friday</strong> |</p>
+<p>|----------------|-----------|-------------|---------------|--------------|------------|</p>
+<p>| [9:00 AM - 10:30 AM] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] |</p>
+<p>| [10:30 AM - 12:00 PM] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] |</p>
+<p>| [1:00 PM - 2:30 PM] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] |</p>
+<p>| [2:30 PM - 4:00 PM] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] | [Task/Project] |</p>
+
+<p>#### <strong>Task Categories</strong></p>
+<ul>
+<li>[ ] Creative Work (Writing, Design, etc.)</li>
+<li>[ ] Client Communication</li>
+<li>[ ] Administrative Tasks</li>
+<li>[ ] Learning & Development</li>
+<li>[ ] Breaks & Buffer Time</li>
+</ul>
+
+<p>#### <strong>Priority Tasks</strong></p>
+<ul>
+<li>[ ] [Task 1] – [Time Block]</li>
+<li>[ ] [Task 2] – [Time Block]</li>
+<li>[ ] [Task 3] – [Time Block]</li>
+</ul>
+
+<p>#### <strong>Notes</strong></p>
+<ul>
+<li>[Add any notes or adjustments]</li>
+</ul>
+
+<hr>
+
+<h2>Template 11: Portfolio & Work Samples Library</h2>
+<p><strong>When to use:</strong> To organize and showcase your best work samples and portfolio pieces.</p>
+
+<hr>
+<h3><strong>Portfolio & Work Samples Library</strong></h3>
+
+<p>#### <strong>Portfolio Categories</strong></p>
+<ol>
+<li><strong>Graphic Design</strong></li>
+</ol>
+<ul>
+<li>[Project Name] – [Date] – [Link/Upload]</li>
+<li>[Project Name] – [Date] – [Link/Upload]</li>
+</ul>
+
+<ol>
+<li><strong>Writing & Content Creation</strong></li>
+</ol>
+<ul>
+<li>[Project Name] – [Date] – [Link/Upload]</li>
+<li>[Project Name] – [Date] – [Link/Upload]</li>
+</ul>
+
+<ol>
+<li><strong>Social Media Management</strong></li>
+</ol>
+<ul>
+<li>[Project Name] – [Date] – [Link/Upload]</li>
+<li>[Project Name] – [Date] – [Link/Upload]</li>
+</ul>
+
+<p>#### <strong>Client Testimonials</strong></p>
+<ul>
+<li>[Client Name]: "[Testimonial Quote]" – [Project]</li>
+<li>[Client Name]: "[Testimonial Quote]" – [Project]</li>
+</ul>
+
+<p>#### <strong>Performance Metrics</strong></p>
+<p>| <strong>Project</strong> | <strong>Views/Impressions</strong> | <strong>Engagement Rate</strong> | <strong>Conversion Rate</strong> |</p>
+<p>|-------------|-----------------------|---------------------|---------------------|</p>
+<p>| [Project A] | [X]                   | [X]%                | [X]%                |</p>
+<p>| [Project B] | [X]                   | [X]%                | [X]%                |</p>
+
+<p>#### <strong>Updating Schedule</strong></p>
+<ul>
+<li>[ ] Review portfolio every [X] months</li>
+<li>[ ] Add new work samples after each project</li>
+<li>[ ] Update testimonials as needed</li>
+</ul>
+    </article>
+    <div style="background:linear-gradient(135deg,#13151d,#1a1d28);border:2px solid #6366f1;border-radius:12px;padding:28px;margin:40px 0;text-align:center;">
+        <p style="color:#6366f1;font-weight:700;font-size:0.85em;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">RECOMMENDED FOR YOU</p>
+        <h3 style="color:#e4e4e7;margin-bottom:12px;font-size:1.4em;">Want AI To Build Your Income Streams?</h3>
+        <p style="color:#9ca3af;margin-bottom:20px;max-width:500px;display:inline-block;">AutoHustle deploys an AI agent that creates products, publishes content, trades crypto, and earns money 24/7.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <a href="https://theartofsound.github.io/autohustle-content/autohustle-system/" style="display:inline-block;background:linear-gradient(135deg,#10b981,#059669);color:white;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;">Start Making Money &rarr;</a>
+            <a href="https://theartofsound.github.io/autohustle-tools/store/" style="display:inline-block;background:#1a1d28;color:#6366f1;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;border:1px solid #6366f1;">Browse Products</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 <a href="https://autohustle.online">AutoHustle.online</a> &mdash; <a href="https://theartofsound.github.io/autohustle-tools/store/">Products &amp; Courses</a> | <a href="https://theartofsound.github.io/autohustle-tools/">Free Tools</a></p>
+    </footer>
+</body>
+</html>
