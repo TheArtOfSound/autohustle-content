@@ -21,3 +21,10 @@
 /store/releases/0.6.0/sentinel-studio.mjs
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="sentinel-studio.mjs"
+
+/store/releases/0.7.0/sentinel-release.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="sentinel-release.mjs"
+/store/releases/0.7.0/sentinel-studio.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="sentinel-studio.mjs"

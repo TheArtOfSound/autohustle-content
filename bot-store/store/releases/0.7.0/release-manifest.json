@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "product": "sentinel-studio",
+  "kind": "release",
+  "version": "0.7.0",
+  "issuedAt": "2026-11-27T10:20:49.021Z",
+  "files": [
+    {
+      "name": "sentinel-studio.mjs",
+      "bytes": 37437,
+      "sha256": "db4810aebf9528c2adb001e7ca33ef89c5057cbb2fd1132dc9fa81f8406e03bf"
+    },
+    {
+      "name": "sentinel-release.mjs",
+      "bytes": 6812,
+      "sha256": "8d20ccd7cd58cf236a4b5bfcbe19172715dae576714a18b8610e727b5d90535f"
+    }
+  ]
+}
