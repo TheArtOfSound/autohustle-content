@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-27",
+  "prioritySitemap": 20,
+  "editorialArticles": 11,
+  "structuralPages": 9,
+  "legacyBlog": "Separate nested blog archive; route recovered for post-body template with noindex until reviewed. Not part of 722 entries. No bulk index submission.",
+  "historicalArchive": "Existing top-level historical guides stay crawlable and indexable except incomplete pages; not included in priority sitemap.",
+  "searchConsole": "GSC Wizard subscription required; no traffic or indexing metrics obtained.",
+  "schema": "Website, CollectionPage, BreadcrumbList, Article only for revised and signed selection; no product review ratings or invented images.",
+  "feed": 11
+}
