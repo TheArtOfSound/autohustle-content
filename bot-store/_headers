@@ -10,3 +10,10 @@
 
 /store/sentinel-studio.mjs
   Content-Disposition: attachment; filename="sentinel-studio.mjs"
+
+/store/releases/0.5.0/Sentinel-Setup.ps1
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="Sentinel-Setup.ps1"
+/store/releases/0.5.0/sentinel-studio.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="sentinel-studio.mjs"
