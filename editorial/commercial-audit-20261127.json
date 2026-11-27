@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-27",
+  "sampleSize": 12,
+  "confirmedLegacyAmazonTaggedLinks": 28,
+  "tag": "leadgenius04-20",
+  "accountState": "closed according to Amazon notice dated 2026-08-22; no subsequent reinstatement found in searched primary account",
+  "approvedAffiliateTags": [],
+  "affiliateMode": "paused",
+  "legacyCheckoutLinks": [
+    "https://buy.stripe.com/fZu9AT5WNcRw5sGcjO6c03r",
+    "https://buy.stripe.com/bJebJ1bh7g3I2gufw06c03s",
+    "https://buy.stripe.com/00w14ndpf7xcdZccjO6c03t"
+  ],
+  "legacyCheckoutState": "not independently verified, disabled on article reader; no Stripe account changes",
+  "policy": "Direct Amazon retailer links preserved without tracking parameters; short links and unverified checkout or explicit affiliate destinations disabled. Original HTML retained. First-party service invitations only for relevant signed non-trading posts. No new affiliate signup or billing.",
+  "firstPartyDestinations": [
+    "https://imagineqira.com/solutions/",
+    "https://ahcrapcleanup.com/"
+  ],
+  "limitations": "Sample-based link inventory; no full article-body audit or live checkout fulfillment verification."
+}
