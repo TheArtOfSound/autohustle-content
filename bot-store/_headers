@@ -115,3 +115,7 @@
 /store/signal/0.4.0/signal-desk-studio.zip
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="signal-desk-studio.zip"
+
+/store/releases/0.9.0/sentinel-studio.zip
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="sentinel-studio.zip"
