@@ -1,0 +1,9 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+/store/sentinel.mjs
+  Content-Disposition: attachment; filename="sentinel.mjs"
+/store/sentinel.json
+  Content-Disposition: attachment; filename="sentinel.json"

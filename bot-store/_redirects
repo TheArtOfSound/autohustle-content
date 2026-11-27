@@ -1,0 +1,4 @@
+/login https://pumpfunbot.app/login 302
+/dashboard https://pumpfunbot.app/dashboard 302
+/pricing https://pumpfunbot.app/pricing 302
+/trade https://pumpfunbot.app/trade 302

@@ -1,0 +1,12 @@
+{
+  "intervalSeconds": 300,
+  "timeoutMs": 10000,
+  "logFile": "sentinel.jsonl",
+  "targets": [
+    {
+      "name": "My site",
+      "url": "https://example.com/",
+      "status": 200
+    }
+  ]
+}
