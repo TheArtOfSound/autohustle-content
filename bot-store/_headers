@@ -7,3 +7,6 @@
   Content-Disposition: attachment; filename="sentinel.mjs"
 /store/sentinel.json
   Content-Disposition: attachment; filename="sentinel.json"
+
+/store/sentinel-studio.mjs
+  Content-Disposition: attachment; filename="sentinel-studio.mjs"
