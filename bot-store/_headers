@@ -40,3 +40,9 @@
 /store/releases/0.9.0/sentinel-release.mjs
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="sentinel-release.mjs"
+
+/store/signal/0.1.0/signal-desk.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="signal-desk.mjs"
+/store/signal/0.1.0/sources.json
+  Content-Disposition: attachment; filename="sources.json"

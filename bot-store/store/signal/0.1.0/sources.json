@@ -1,0 +1,11 @@
+{
+  "sources": [
+    {
+      "id": "bot-release",
+      "url": "https://bot.autohustle.online/version.json",
+      "mode": "json",
+      "pointer": "/release",
+      "interval": 900
+    }
+  ]
+}
