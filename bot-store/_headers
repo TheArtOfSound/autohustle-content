@@ -62,3 +62,28 @@
 /store/signal/0.2.0/signal-desk.mjs
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="signal-desk.mjs"
+
+/store/signal/0.3.0/signal-desk-studio.zip
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="signal-desk-studio.zip"
+/store/signal/0.3.0/studio.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="studio.mjs"
+/store/signal/0.3.0/studio.html
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="studio.html"
+/store/signal/0.3.0/studio-ui.js
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="studio-ui.js"
+/store/signal/0.3.0/signal-desk.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="signal-desk.mjs"
+/store/signal/0.3.0/rules.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="rules.mjs"
+/store/signal/0.3.0/README.md
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="README.md"
+/store/signal/0.3.0/SHA256SUMS
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="SHA256SUMS"
