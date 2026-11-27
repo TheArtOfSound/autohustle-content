@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "autohustle-content",
-  "main": "editorial-edge-worker-20261127.js",
+  "main": "editorial-worker-entry.mjs",
   "compatibility_date": "2025-09-27",
   "observability": {
     "enabled": true
