@@ -132,3 +132,19 @@
 /store/releases/0.9.1/sentinel-release.mjs
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="sentinel-release.mjs"
+
+/store/releases/0.9.2/sentinel-studio.zip
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="sentinel-studio.zip"
+/store/releases/0.9.2/sentinel-studio.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="sentinel-studio.mjs"
+/store/releases/0.9.2/workspace.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="workspace.mjs"
+/store/releases/0.9.2/activation.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="activation.mjs"
+/store/releases/0.9.2/sentinel-release.mjs
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="sentinel-release.mjs"
