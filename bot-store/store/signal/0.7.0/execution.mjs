@@ -1,0 +1,4 @@
+// Serialize state transactions, not external I/O. A failed transaction cannot poison the queue.
+export function serial(){let tail=Promise.resolve();return fn=>{const p=tail.then(fn);tail=p.catch(()=>{});return p;};}
+export async function bounded(items,limit,fn){if(!Number.isInteger(limit)||limit<1)throw Error('Invalid concurrency');const out=Array(items.length);let cursor=0;await Promise.all(Array.from({length:Math.min(limit,items.length)},async()=>{for(;;){const i=cursor++;if(i>=items.length)return;try{out[i]={ok:true,value:await fn(items[i])};}catch(error){out[i]={ok:false,error};}}}));return out;}
+export function deliveryResult(error){const detail=String(error?.message||'');return /^HTTP \d{3}$|^Provider rejected$/.test(detail)?{status:'failed',detail}:{status:'unknown',detail:'Network or timeout; receipt uncertain'};}
