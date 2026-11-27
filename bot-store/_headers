@@ -193,3 +193,7 @@
 /store/signal/0.5.0/*
   Content-Type: application/octet-stream
   Cache-Control: public, max-age=86400
+
+/store/signal/0.6.0/*
+  Content-Type: application/octet-stream
+  Cache-Control: public, max-age=86400
