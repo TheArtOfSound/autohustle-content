@@ -189,3 +189,7 @@
 /store/releases/0.9.4/sentinel-release.mjs
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="sentinel-release.mjs"
+
+/store/signal/0.5.0/*
+  Content-Type: application/octet-stream
+  Cache-Control: public, max-age=86400
